@@ -1,0 +1,1044 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 5.3.4.2 (Linux)"/>
+	<meta name="created" content="2017-07-12T18:37:19.014293596"/>
+	<meta name="changed" content="2017-08-02T17:10:35.879017713"/>
+	<style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+		h2.western { font-family: "Liberation Sans", sans-serif; font-size: 16pt }
+		h2.cjk { font-family: "WenQuanYi Micro Hei"; font-size: 16pt }
+		h2.ctl { font-family: "FreeSans"; font-size: 16pt }
+		h3.western { font-family: "Liberation Sans", sans-serif; font-size: 14pt }
+		h3.cjk { font-family: "WenQuanYi Micro Hei"; font-size: 14pt }
+		h3.ctl { font-family: "FreeSans"; font-size: 14pt }
+		h4.western { font-family: "Liberation Sans", sans-serif; font-size: 13pt; font-style: italic }
+		h4.cjk { font-family: "WenQuanYi Micro Hei"; font-size: 13pt; font-style: italic }
+		h4.ctl { font-family: "FreeSans"; font-size: 13pt; font-style: italic }
+		a:link { so-language: zxx }
+	</style>
+</head>
+<body lang="en-US" dir="ltr">
+<h2 class="western" align="center">How to get software updates from
+one Wasta computer<br/>
+and transfer them to another Wasta computer
+<br/>
+using wasta-offline-setup<br/>
+By Bill Martin (revised <sdfield type=DOCINFO subtype=CHANGE format=DATE sdnum="1033;1033;D. MMMM YYYY">2. August 2017</sdfield>)</h2>
+<h3 class="western">What is this document?</h3>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Wasta-logo-low-res.jpg" name="Image55" align="left" width="331" height="71" border="0"/>
+This
+document is an illustrated guide that shows how to use the
+<b>wasta-offline-setup</b> program to prepare a memory stick with
+software updates accumulated from one or more already updated Linux
+computers (the source machines). The memory stick can then be carried
+to a remote area (without good/inexpensive Internet access) and
+plugged into one or more Wasta computers (the target machines) to
+update their software from the updates on the memory stick –
+offline – rather than going out to the Internet for those updates.
+When the memory stick is plugged into a Wasta target computer, the
+wasta-offline program runs automatically to configure the computer to
+look for its updates from the memory stick. While wasta-offline is
+running and “Ready”, the user can then use standard software
+installing and updating programs (such as Software Updater, Synaptic
+Package Manager, or apt-get commands in a Terminal) to carry out the
+updating/installing process. The Ubuntu Software Center could also be
+used, but it won’t run unless Internet access is available at the
+time it is run – even though it would be used in this case just to
+install programs that were stored on the memory stick.</p>
+<h3 class="western">Who is this document for?</h3>
+<p style="margin-bottom: 0in; line-height: 100%">This document is
+designed to be a guide for an Advisor, Consultant or Technician who
+wishes to provide an offline way to update the software on any number
+of target Wasta computers that are similarly configured to one or
+more source Wasta computers – where the source computers have had
+more recent software installs or updates than the target computers. 
+</p>
+<h3 class="western">When does it make sense to use this procedure</h3>
+<p style="margin-bottom: 0in; line-height: 100%">It makes sense:</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">When updating
+	a 1TB drive with a Full Wasta-Offline Mirror is not practical or
+	cost effective</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Where
+	Internet access is not possible or too unreliable</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Where the
+	cost of Internet access is expensive – especially for data
+	downloads where cost is calculated per-megabyte</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Where more
+	than one target Wasta computer needs to be updated so that they all
+	stay in sync with the source Wasta computer(s) - configured with
+	essentially the same software on them.</p>
+</ul>
+<h3 class="western">Related How To documents</h3>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in">“How to obtain a Full
+	Wasta-Offline Mirror residing on a 1TB USB hard drive”</p>
+	<li/>
+<p style="margin-bottom: 0in">“How to get software updates
+	for a Full Wasta-Offline Mirror residing on a 1TB USB hard drive”</p>
+	<li/>
+<p style="margin-bottom: 0in">“How to update your
+	Wasta-Linux software offline by memory stick or external hard drive”</p>
+</ul>
+<h3 class="western">Preliminary one-time procedures</h3>
+<p>If you have a fresh memory stick that has not been used previously
+for transferring wasta-offline software updates from a source
+computer to a target computer, or are getting software updates from a
+source computer that has <b>not </b><b>been </b><b>used </b><b>with
+</b><b>wasta-offline-setup before</b>, then you need to do one or
+both of these preliminary one-time procedures. The one-time
+procedures are:</p>
+<p><b>Preliminary Procedure </b><b>1. <a href="#Installing_wasta-offline-setup_on_the_source_computer">Install</a></b><a href="#Installing_wasta-offline-setup_on_the_source_computer"><b>ing</b></a><b><a href="#Installing_wasta-offline-setup_on_the_source_computer">
+wasta-offline-setup on the “source” computer(s)</a>.</b><span style="font-weight: normal">
+</span><span style="font-weight: normal">Do this procedure if the
+source computer has never before been used as a source computer for
+wasta-offline-setup. The procedure shows how to install the
+wasta-offline-setup program on the computer. If there is more than
+one source computer, this procedure will need to be done one time on
+each </span><span style="font-weight: normal">of the</span><span style="font-weight: normal">
+source computer</span><span style="font-weight: normal">s functioning
+as the source for offline software updates</span><span style="font-weight: normal">.</span></p>
+<p><b>Preliminary Procedure 2. <a href="#Preparing_a_fresh_memory_stick_for_wasta-offline-setup">Preparing
+a fresh memory stick for use by wasta-offline-setup</a></b><span style="font-weight: normal">.
+</span><span style="font-weight: normal">Do this procedure if the
+memory stick being used to transfer software updates is a fresh one,
+that is, one that has not been used before by wasta-offline-setup for
+this purpose. A fresh memory stick will not have a folder named
+wasta-offline in its root directory.</span></p>
+<p>The above one-time procedures are documented in a later section of
+this document. Click on the links and follow the appropriate
+procedure(s) if needed, then return here to proceed with Step 1 below
+to follow the typical memory stick update scenario.</p>
+<h3 class="western"><a name="Running_wasta-offline-setup_on_the_source_computer"></a>
+Typical memory stick update scenario: Running wasta-offline-setup on
+the source computer</h3>
+<h3 class="western">Step 1. Plug in your wasta-offline-setup memory
+stick to the source computer</h3>
+<p style="margin-bottom: 0in; line-height: 100%">If you previously
+prepared – or were given - a memory stick for installing
+wasta-offline updates, <b>plug that memory stick into the “source”
+computer</b>:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Inserting-memory-stick.png" name="Image23" align="left" width="360" height="240">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">The source computer
+will normally be a Wasta computer and have the wasta-offline program
+installed on it along with wasta-offline-setup. Assuming the memory
+stick has been used previously for transferring software updates, it
+will have a wasta-offline folder in its root directory with (old)
+updates on it. The presence of a wasta-offline folder on the memory
+stick triggers the launch of the wasta-offline program about 10
+seconds after it is plugged in. The first evidence you see that
+wasta-offline has launched is the request for a password for wasta
+[Offline]:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Cancel-Enter-Password-for-wasta-offline.png" name="Image24" align="left" width="473" height="241">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">But, at this stage
+just <b>Cancel</b> this password prompt – <b>we need to run
+wasta-offline-setup first</b> instead of wasta-offline, since we
+haven’t yet gotten updates from this “source” computer. 
+</p>
+<h3 class="western">Step 2. Run wasta-offline-setup on the source
+computer</h3>
+<p style="margin-bottom: 0in; line-height: 100%">With the memory
+stick plugged into the source computer, start up the
+wasta-offline-setup program from the Administration category of the
+main Menu:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Menu-Administration-wasta-offline-setup-installed.png" name="Image25" align="left" width="665" height="243">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">If <b>wasta
+[Offline] Setup</b> is not listed on the Administration menu, skip
+down to the Preliminary Procedure <b>1. <a href="#Installing_wasta-offline-setup-on-the-source-computers">Install</a></b><a href="#Installing_wasta-offline-setup-on-the-source-computers"><b>ing</b></a><a href="#Installing_wasta-offline-setup-on-the-source-computers"><b>
+wasta-offline-setup on the “source” computer(s)</b></a><span style="font-weight: normal">,
+</span><span style="font-weight: normal">and install
+wasta-offline-setup on this source computer; then return here to
+continue the process of running wasta-offline-setup.</span></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+The wasta-offline-setup program asks for your administrative
+password:</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<img src="wasta-docs-images/Enter-Password-for-wasta-offline-setup.png" name="Image21" align="left" width="425" height="228">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">The initial
+wasta-offline-setup message appears as shown in the illustration
+below:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Wasta-Offline-Setup-Initial-No-Yes-message.png" name="Image26" align="left" width="590" height="393">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Read the text in the
+message, then click on the <b>Yes</b> button to continue. The program
+causes the computer to look for a memory stick plugged in that has a
+wasta-offline folder on it, and when it finds one it presents you
+with the following dialog:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Wasta-Offline-Setup-Select-Folder-already-selected.png" name="Image27" align="left" width="575" height="264">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Note: In our typical
+scenario we previously used this memory stick, so it already had a
+<b>wasta-offline</b> folder in its root directory. The program
+automatically selected the <b>KINGSTON</b> memory stick device -
+since it found a wasta-offline folder on it - and it
+highlighted/selected the <b>wasta-offline</b> folder in blue.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Finally, click on
+the <b>OK</b> button. The program now processes the software package
+information:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Wasta-Offline-Setup-copying-local-cache-to-wasta-offline.png" name="Image18" align="left" width="425" height="183">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">The copying process
+goes fairly quickly with several progress messages similar to the
+above image. When wasta-offline-setup has finished the “Finished”
+dialog will appear:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Wasta-Offline-Setup-finished-adding-cache.png" name="Image19" align="left" width="400" height="192">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">When the process is
+finished you can view the log or just click <b>No</b> to finish up
+and close the dialog.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Repeat Step 1 and
+Step 2 above for any other source computer that you want to collect
+updates from. The wasta-offline-setup will combine the updates
+together on the memory stick for transferring to the target computer.</p>
+<h3 class="western">Step 3. Take the memory stick and plug it in to
+the target computer(s)</h3>
+<p style="margin-bottom: 0in; line-height: 100%">After removing the
+memory stick from the “source” computer(s), it is ready to plug
+into one or more <b>target computers</b> and transfer all the updates
+it received from the source computer(s). 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Inserting-memory-stick.png" name="Image28" align="left" width="400" height="267">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Typically, the
+target computer(s) may be in a remote location where Internet is not
+available or is too expensive or unreliable to use for updating
+software.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">About 10 seconds
+after plugging in the memory stick containing the latest software
+updates, the wasta [Offline] program should launch automatically and
+ask for your password:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Enter-Password-for-wasta-offline.png" name="Image29" align="left" width="427" height="229">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">This time you should
+go ahead and type in the password and click <b>OK</b> to continue –
+we know that this time the memory stick has been updated from one or
+more source computers – and we want wasta-offline to now update
+this target computer’s software.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p>After entering the password the first dialog you will see is the
+<strong>wasta </strong><strong>[</strong><strong>Offline</strong><strong>]</strong>
+dialog shown below:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Select-Mode-wasta-offline-Only-Dialog.png" name="Image30" align="left" width="477" height="549">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Click on the <b>OK</b>
+button to continue. After you click on the <strong>OK</strong>
+button, the wasta-offline program then does some work in the
+background for a short period of time (temporarily replacing the
+user's sources.list file with one that points to the external USB
+memory stick, rather than the remote Internet repositories, and then
+it inventories the updates that are available for your computer). The
+background work being done goes quickly. The following dialog is
+shown temporarily as progress indicator during the background
+process:</p>
+<p><br/>
+<br/>
+
+</p>
+<p><img src="wasta-docs-images/Wasta-Offline-updating-software-lists-from-memory-stick.png" name="Image31" align="left" width="524" height="226">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>As soon as the background work is done the progress indicator
+automatically disappears and the following message is presented to
+the user:</p>
+<p><img src="wasta-docs-images/Wasta-Offline-Finished-dialog.png" name="Image33" align="left" width="628" height="392">
+  <br clear="left"/>
+</img>
+At
+this point we are ready to do a &quot;normal&quot; software update
+procedure. <strong>Important: You must leave this </strong><strong>wasta
+[Offline] Ready </strong><strong>dialog &quot;open&quot; and
+unfinished as you go on to the next steps.</strong> 
+</p>
+<p>Wasta-offline has temporarily re-arranged the expected places to
+find updates on the memory stick or external hard drive, but if you
+click <b>Finish</b> too early, then the system reverts back to its
+original mode of looking for updates off the Internet instead.</p>
+<h3 class="western">Step 4. Use Software Updater to install the
+updates from the memory stick to the target computer</h3>
+<p style="margin-bottom: 0in; line-height: 100%">Remember, the memory
+stick only contains software and updates to software that are being
+transferred from one or more existing “source” Wasta computer(s)
+to this target computer. It cannot be used to install new software or
+updates that were not already installed on the source Wasta
+computer(s). 
+</p>
+<h4 class="western">Using Software Updater</h4>
+<p>There are many ways to update software in Wasta Linux, but here we
+will describe the tool called <b>Software Update</b><strong><b>r</b></strong>
+which is one of the “normal” software tools to update software
+packages in the Ubuntu/Wasta Linux systems. Software Updater usually
+looks for updates on the Internet, but while wasta-offline is running
+(and the above “Ready” message is displaying), Software Updater
+is temporarily directed to get its updates from the memory stick that
+is plugged into the computer – instead of the Internet.</p>
+<p>The Software Updater program can be started by clicking on an icon
+on your desktop as shown below:</p>
+<p><img src="wasta-docs-images/Software-Updater-icon-and-menu.png" name="Image32" align="left" width="407" height="318">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>Click on the <b>Software Updater</b><b> icon</b> found on the
+lower right corner of the desktop. In the image above, the system is
+reporting that there are 16 updates available. That number will vary
+from update to update. It is the number of packages that would have
+been transferred over the Internet, if you had used the Internet to
+download the updates.</p>
+<p><b>With wasta-offline still running </b><b>(and the “Ready”
+message still open)</b>, select the <b>Show updates</b> option from
+the menu that appears in the software updater’s menu (Note:
+selecting the <b>Install all updates</b> menu item bypasses the next
+dialog).</p>
+<p>The Software Updater will start up and show any updates that are
+available to install. The illustration shown below will vary for your
+computer depending on what updates are being transferred via the
+memory stick:</p>
+<p><img src="wasta-docs-images/Software-Updater-Showing-Updates.png" name="Image34" align="left" width="466" height="348">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>In the lower left part of the Software Updater dialog it says that
+“2.7 MB will be downloaded” for this particular software update.
+Occasionally, there may be many tens or hundreds of megabytes to “be
+downloaded”. Since we are using wasta-offline, the amount to be
+“downloaded” here will be done directly from the plugged-in
+memory stick rather than from the Internet. You can well imagine how
+using wasta-offline can improve the speed and eliminate the cost of
+such downloads, especially in areas where Internet is slow or
+expensive.</p>
+<p>Click on the <b>Install Now</b> button to begin the software
+updates to your system. You may be asked to enter computer user's
+administrative password , if it has been more than 15 minutes since
+you started wasta-offline. The Software Updater first downloads the
+updates from the memory stick:</p>
+<p><img src="wasta-docs-images/Installing-updates-download-progress.png" name="Image35" align="left" width="487" height="165">
+  <br clear="left"/>
+</img>
+And
+then it applies those updates in the same operation:</p>
+<p><img src="wasta-docs-images/Installing-updates-applying-progress.png" name="Image36" align="left" width="492" height="168">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>When the installation process is complete Software Updater will
+report that your computer is up to date:</p>
+<p><img src="wasta-docs-images/Software-is-up-to-date.png" name="Image38" align="left" width="485" height="142">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>When the user clicks on the <strong>OK</strong> button, the Update
+Manager automatically closes too, leaving the still-open
+wasta-offline message box the user saw at the beginning of the update
+process (and has been left open during the software updates):</p>
+<p><img src="wasta-docs-images/Wasta-Offline-Finished-Dismiss-with-Finished-dialog.png" name="Image37" align="left" width="586" height="316">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>If you know that a new Linux program was installed on the source
+computer recently, it should be possible to also install that new
+program on the target computer from the packages that are on the
+memory stick. To install the new software, you should use a different
+program called Synaptic Package Manager. The use of the Synaptic
+Package Manager is not described on this document. Please refer to
+the document entitled “How to update your Wasta-Linux software
+offline by memory stick or external hard drive” and follow the
+procedure described in the “Installing new software” section of
+that document. 
+</p>
+<h4 class="western"><a name="Finishing-the-update-process"></a>Finishing
+the update process</h4>
+<p>The wasta-offline “Ready” message shown above should still be
+displaying on your desktop. You can now, click the <strong>Finish</strong>
+button to formally end the Wasta-Offline session and close the
+“Ready”  message.</p>
+<p>At this point the system has returned back to &quot;normal&quot;
+and will look for updates, as before, by using the Internet. If the
+system were somehow brought to a town and connected, then it would be
+ready to receive downloads and updates via the Internet. 
+</p>
+<p>Since you have just completed the update process, you can now
+&quot;Safely Remove&quot; the USB memory stick. Hover the mouse over
+the icons found on the lower right corner of the desktop as you look
+for the <b>Removable drives </b><span style="font-weight: normal">icon</span><span style="font-weight: normal">:</span></p>
+<p><img src="wasta-docs-images/Removable-Drives-Tray-Icon.png" name="Image39" align="left" width="376" height="63">
+  <br clear="left"/>
+</img>
+Click
+on the <b>Removable drives</b><span style="font-weight: normal"> icon
+to display the pop up menu:</span> 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Removable-Drives-Tray-popup-menu-Kingston.png" name="Image40" align="left" width="440" height="139">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">The USB memory stick
+we are demonstrating is named <b>KINGSTON</b><b>.</b> In the
+illustration above it is the only device listed in the removable
+drives menu list (there may be other drives listed for your
+computer). Click on the up-pointing arrow icon shown above to safely
+remove the external drive containing the wasta-offline updates
+(mirror). The icon and pop up menu will disappear when it is safe to
+remove the USB device from the computer. You may also see a
+notification at the top of your screen that looks like this:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/You-can-now-unplug-LM-UPDATES.png" name="Image41" align="left" width="495" height="49">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">If you have multiple
+target computers running Wasta-Linux, you can do the same process on
+all of them without accessing the Internet from any of the target
+computers. You can follow the above process as often as there are new
+updates on memory stick. 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">For more detailed
+information on how to get the latest software updates loaded on the
+memory stick or external USB drive, see these documents: 
+</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">“How to get
+	software updates for a Full Wasta-Offline Mirror residing on a 1TB
+	USB hard drive”</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">“How to get
+	software updates from one Wasta computer and transfer them to
+	another Wasta computer using wasta-offline-setup”</p>
+</ul>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">The following
+procedures describe one-time actions that you may need to do before
+you can follow the steps described above in the main documentation:</p>
+<h3 class="western"><a name="Installing_wasta-offline-setup_on_the_source_computer"></a>
+Preliminary Procedure 1. Installing wasta-offline-setup on the
+“source” computer(s)</h3>
+<p><span style="font-weight: normal">Do this procedure if the source
+computer has never before been used as a source computer for
+wasta-offline-setup. The procedure shows how to install the
+wasta-offline-setup program on the computer. If there is more than
+one source computer, this procedure will need to be done one time on
+each </span><span style="font-weight: normal">of the</span><span style="font-weight: normal">
+source computer</span><span style="font-weight: normal">s functioning
+as the source for offline software updates</span><span style="font-weight: normal">.</span></p>
+<h4 class="western">Is wasta-offline-setup installed on the “source”
+computer(s)?</h4>
+<p style="margin-bottom: 0in; line-height: 100%">Check to see if the
+program called <b>wasta-offline-setup </b><span style="font-weight: normal">is
+</span><span style="font-weight: normal">already </span><span style="font-weight: normal">installed
+</span><span style="font-weight: normal">or not, </span><span style="font-weight: normal">on
+the computer that is to function as the “source” computer. </span><span style="font-weight: normal">The
+computer  or computers we call the “source” computer is</span><span style="font-weight: normal">
+the computer that has </span><span style="font-weight: normal">more
+recently</span><span style="font-weight: normal"> had software
+updates done </span><span style="font-weight: normal">to it</span><span style="font-weight: normal">.
+</span><span style="font-weight: normal">It is</span><span style="font-weight: normal">
+the computer you will </span><span style="font-weight: normal">be
+getting</span><span style="font-weight: normal"> the updates from</span><span style="font-weight: normal">.
+</span><span style="font-weight: normal">T</span><span style="font-weight: normal">he
+</span><span style="font-weight: normal">wasta-offline-setup </span><span style="font-weight: normal">program
+is not </span><span style="font-weight: normal">generally </span><span style="font-weight: normal">installed
+</span><span style="font-weight: normal">w</span><span style="font-weight: normal">hen
+Wasta Linux is first installed on a computer </span><span style="font-weight: normal">-
+i</span><span style="font-weight: normal">t would be installed if the
+computer was previously used to prepare a </span><span style="font-weight: normal">memory
+stick for </span><span style="font-weight: normal">wasta-offline </span><span style="font-weight: normal">use.
+</span>
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-weight: normal">Look
+at the list of programs in the </span><b>Administration</b><span style="font-weight: normal">
+category of the main </span><b>Menu </b><b>(scroll down the list)</b>.
+If it only lists <b>wasta [Offline]</b>, and not <b>wasta [Offline]
+setup</b>, as shown here:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Menu-Administration-wasta-offline-setup-not-installed.png" name="Image1" align="left" width="586" height="215">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">then the first thing
+we need to do is to install <b>wasta-offline-setup</b><span style="font-weight: normal">
+</span><span style="font-weight: normal">on the source machine. </span><span style="font-weight: normal"><a href="#Install_wasta-offline-setup">Skip
+down to the Install wasta-offline-setup section below</a>.</span></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-weight: normal">If
+</span><b>wasta [Offline] setup</b><span style="font-weight: normal">
+is already installed it should be listed in the Administration
+category of the Menu and will </span><span style="font-weight: normal">be
+located at this position in the list of Administration programs</span><span style="font-weight: normal">:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<img src="wasta-docs-images/Menu-Administration-wasta-offline-setup-installed.png" name="Image2" align="left" width="598" height="219">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-weight: normal">If
+</span><b>wasta [Offline] setup</b><span style="font-weight: normal">
+is listed there under wasta [Offline], the program </span><span style="font-weight: normal">we
+need </span><span style="font-weight: normal">is already installed
+and you can <a href="#Run_wasta_offline_setup">skip down to the </a></span><a href="#Run_wasta_offline_setup"><b>Run
+wasta-offline-setup</b></a><span style="font-weight: normal"><a href="#Run_wasta_offline_setup">
+section</a> of this document.</span></p>
+<h4 class="western">Install wasta-offline-setup</h4>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+If you do not see <b>wasta [Offline] setup</b> in the computer’s
+Administration programs list, you will need to install the
+<b>wasta-offline-setup</b> program <b>from the Internet</b>.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Fortunately, the
+wasta-offline-setup program is a relatively small download from the
+Internet – only about 10kb. If you have Internet access you can use
+the Ubuntu Software Center to download it and install it. (Note that
+the Ubuntu Software Center will not work if you do not have Internet
+access):</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Ubuntu-Software-Center-Menu-Item.png" name="Image3" align="left" width="588" height="283">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">From the Main menu
+Select the Administration category, scroll down and select <b>Ubuntu
+Software Center</b><span style="font-weight: normal">. The Ubuntu
+Software Center </span><span style="font-weight: normal">program </span><span style="font-weight: normal">will
+</span><span style="font-weight: normal">run and </span><span style="font-weight: normal">appear
+</span><span style="font-weight: normal">like this</span><span style="font-weight: normal">:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Ubuntu-Software-Center-initial-screen.png" name="Image4" align="left" width="651" height="369">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">There is a search
+box in the upper right part of the Ubuntu Software Center. Type this:</p>
+<p style="margin-bottom: 0in; line-height: 100%">  
+<b>wasta-offline-setup</b></p>
+<p style="margin-bottom: 0in; line-height: 100%">into that search
+box. As you type you should see the possible applications narrow down
+to just one – the wasta-offline-setup program as shown in the
+illustration below:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Ubuntu-Software-Center-typed-wasta-offline-setup.png" name="Image5" align="left" width="539" height="291">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Click on the <b>Create
+or Update a wasta-offline “Locale Cache Repository”
+wasta-offline-setup</b><span style="font-weight: normal"> item </span><span style="font-weight: normal">to
+highlight it</span><span style="font-weight: normal">: </span>
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<img src="wasta-docs-images/Ubuntu-Software-Center-selected-wasta-offline-setup.png" name="Image6" align="left" width="537" height="296">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-weight: normal">Then
+click on the </span><b>Install</b><span style="font-weight: normal">
+button to start installing the wasta-offline-setup program on your
+computer.</span></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-weight: normal">The
+</span><span style="font-weight: normal">program</span><span style="font-weight: normal">
+will </span><span style="font-weight: normal">ask you to enter your
+</span><span style="font-weight: normal">administrative </span><span style="font-weight: normal">password</span><span style="font-weight: normal">:</span></p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Ubuntu-Software-Center-enter-password.png" name="Image7" align="left" width="665" height="324">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Enter the user’s
+administrative password and the press the <b>Authenticate</b> button.
+The password is required any time you install or update software in
+Wasta. The installation should happen quickly, and then you should
+see:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Ubuntu-Software-Center-installed.png" name="Image8" align="left" width="617" height="316">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Note the green check
+mark now next to the wasta-offline-setup item. Also note that if you
+wanted to remove the wasta-offline-setup program (or other installed
+software) after it is installed, you could search for the program by
+name in the search box and remove it using the <b>Remove</b> button
+in the Ubuntu Software Center. 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">After you have
+installed wasta-offline-setup with this method it will not need to be
+installed again, but will be available for transferring the software
+updates from this “source” computer to other “target”
+computers without having to access the Internet for updating those
+other computers. 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">If you do not need
+to follow Preliminary Procedure 2 below you can <a href="#Running_wasta-offline-setup_on_the_source_computer">click
+on this link to go back up and follow the main steps for using
+wasta-offline-setup above</a>.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h3 class="western"><a name="Preparing_a_fresh_memory_stick_for_wasta-offline-setup"></a>
+Preliminary Procedure 2. Preparing a fresh memory stick for use by
+wasta-offline-setup</h3>
+<p style="margin-bottom: 0in; line-height: 100%">If this is the first
+use of this memory stick, it won’t have any wasta-offline folder on
+it. This preliminary procedure will describe two different methods
+for creating a wasta-offline folder:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Create a
+	wasta-offline folder on a memory stick using the File Manager</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Create a
+	wasta-offline folder on a memory stick from within
+	wasta-offline-setup</p>
+</ul>
+<h4 class="western">Create a wasta-offline folder on a memory stick
+using the File Manager</h4>
+<p style="margin-bottom: 0in; line-height: 100%">This method might be
+used before wasta-offline is installed on any computer, using the
+File Manager.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><b>Plug in the fresh
+memory stick into the USB port of the computer</b>.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><b>Start up the File
+Manager</b> by clicking once on the <b>Files</b> icon in the task bar
+as shown below:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Files-Tray-Icon-highlighted.png" name="Image45" align="left" width="310" height="114">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">The File Manager
+runs and appears on screen similar to the illustration below:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Files-Nemo-showing-KINGSTON-Device.png" name="Image46" align="left" width="665" height="409">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">The memory stick
+shows up as a USB device under the Devices list in the left panel.
+The little round symbol with the up arrow over a bar indicates that
+the device is mounted in the file system and its contents can be
+accessed.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Click on the
+KINGSTON name in the device list to highlight it. The screen changes
+to look like the illustration shown below:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Files-Nemo-showing-KINGSTON-Device-create-new-folder.png" name="Image47" align="left" width="557" height="342">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">With the KINGSTON
+device highlighted, hover your mouse over the icons in the upper
+right part of the File Manager’s tool bar, until you see the
+“Create a new folder” tip below the icon that is shown in the red
+square in the above illustration. Click on that “<b>Create a new
+folder</b>” icon and “type-and-replace” the ‘Untitled Folder’
+name with <span style="font-weight: normal">a different name:</span>
+<b>wasta-offline</b><span style="font-weight: normal"> and press the
+</span><b>Enter</b><span style="font-weight: normal"> key when done.
+The new folder will appear in the File Manager:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<img src="wasta-docs-images/Files-Nemo-showing-KINGSTON-Device-new-folder-created.png" name="Image48" align="left" width="615" height="378">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-weight: normal">T</span><span style="font-weight: normal">he
+memory stick now has a </span><b>wasta-offline</b><span style="font-weight: normal">
+folder created on it, and it can be plugged into the desired “source”
+computer.</span></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-weight: normal">If
+you used the above procedure to create the wasta-offline folder on
+the memory stick, you have come to the </span><span style="font-weight: normal">end
+of the Preliminary Procedure </span><span style="font-weight: normal">2</span><span style="font-weight: normal">.
+You can now </span><span style="font-weight: normal">go back</span><span style="font-weight: normal">
+up to the main wasta-offline-setup steps – <a href="#Running_wasta-offline-setup_on_the_source_computer">Running
+wasta-offline-setup on the source computer</a>. </span><span style="font-weight: normal">The
+section below shows an alternate way to create a wasta-offline folder
+– from within the wasta-offline-setup program itself.</span></p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h4 class="western">Create a wasta-offline folder on a memory stick
+from within wasta-offline-setup</h4>
+<p style="margin-bottom: 0in; line-height: 100%">This method might be
+used if wasta-offline-setup is already installed on a source computer
+and you have started it before realizing that your memory stick
+doesn’t have a wasta-offline folder on it. 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><b>Plug in the fresh
+memory stick into the USB port of the source computer</b>. 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Then <b>start up
+wasta-offline-setup</b> from the Administrator category of the main
+Menu:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Menu-Administration-wasta-offline-setup-installed.png" name="Image42" align="left" width="665" height="243">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">It prompts you for a
+password:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Enter-Password-for-wasta-offline-setup.png" name="Image43" align="left" width="392" height="210">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Enter the password
+and click <b>OK</b>. The wasta-offline-setup program then presents
+the following information and confirmation message:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Wasta-offline-setup-first-dialog.png" name="Image44" align="left" width="498" height="331">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Click the <b>Yes</b>
+button to continue. 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">The program then
+runs and scans the computer’s USB devices for a device that has a
+wasta-offline folder in its root directory. If it doesn’t find such
+a folder, it will prompt you to “Select or Create a ‘wasta-offline’
+Folder as shown in this dialog:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Wasta-Offline-Setup-Select-Folder-not-created-yet.png" name="Image13" align="left" width="510" height="336">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">In the above
+illustration, the name of my memory stick is “KINGSTON”. It is
+listed in the left panel of the dialog but the program doesn’t yet
+know that I want to use it (currently there is no wasta-offline
+folder in its root directory). So, you would click on the name
+<b>KINGSTON</b> to select it as shown below:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Wasta-Offline-Setup-Select-memory-stick.png" name="Image14" align="left" width="548" height="361">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Once you have
+selected your memory stick (it will likely have its own name), you
+will need to click on the icon in the upper right corner of the
+dialog shown below to create a folder on the memory stick:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Wasta-Offline-Setup-Create-folder.png" name="Image15" align="left" width="572" height="333">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Type the name</p>
+<p style="margin-bottom: 0in; line-height: 100%">   <b>wasta-offline</b></p>
+<p style="margin-bottom: 0in; line-height: 100%">in the edit box as
+shown below:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Wasta-Offline-Setup-Type-Folder-Name-wasta-offline.png" name="Image16" align="left" width="582" height="269">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">and then click on
+the <b>Create</b> button. Once the wasta-offline folder has been
+created on the memory stick, the dialog will appear like the one
+below:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Wasta-Offline-Setup-wasta-offline-folder-created.png" name="Image17" align="left" width="587" height="262">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p>At this point, if the memory stick is plugged into a “source”
+computer from which you want to collect software updates, you can
+proceed with the wasta-offline-setup process and click <b>OK</b>.
+Otherwise, you can click Cancel since the memory stick now has a
+wasta-offline folder created on it, and it can be plugged into the
+desired “source” computer.</p>
+<p><span style="font-weight: normal">If you used the above procedure
+to create the wasta-offline folder on the memory stick, you have come
+to the </span><span style="font-weight: normal">end of the
+Preliminary Procedure </span><span style="font-weight: normal">2</span><span style="font-weight: normal">.
+You can now </span><span style="font-weight: normal">go back</span><span style="font-weight: normal">
+up to the main wasta-offline-setup steps – <a href="#Running_wasta-offline-setup_on_the_source_computer">Running
+wasta-offline-setup on the source computer</a>. </span>
+</p>
+<div title="footer">
+	<p style="margin-top: 0.2in; margin-bottom: 0in; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 10pt"><b>Transferring
+	software updates offline via memory stick   <sdfield type=DOCINFO subtype=CHANGE format=DATE sdnum="1033;1033;D. MMM. YYYY">2. Aug. 2017</sdfield>	Page
+	<sdfield type=PAGE subtype=RANDOM format=PAGE>23</sdfield> of <sdfield type=DOCSTAT subtype=PAGE format=PAGE>23</sdfield></b></font></font></p>
+</div>
+</body>
+</html>

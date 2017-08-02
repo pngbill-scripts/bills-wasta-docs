@@ -1,0 +1,616 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 5.3.4.2 (Linux)"/>
+	<meta name="created" content="2017-07-06T14:10:46.497752765"/>
+	<meta name="changed" content="2017-08-02T17:11:28.036255789"/>
+	<style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+		h2.western { font-family: "Liberation Sans", sans-serif; font-size: 16pt }
+		h2.cjk { font-family: "WenQuanYi Micro Hei"; font-size: 16pt }
+		h2.ctl { font-family: "FreeSans"; font-size: 16pt }
+		h3.western { font-family: "Liberation Sans", sans-serif; font-size: 14pt }
+		h3.cjk { font-family: "WenQuanYi Micro Hei"; font-size: 14pt }
+		h3.ctl { font-family: "FreeSans"; font-size: 14pt }
+		h4.western { font-family: "Liberation Sans", sans-serif; font-size: 13pt; font-style: italic }
+		h4.cjk { font-family: "WenQuanYi Micro Hei"; font-size: 13pt; font-style: italic }
+		h4.ctl { font-family: "FreeSans"; font-size: 13pt; font-style: italic }
+		a:link { so-language: zxx }
+	</style>
+</head>
+<body lang="en-US" dir="ltr">
+<h2 class="western" align="center">How to get software updates for a
+Full Wasta-Offline Mirror<br/>
+residing on a 1TB USB hard drive<br/>
+by
+Bill Martin (revised <sdfield type=DOCINFO subtype=CHANGE format=DATE sdnum="1033;1033;D. MMMM YYYY">2. August 2017</sdfield>)</h2>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h3 class="western">What is this document?</h3>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Wasta-logo-low-res.jpg" name="Image55" align="left" width="331" height="71" border="0"/>
+This
+document is an illustrated guide that shows how to retrieve the
+latest Linux software and updates for use by the Wasta-Offline
+program from the Internet repositories (or software mirrors) saving
+those updates on an external 1TB USB drive (known as a “full
+software mirror”). Wasta Linux users can then use the external 1TB
+USB drive to update the software on one or more Wasta Linux computers
+using the Wasta-Offline program which is pre-installed on all Wasta
+Linux systems. 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h3 class="western">Who is this document for?</h3>
+<p style="margin-bottom: 0in; line-height: 100%">This document is
+designed to be a guide for an Advisor, Consultant, or Technician, as
+it involves the running of a script and interacting with prompts in a
+terminal window. But, don’t worry. The steps are well illustrated
+with screen shots and should be relatively easy for most users of
+Wasta Linux to follow.</p>
+<h3 class="western">When does it make sense to use this procedure</h3>
+<p style="margin-bottom: 0in; line-height: 100%">It makes sense:</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">When the 1TB
+	drive containing the Fulll Wasta-Offline Mirror can be periodically
+	updated using a reasonably fast, reliable, and inexpensive local
+	Internet connection, or</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">When the 1TB
+	drive can be periodically taken to a location where Internet access
+	is “free” or low cost, such as a regional center (like Ukarumpa)
+	where the center keeps its own Linux software mirrors that you can
+	access, to obtain the latest software updates for the Full
+	Wasta-Offline Mirror</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Where you
+	need to Install Wasta Linux on potentially many computers and bring
+	those computers up to date in the most efficient way possible</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Where new
+	software needs to be installed and that software doesn’t exist yet
+	on any available Wasta computer 
+	</p>
+</ul>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h3 class="western">Related How To documents</h3>
+<ul>
+	<li/>
+<p>“How to obtain a Full Wasta-Offline Mirror residing on a
+	1TB USB hard drive”</p>
+	<li/>
+<p>“How to update your Wasta-Linux software offline by
+	memory stick or external hard drive”</p>
+	<li/>
+<p>“How to get software updates from one Wasta computer and
+	transfer them to another Wasta computer using wasta-offline-setup”</p>
+</ul>
+<h3 class="western">Where does Linux software reside? Is it secure?</h3>
+<p style="margin-bottom: 0in; line-height: 100%">Most Linux software
+is stored and maintained on public servers known as software
+repositories or mirrors. Those repositories and mirrors are highly
+secure and designed so that only trusted software developers are
+allowed to contribute and upload software to them. Anyone can “read”
+or “copy” software packages from them, but only software that has
+been “signed” by the use of encrypted “keys” is allowed into
+them.</p>
+<h3 class="western">How is Linux software kept up to date?</h3>
+<p style="margin-bottom: 0in; line-height: 100%">Linux software is
+open source and the software used in Wasta Linux is being regularly
+updated by its developers who may enhance the software with new
+features, fix bugs, and issue security updates. Those developers
+securely post updates to the appropriate software repositories. 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">The software on your
+Wasta Linux computer can be kept up to date directly from the
+Internet, or indirectly - by accessing a “mirror” of the Internet
+repositories that have been previously downloaded onto an external
+USB hard drive – without needing to access the Internet. 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">This guide tells how
+to get the latest updates from the Internet (or other already updated
+mirror) and ensure that those updates are stored on an external USB
+hard drive that is dedicated for that purpose. The program we use to
+retrieve Linux software and updates from the repositories and mirrors
+is called <b>apt-mirror</b>. It is a command-line only program so it
+does not have a nice graphical interface, so I’ve created a script
+that makes it relatively easy to use apt-mirror. The script file is
+named <b>update-mirror.sh</b> and is located in the root directory of
+the 1 TB Full Wasta-Offline Mirror external USB drives that I
+distribute. 
+</p>
+<h3 class="western">Getting Started</h3>
+<h4 class="western">Step 1. Plug in the Full Wasta-Offline Mirror USB
+external hard drive</h4>
+<p style="margin-bottom: 0in; line-height: 100%"><strong><span style="font-weight: normal">With
+Wasta Linux booted up and running</span></strong><strong><span style="font-weight: normal">,
+insert the latest wasta-offline external drive </span></strong><strong><span style="font-weight: normal">you
+received from Bill Martin </span></strong><strong><span style="font-weight: normal">that
+contains the </span></strong><strong><span style="font-weight: normal">Full
+Wasta Offline Mirror</span></strong><strong><span style="font-weight: normal">
+already installed </span></strong><strong><span style="font-weight: normal">on
+it</span></strong><strong><span style="font-weight: normal">.</span></strong></p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Plug-in-Wasta-Offline-External-Drive.png" name="Image1" align="left" width="290" height="219">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">The wasta-offline
+program should start automatically within a few seconds after a the
+wasta-offline external hard drive is plugged in. 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h4 class="western">Step 2. Cancel at the password prompt</h4>
+<p style="margin-bottom: 0in; line-height: 100%">You will be updating
+the wasta-offline software on this external drive so you will <b>not</b>
+be running wasta-offline in this case. So click the <b>Cancel</b>
+button on the “Authentication is required to run wasta [Offline}”
+dialog:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Cancel-Enter-Password-for-wasta-offline.png" name="Image6" align="left" width="458" height="234">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Clicking <b>Cancel</b>
+will quit the wasta-offline program. 
+</p>
+<h4 class="western">Step 3. Start up the File Manager (“Files”)</h4>
+<p style="margin-bottom: 0in; line-height: 100%">Keep the external
+1TB drive plugged into the computer for the following steps. 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Hover your mouse
+over the icons in the panel of programs near the lower left corner of
+your screen until you see the <b>Files</b> program. Run the <b>File
+Manager</b> program by clicking once on the <b>Files</b> tray icon:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Files-Tray-Icon-highlighted.png" name="Image3" align="left" width="309" height="114">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">We usually refer to
+the <b>Files</b> program as the <b>File Manager</b> (or by its real
+Linux name, which is <b>Nemo</b>). Here is a view of what you should
+see when the <b>File </b><b>Manager</b> program is running - with the
+1TB external Full Wasta-Offline Mirror plugged into the computer:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Files-Nemo-showing-LM-UPDATES-Device.png" name="Image4" align="left" width="606" height="327">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Under <b>Devices</b><span style="font-weight: normal">
+</span><span style="font-weight: normal">i</span>n the left panel you
+should see the <b>LM-UPDATES</b> device, which is the label Bill has
+given to the external drive containing the full wasta-offline mirror.
+The presence of the little round icon to its right indicates that the
+LM-UPDATES device is “mounted” in the computer’s file system. 
+</p>
+<h4 class="western">Step 4. Select the external USB device
+(“LM-UPDATES”)</h4>
+<p style="margin-bottom: 0in; line-height: 100%">Now select the
+<b>LM-UPDATES</b> device by clicking on it with your mouse pointer.
+The Files program should now display the contents of the LM-UPDATES
+device in the right hand pane of the Files’ window as shown below:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Files-Nemo-showing-update-mirror.sh-script.png" name="Image2" align="left" width="608" height="328">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">The <b>update-mirror.sh</b>
+file is a script file that we will run to update the software package
+data on the external hard drive. It is shown highlighted in the
+illustration above. 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">The <b>update-mirror.sh</b>
+script is one of a collection of wasta-scripts created by Bill Martin
+to manage the creation and maintenance of Full Wasta-Offline Mirrors
+on multiple 1TB USB hard drives. The scripts are maintained in a
+GitHub repository located at:
+<a href="https://github.com/pngbill-scripts/wasta-scripts">https://github.com/pngbill-scripts/wasta-scripts</a>.
+A copy of this repository that includes all of the wasta-scripts is
+provided on the USB external drive provided by Bill Martin.</p>
+<h4 class="western">Step 5. Run the update-mirror.sh script</h4>
+<p style="margin-bottom: 0in; line-height: 100%">To run the
+update-mirror.sh script you will need to access the Internet, so make
+sure that your computer has access to the Internet.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><b>WARNING: You
+should continue this procedure only if your Internet data plan is
+capable of downloading gigabytes of data at no extra cost or at
+reasonable cost. The update procedure that we are about to do may
+need to download anywhere from a few kilobytes up to a few gigabytes.</b></p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><b>With your mouse
+double click on the update-mirror.sh file.</b> You should see the
+following dialog:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Run-in-Terminal-dialog.png" name="Image5" align="left" width="516" height="127">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Click on the <b>Run
+in Terminal</b> button. The computer will open a Terminal window and
+the <b>update-mirror.sh</b> script will start running inside that
+Terminal window:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Terminal-waiting-for-password.png" name="Image7" align="left" width="415" height="277">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<h4 class="western">Step 6. Type your password (“blindly”)</h4>
+<p style="margin-bottom: 0in; line-height: 100%">The Terminal prompts
+the user (in this case the user is bill) for <b>[sudo] password for
+bill:</b><span style="font-weight: normal"> </span><span style="font-weight: normal">The
+</span><span style="font-weight: normal">password is the password
+that I enter </span><span style="font-weight: normal">when Wasta
+starts up </span><span style="font-weight: normal">at login. </span><span style="font-weight: normal">If
+the user is not an administrator, the password needs to be the
+password for the administrator. </span><span style="font-weight: normal">The
+prompt will have your user name instead of bill. </span>
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-weight: normal">When
+typing your password </span><span style="font-weight: normal">you
+need to take care, because in a Terminal, Linux does not echo the
+keys you are typing for security reasons. Hence, </span><b>you will
+need to type your password blindly with the screen giving no feedback
+to help you</b><span style="font-weight: normal">. Press the Enter
+key after typing your password. If you have typed your password
+correctly, the script will move on. If you make a mistake, the
+Terminal will </span><span style="font-weight: normal">say “Sorry,
+try again.” and </span><span style="font-weight: normal">continue
+to ask for your password until you type it correctly – or </span><span style="font-weight: normal">you
+can</span><span style="font-weight: normal"> abort the running of the
+script by typing Ctrl + C (hold down the Ctrl key and press the C
+key, then release both) </span><span style="font-weight: normal">if
+you decide not to proceed</span><span style="font-weight: normal">.</span></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<h4 class="western">Step 7. Tell the script where to get software
+updates (type number 1, 2, 3, or 4)</h4>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-weight: normal">O</span><span style="font-weight: normal">nce
+you have successfully entered your password into the Terminal, the
+script continues to run and will output some information to the
+screen. </span><span style="font-weight: normal">In a </span><span style="font-weight: normal">short
+time</span><span style="font-weight: normal">, it will pause for 60
+seconds and wait for your to respond to the prompt </span><span style="font-weight: normal">illustrated
+in the screen shot below</span><span style="font-weight: normal">:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<img src="wasta-docs-images/Terminal-waiting-for-user-to-select-1-to-4.png" name="Image8" align="left" width="655" height="453">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+This documentation assumes that you have good/affordable Internet
+access so you should type the number <b>2</b> to indicate to the
+script that you have selected the following option:</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><b>2) Get software
+updates directly from the Internet (might be expensive!)</b></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-weight: normal">If
+you do not respond within 60 seconds the </span><b>4) Quit</b><span style="font-weight: normal">
+option will automatically be selected and the script will abort
+without downloading any information </span><span style="font-weight: normal">(and
+show the following message in the Terminal)</span><span style="font-weight: normal">:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<img src="wasta-docs-images/Terminal-no-selection-made.png" name="Image9" align="left" width="641" height="69">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+and you can press the <b>Enter</b> key to close the terminal window.
+If the countdown gets to 1 before you can respond, you can simply run
+the update-mirror.sh script more than once if necessary to complete
+the operation of downloading software updates. 
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+The number 1 option would be selected by users located at Ukarumpa
+who have access to the Linux mirrors that are kept up to date on the
+Ukarumpa PNG servers. The number 3 option would be selected by
+someone who has good access to a different server (in which case the
+script would ask you to type in a network path to that server). The
+number 4 option will just quit running the update-mirror script
+before downloading any data. 
+</p>
+<h4 class="western">Step 8. Wait for the software updates to download</h4>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+Assuming that you select option <b>2</b> the script continues. The
+script makes some checks and installs and configures the apt-mirror
+program if necessary. It then begins the download of some index files
+that it uses to determine what software packages need to be updated
+in the existing mirror:</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<img src="wasta-docs-images/Terminal-processing-indexes.png" name="Image10" align="left" width="443" height="328">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+The above processing will take a few minutes. Once the “Processing
+indexes...” step has finished, the script will automatically start
+the actual download of the software updates:</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<img src="wasta-docs-images/Terminal-x-will-be-downloaded-into-archive.png" name="Image11" align="left" width="479" height="355">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+Note the amount of data that “will be downloaded into archive.”
+Depending on how long since you last updated the mirror, this amount
+can range from 0 bytes to a number of Gigabytes of data. The time
+needed will depend on the speed of your Internet/network connection
+and amount of data to download.</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+The process continues automatically until the download process has
+completed. Once the download has completed, the script does some
+house-cleaning:</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<img src="wasta-docs-images/Terminal-post-mirror-cleanup.png" name="Image12" align="left" width="591" height="222">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+and will present another (optional) timed prompt that looks like
+this:</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<img src="wasta-docs-images/Terminal-hash-sum-mismatch-bypass.png" name="Image13" align="left" width="601" height="126">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+If you are watching the script run when this prompt appears, you can
+safely type <b>1</b> or just allow the countdown to go down to 1,
+after which the script will finish normally:</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<img src="wasta-docs-images/Terminal-script-has-finished.png" name="Image14" align="left" width="628" height="137">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+At this point just press the <b>Enter</b> key to close the Terminal
+window. 
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+You would only run the postmirror2.sh script if you saw a warning
+message in the script’s output that indicated that it encountered
+“Hash Sum mismatch errors”.</p>
+<h4 class="western">Step 9. Press Enter to exit and close the
+Terminal session 
+</h4>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-weight: normal">Once
+the script has finished and you have pressed </span><b>Enter</b><span style="font-weight: normal">
+to close the Terminal window.</span></p>
+<h4 class="western">Step 10. Remove the USB external hard drive</h4>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-weight: normal">Y</span><span style="font-weight: normal">ou
+can </span><span style="font-weight: normal">now</span><span style="font-weight: normal">
+</span>&quot;Safely Remove&quot; the external USB hard drive mirror.
+Hover the mouse over the icons found on the lower right corner of the
+desktop as you look for the <b>Removable drives </b><span style="font-weight: normal">icon</span><span style="font-weight: normal">:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Removable-Drives-Tray-Icon.png" name="Image15" align="left" width="433" height="73">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Click on the
+<b>Removable drives</b><span style="font-weight: normal"> icon to
+display the pop up menu:</span> 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="wasta-docs-images/Removable-Drives-Tray-popup-menu.png" name="Image16" align="left" width="398" height="132">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+The external USB drive mirror we are demonstrating is named
+<b>LM-UPDATES.</b> In this case it is the only device listed in the
+removable drives menu list (there may be other drives listed for your
+computer). Click on the icon shown in the illustration above to
+safely remove the external drive containing the wasta-offline updates
+(mirror).</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+You may see a brief notification at the top of your screen that says:</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<img src="wasta-docs-images/You-can-now-unplug-LM-UPDATES.png" name="Image19" align="left" width="469" height="46">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+Unplug the external USB drive.</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+If instead, you see a brief notification that says:</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<img src="wasta-docs-images/Failed-to-mount-LM-UPDATES.png" name="Image17" align="left" width="416" height="92">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+make sure that you have pressed the Enter key within the Terminal
+window and the Terminal window has closed:</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<img src="wasta-docs-images/Terminal-script-has-finished.png" name="Image18" align="left" width="628" height="137">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+If the “Failed to unmount...” notification persists even after
+you have closed the Terminal (and it is not minimized on the task
+bar), it is generally safe to go ahead and unplug the external USB
+hard drive</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+even if the “Failed to unmount...” notification persists when you
+try to “safely remove” the drive with the “Removable drives”
+pop up menu as shown farther above.</p>
+<h4 class="western">Step 11. Keep your Full Wasta-Offline Mirror up
+to date</h4>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+You may run the update-mirror.sh script periodically as described in
+this document. Update your mirror as often as you want to collect any
+software updates to bring the external 1TB mirror up to date.</p>
+<h4 class="western">Step 12. Use your Full Wasta-Offline Mirror to
+update and install software on any Wasta Computer</h4>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+<b>Next logical step</b> – use the updated 1TB Full Wasta-Offline
+Mirror to update the Wasta Linux system and install Linux software on
+your computers! That process is described and illustrated in the
+document named: “How to update your Wasta-Linux software offline by
+memory stick or external hard drive”.</p>
+<div title="footer">
+	<p style="margin-top: 0.2in; margin-bottom: 0in; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 10pt"><b>How
+	to Get the Latest Wasta-Offline Mirror Updates		 <sdfield type=DOCINFO subtype=CHANGE format=DATE sdnum="1033;1033;D. MMM. YYYY">2. Aug. 2017</sdfield>			Page
+	<sdfield type=PAGE subtype=RANDOM format=PAGE>10</sdfield> of <sdfield type=DOCSTAT subtype=PAGE format=PAGE>10</sdfield></b></font></font></p>
+</div>
+</body>
+</html>

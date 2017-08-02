@@ -1,0 +1,2235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 5.3.4.2 (Linux)"/>
+	<meta name="author" content="Jerry Pfaff"/>
+	<meta name="created" content="2013-06-18T14:53:02"/>
+	<meta name="changed" content="2017-08-02T17:09:05.037879454"/>
+	<style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.08in }
+		h3.western { font-family: "Arial", sans-serif; font-size: 14pt }
+		h3.cjk { font-family: "Droid Sans Fallback"; font-size: 14pt }
+		h3.ctl { font-family: "Lohit Hindi"; font-size: 14pt }
+		h2.western { font-family: "Arial", sans-serif; font-size: 16pt }
+		h2.cjk { font-family: "Droid Sans Fallback"; font-size: 16pt }
+		h2.ctl { font-family: "Lohit Hindi"; font-size: 16pt }
+		h4.western { font-family: "Arial", sans-serif; font-size: 13pt; font-style: italic }
+		h4.cjk { font-family: "Droid Sans Fallback"; font-size: 13pt; font-style: italic }
+		h4.ctl { font-family: "Lohit Hindi"; font-size: 13pt; font-style: italic }
+		h5.western { font-family: "Arial", sans-serif; font-size: 11pt }
+		h5.cjk { font-family: "Droid Sans Fallback"; font-size: 11pt }
+		h5.ctl { font-family: "Lohit Hindi"; font-size: 11pt }
+		a:link { so-language: zxx }
+	</style>
+</head>
+<body lang="en-US" dir="ltr">
+<h2 class="western" align="center">Installing Wasta Linux – totally
+replacing Windows partitions<br/>
+by Bill Martin (revised <sdfield type=DOCINFO subtype=CHANGE format=DATE sdnum="1033;1033;D. MMMM YYYY">2. August 2017</sdfield>)</h2>
+<p align="center" style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>Important Note: These instructions
+tell how to </b><u><b>totally</b></u><b> replace the Windows system
+on a computer with a custom version of </b><b>the Ubuntu</b><b> Linux
+operating system </b><b>called Wasta Linux, which is </b><b>pre-configured
+for Bible translation work. Th</b><b>e installation</b><b> process
+will wipe out all data and files from the computer, so be sure that
+you have backed up all data that you want to save before proceeding
+with these installation steps. Step </b><b>8</b><b> below is where
+actual changes start to take place - you can abort the installation
+at any time before you get to the </b><b>point of </b><b>click</b><b>ing</b><b>
+on the &quot;Install Now&quot; button at the end of step </b><b>8</b><b>.</b></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0in"><b>(If you want to install
+</b><b>Wasta </b><b>Linux to dual boot with an existing Windows
+system see the document &quot;Installing </b><b>Wasta Linux</b><b> -
+to dual boot with an </b><b>e</b><b>xisting Windows system&quot;.)</b></p>
+<h3 class="western">What is this document?</h3>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Wasta-logo-low-res.jpg" name="Image55" align="left" width="331" height="71" border="0"/>
+This
+document is an illustrated guide that shows how to remove the Windows
+operating system entirely and install Wasta Linux as the only
+operating system installed on a computer. It describes how to boot
+Wasta from the “Live” memory stick and guides you through some
+checks to ensure that your computer’s hardware is working properly
+before you change anything on the computer. If you like what you see
+and want to install Wasta Linux and totally replace your Windows
+system, this document also shows you how to do that installation.</p>
+<h3 class="western">Who is this document for?</h3>
+<p style="margin-bottom: 0in">This document is designed to be a guide
+for an Advisor, Consultant, or Technician with some knowledge about
+booting and operating systems (or wants to learn!). This document
+describes how to make radical changes to the computer that cannot be
+easily reversed. The booting process for some computers can be
+different from other computers, so this document cannot predict all
+possible scenarios that might occur during the process of booting,
+removing the existing Windows system, and installing Wasta in its
+place. Hence, there is some risk that this process could turn your
+computer into a “brick” that can no longer boot to any operating
+system. That risk, I think, is small, but not zero. I think it is
+worth the risk, and if you also think so please proceed. The document
+is well illustrated. You will find it helpful if you read through the
+whole document before trying to execute it step by step. 
+</p>
+<h3 class="western">When does it make sense to use this procedure</h3>
+<p style="margin-bottom: 0in">It makes sense:</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in">If you are tired of the expense
+	and hassle of being tied to Microsoft Windows with its licensing
+	restrictions, its vulnerability to viruses and malware, its
+	time-consuming updates, and its encroachment on your privacy.</p>
+	<li/>
+<p style="margin-bottom: 0in">If you like to be able to freely
+	share your computer system and software with others that could
+	benefit from it without licensing restrictions.</p>
+	<li/>
+<p style="margin-bottom: 0in">If you want an operating system
+	and software that is highly secure and efficient - and specially
+	designed for the tasks that you do in your work.</p>
+	<li/>
+<p style="margin-bottom: 0in">If you have an older Windows XP
+	or other Windows computer that is no longer supported by Microsoft
+	and has become a security liability, and you want to give it new
+	life.</p>
+</ul>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<h3 class="western">Related How To documents:</h3>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in">&quot;Installing Wasta Linux -
+	to dual boot with an existing Windows system&quot;</p>
+</ul>
+<h3 class="western">What is a “Live” bootable memory stick?</h3>
+<p style="margin-bottom: 0in">A memory stick (also called “flash
+drive” or “thumb drive”) is a small memory storage device that
+can plug into a computer’s USB port (see illustration below). A
+“Live” memory stick installer is simply a bootable memory stick
+that can be used to boot a computer to the Wasta Linux system and try
+out Wasta Linux on the computer – without changing anything on that
+computer. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Booting from the “Live” Wasta
+memory stick enables you to try out the Wasta Linux system on your
+computer “before you buy” into it. When the Wasta “Live”
+system is shut down, no changes at all are made to the computer that
+booted Wasta Linux from the memory stick. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Inserting-memory-stick.png" name="Image17" align="left" width="310" height="207">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">While the computer is booted to Wasta
+Linux, if (and only if) you decide to do so, you can actually install
+Wasta Linux on the computer. The memory stick has all the software
+resources needed to do such an installation. It is a great way to try
+out Wasta Linux and see how it works on your computer. If you like
+the Wasta Linux system, the memory stick is also the tool we can use
+to install Wasta Linux on the computer.</p>
+<h3 class="western">Preparing a “Live” Wasta Linux memory stick
+installer</h3>
+<p style="margin-bottom: 0in">If you want to make your own Live Wasta
+Linux memory stick, you can prepare one from a Wasta Linux ISO image
+file. The Wasta ISO image files can be downloaded from the Wasta
+website at:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><a href="https://sites.google.com/site/wastalinux/home/download">https://sites.google.com/site/wastalinux/home/download</a></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">After downloading the ISO image, it
+cannot be simply copied to the memory stick. It must be written to
+the memory stick with special software that also makes the memory
+stick bootable. There are a number of ways this can be done. This
+Wasta web page tells how to create a bootable memory stick on a
+Windows computer using a downloaded ISO image:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><a href="https://sites.google.com/site/wastalinux/home/create-bootable-usb">https://sites.google.com/site/wastalinux/home/create-bootable-usb</a></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The following steps assume you have a
+USB memory stick containing an appropriate “Live” Wasta Linux
+installer that you prepared (see information above), or an equivalent
+memory stick installer you may have received from Bill Martin or
+other developer. These procedures assume you are using Bill Martin's
+installer which is contained on a USB memory stick labeled on the
+outside: &quot;Wasta 16.04.1.1&quot;.</p>
+<h3 class="western">Step 1. Get your computer to boot from a USB
+memory stick</h3>
+<p style="margin-bottom: 0in"><b>With the computer OFF, insert the
+Wasta 16.04.1.1 USB memory stick into the computer. </b>
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Unfortunately, booting a recently made
+computer from a USB memory stick is not as easy as it used to be.
+This document attempts to guide you through the steps you might have
+to follow in order for your computer to boot from the Live Wasta
+Linux memory stick. This Step 1 will describe 3 sub-steps: 
+</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in"><a href="#Step 1a">Step 1a</a>
+	Try to directly access the Boot Menu using a special key command at
+	boot time</p>
+	<li/>
+<p style="margin-bottom: 0in"><a href="#Step_1b">Step 1b</a>
+	Do a SHIFT + Restart from inside Windows</p>
+	<li/>
+<p style="margin-bottom: 0in"><a href="#Step 1c">Step 2c</a>
+	Change settings in the BIOS / UEFI</p>
+</ul>
+<p style="margin-bottom: 0in">You may need to follow one, two or all
+three of these sub-steps to be successful in getting your computer to
+boot from a Live Wasta Linux memory stick. Once you successfully boot
+to the Live Wasta memory stick, you can proceed to <a href="#Step_2">Step
+2</a> Boot Wasta to a “Live” session on the computer.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Before you turn the computer’s power
+on, please read the following background and hints:</p>
+<h4 class="western">Background: 
+</h4>
+<p style="margin-bottom: 0in">To experience Wasta Linux (and later
+install it), it is necessary to be able to boot from the Wasta Linux
+memory stick. That is fairly easy to do on older computers which used
+a boot process controlled by its “firmware” known as a “Basic
+Input Output System” or BIOS for short. Most Windows computers sold
+today are shipped with Windows 10, and have newer type of boot
+process controlled by its “firmware” that is called “Unified
+Extensible Firmware Interface” or UEFI for short. Linux can handle
+both booting processes, but the “Secure Boot” feature of UEFI
+equipped computers can make it more difficult (or impossible) to boot
+the computer from a memory stick. On UEFI equipped computers you
+typically have to first make some changes to the computer’s UEFI
+settings that control the boot startup process. But, even gaining
+access to the BIOS / UEFI settings on Windows computers can be
+challenging, because computer manufacturers don’t have a standard
+way to access the BIOS or the UEFI system. 
+</p>
+<h4 class="western">Hints about booting from a USB Drive:</h4>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in">On many older computers (with
+	Windows XP or Windows 7) the first power-on screen will tell what
+	keys can be used to get into a boot order menu or the setup menu.
+	You want to get into the boot order menu so that you can tell the
+	computer to boot from the USB memory stick (or USB HDD) instead of
+	from the computer's main hard drive.</p>
+	<li/>
+<p style="margin-bottom: 0in">Sometimes there is not much time
+	during which you can press F2 or F12 function key at the time the
+	computer first starts up. You may need to press the computer's power
+	button to ON with the finger of one hand, and immediately have a
+	finger of the other hand pressing on the special key command to
+	access the boot order menu – all before Windows itself starts to
+	boot. The proper key to press to interrupt the normal boot process
+	varies with different computers. It is often the F12 function key,
+	but it could be Esc, F8, F9, F10, F11, F12, or even the Enter key
+	(see list in <a href="#Step 1a">Step 1a</a> below).</p>
+	<li/>
+<p style="margin-bottom: 0in">On many newer computers (with
+	Windows 8.x or Windows 10) the computer is set to “Fast Boot” or
+	“Quiet Boot” making it impossible to access a boot menu before
+	Windows boots up. You may have to boot first into Windows, then hold
+	the Shift key down while making the computer do a Restart to access
+	special booting options (see more about this Shift + Restart method
+	in <a href="#Step_1b">Step 1b</a> below).</p>
+	<li/>
+<p style="margin-bottom: 0in">Once you are able to get the
+	computer to boot into a special boot menu or into the UEFI / BIOS
+	settings , you will need to <b>turn OFF or DISABLE its secure boot
+	setting</b>. You will also find it helpful to (temporarily) set the
+	boot order to allow booting from a USB drive as a higher priority
+	than booting from the computer’s internal hard drive.</p>
+	<li/>
+<p style="margin-bottom: 0in">You may need to patiently
+	experiment a bit - try to boot, change a setting, try to boot again,
+	etc. 
+	</p>
+</ul>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Here are some guidelines for accessing
+the BIOS / UEFI of a Windows computer:</p>
+<h4 class="western"><a name="Step 1a"></a>   Step 1a. Try to directly
+access the Boot Menu using a special key command at boot time</h4>
+<p style="margin-bottom: 0in">When you turn on the computer look at
+the power on screen as the computer starts up. You may see a line of
+text that tells the function keys that can be pressed during start up
+to access the computer's Setup or to access the computer's Boot Menu
+or Boot sequence/device List. If you do not see any info about
+function keys for special startup, various computer brands may use
+these <b>special </b><b>keyboard commands to </b><b>directly </b><b>access
+the boot menu</b>:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<table width="665" cellpadding="4" cellspacing="0">
+	<col width="95">
+	<col width="128">
+	<col width="10">
+	<col width="148">
+	<col width="242">
+	<tr valign="top">
+		<td width="95" bgcolor="#dddddd" style="background: #dddddd" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.04in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><b>Brand</b></p>
+		</td>
+		<td width="128" bgcolor="#dddddd" style="background: #dddddd" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.04in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><b>Key Command</b></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.04in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" bgcolor="#dddddd" style="background: #dddddd" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.04in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><b>Brand</b></p>
+		</td>
+		<td width="242" bgcolor="#dddddd" style="background: #dddddd" style="border: 1px solid #000000; padding: 0.04in">
+			<p><b>Key Command</b></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Acer</font></p>
+		</td>
+		<td width="128" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Esc / F9 / F12</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Intel</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F10</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Asrock</font></p>
+		</td>
+		<td width="128" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">F11</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Lenovo </font>
+			</p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F12 / Enter</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Asus</font></p>
+		</td>
+		<td width="128" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Esc / F8</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Microsoft Surface</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">Volume up + Power for 5
+			seconds*</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Compaq</font></p>
+		</td>
+		<td width="128" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Esc / F9</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">MSI</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F11</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Dell</font></p>
+		</td>
+		<td width="128" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">F12</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Packard Bell</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F8</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Fujitsu</font></p>
+		</td>
+		<td width="128" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">F12</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Samsung</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">Esc</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Gigabyte</font></p>
+		</td>
+		<td width="128" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">F12</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Sony Vaio</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F11</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">HP</font></p>
+		</td>
+		<td width="128" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Esc / F9</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Toshiba</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F12</font></p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">* <font size="2" style="font-size: 10pt">On
+the Microsoft Surface and Surface Pro you have to press and hold the
+volume up button located on the left side of the device, and press
+and hold the power button for 5 seconds located on the top of the
+device. Release the power button after 5 seconds but continue to hold
+down on the volume button until you see BIOS/UEFI settings screen
+appear.</font></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">If you succeed at accessing the
+computer's boot menu directly using a key commands shown above, then
+<b>select the device you want to boot from by highlighting the device
+in</b><b> the boot menu</b>, and pressing <b>Enter</b> to boot
+immediately from that device. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Here is a sample boot menu screen shot
+for a Lenovo X140e laptop (accessed directly with <b>F12</b> key):</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Boot-Order-Menu-Lenovo-USB-HDD-Legacy-secure-boot-off.png" name="Image56" align="left" width="427" height="238">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">In the above illustration, the second
+device in the list - <b>USB HDD: SanDisk Ultra</b> - is the memory
+stick that is plugged into the computer. If, after using the <b>down
+arrow key</b> to move the highlight to that device, and pressing
+<b>Enter</b>, the computer successfully boots from the Wasta Linux
+“Live” memory stick, you can skip to <a href="#Step_2">Step 2</a>
+below.</p>
+<p style="margin-bottom: 0in"> 
+</p>
+<p style="margin-bottom: 0in">If you cannot directly access the boot
+menu using one of the key commands shown above, you can try to
+directly access the BIOS / UEFI settings using one of the following
+special function keys:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<table width="665" cellpadding="4" cellspacing="0">
+	<col width="95">
+	<col width="152">
+	<col width="10">
+	<col width="124">
+	<col width="242">
+	<tr valign="top">
+		<td width="95" bgcolor="#dddddd" style="background: #dddddd" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.04in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><b>Brand</b></p>
+		</td>
+		<td width="152" bgcolor="#dddddd" style="background: #dddddd" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.04in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><b>Key Command</b></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.04in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="124" bgcolor="#dddddd" style="background: #dddddd" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.04in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><b>Brand</b></p>
+		</td>
+		<td width="242" bgcolor="#dddddd" style="background: #dddddd" style="border: 1px solid #000000; padding: 0.04in">
+			<p><b>Key Command</b></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Acer</font></p>
+		</td>
+		<td width="152" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">F2 / Del</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="124" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Intel</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F2</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Asrock</font></p>
+		</td>
+		<td width="152" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">F2 / Del</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="124" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Lenovo </font>
+			</p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F1 / F2 / Enter / Ctrl +
+			Alt + F3</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Asus</font></p>
+		</td>
+		<td width="152" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Del</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="124" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">MSI</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">Del</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Compaq</font></p>
+		</td>
+		<td width="152" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">F10 / F1 / F2 / Del</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="124" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Pegatron</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F2 / F10 / Del</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Dell</font></p>
+		</td>
+		<td width="152" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">F2</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="124" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Samsung</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F2</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Fujitsu</font></p>
+		</td>
+		<td width="152" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">F2</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="124" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Sony Vaio</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F1 / F2 / F3</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Gigabyte</font></p>
+		</td>
+		<td width="152" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Del</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="124" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Toshiba</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F1 / Esc</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">HP</font></p>
+		</td>
+		<td width="152" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Esc / F1 / F2 / F10 /
+			F12</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="124" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><br/>
+
+			</p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">If the special key listed above works
+to access the BIOS / UEFI of you computer, then skip down to <a href="#Step 1c">Step
+1c</a> below which tells what boot and system settings to change in
+order to successfully boot off the Wasta Linux memory stick (and
+install Linux). If you still can't access the computer's settings or
+boot sequence with the measures described above, then try following
+the advice in <a href="#Step_1b">Step 1b</a> below. 
+</p>
+<h4 class="western"><a name="Step_1b"></a>   Step 1b. Do a SHIFT +
+Restart from inside Windows</h4>
+<p style="margin-bottom: 0in">If you don't see a line saying what
+function keys can be pressed during startup, and you cannot use one
+of the special startup function keys (listed in Step 1a above) to get
+to a boot menu, then the computer's boot settings may have been set
+by the manufacturer to do a “quiet” or “fast” boot. A “secure
+boot” setting may also have been set and will need to be disabled.
+These special boot options are more likely required if the computer
+came with Windows 10 running on it. To access the computer's BIOS /
+UEFI system settings and its boot menu, you may need to do the
+following:</p>
+<p style="margin-bottom: 0in">   * Start up the computer and login to
+Windows as usual.</p>
+<p style="margin-bottom: 0in">   * Access the Windows Power &gt;
+Shutdown or Restart menu and <b>select “Restart” WHILE HOLDING
+DOWN the SHIFT key.</b><span style="font-weight: normal"> </span><span style="font-weight: normal">On
+Windows 10 it looks like this:</span></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Windows10-shift-startup-restart-at-start-power-button.png" name="Image51" align="left" width="497" height="201">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">This type of restart signals to Windows
+that you want to reboot to a special menu. Upon restart the system
+will show a series of options. Select the option as shown in the
+illustrations shown below:</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Windows10-shift-startup-choose-an-option.png" name="Image52" align="left" width="226" height="239">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Select the <b>Troubleshoot</b> option.
+The system will then show these troubleshooting options:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Windows10-shift-startup-troubleshoot.png" name="Image53" align="left" width="244" height="202">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Select the <b>Advanced options</b><span style="font-weight: normal">.
+</span><span style="font-weight: normal">You will then see:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/Windows10-shift-startup-advanced-options.png" name="Image54" align="left" width="530" height="256">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Select the <b>UEFI Firmware</b><b>
+Settings</b><span style="font-weight: normal"> </span><span style="font-weight: normal">as
+shown above</span>. You should now see:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/UEFI-Restart-button.png" name="Image58" align="left" width="665" height="206">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Click the <strong>Restart</strong>
+button. Your system will restart and take you to the <b>UEFI </b><b>Firmware
+settings</b>.</p>
+<h4 class="western"><a name="Step 1c"></a>   Step 1c. Change settings
+in the BIOS / UEFI</h4>
+<p style="margin-bottom: 0in">This Step 1c assumes you have finally
+managed to access the computer’s BIOS / UEFI firmware settings
+using <a href="#Step 1a">Step 1a</a> or <a href="#Step_1b">Step 1b</a>
+as described above.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The appearance and organization of the
+Firmware settings depend on how your computer manufacturer has
+designed them. There is no standard that all manufacturers follow.
+Within the firmware settings you should look at the various tab pages
+shown at the top of the settings screen. These may be labeled in
+various ways, but may include tabs or pages labeled with categories
+such as <b>Main</b>, <b>Advanced</b>, <b>Boot</b>, <b>Security</b>,
+<b>Monitor</b>, <b>Power</b>, <b>Options</b>, <b>Save &amp; Exit</b>,
+etc. For menu driven BIOS or UEFI interfaces, your keyboard’s arrow
+keys are used to access and enter menus. The settings for configuring
+boot options are sometimes hidden under sub menus, which you will
+have to explore and navigate using these keys. Special navigation
+keys are sometimes shown in a side panel or at the bottom of the
+screen. 
+</p>
+<h4 class="western">Keep track of the changes you make</h4>
+<p style="margin-bottom: 0in">I recommend that you write down the
+name of a setting along with what the setting is before you change
+it, and also what you change it to. That way if something doesn’t
+work or causes a problem on later boots, you can get back into the
+UEFI/BIOS and restore any setting to what it was before you changed
+it. 
+</p>
+<h4 class="western">Enable the Compatibility Support Module (CSM) if
+it exists</h4>
+<p style="margin-bottom: 0in">On some UEFI enabled computers, the
+Compatibility Support Module (CSM) may need to first be <b>enabled</b>
+or set to <b>CSM Boot</b> in order to turn of the computer’s
+firmware’s secure boot option. This setting would most likely be
+located on the <b>Boot</b><span style="font-weight: normal">,
+</span><b>Security</b><span style="font-weight: normal">, </span><b>Startup</b><span style="font-weight: normal">
+</span><span style="font-weight: normal">or </span><b>Authentication</b>
+tab/page of the settings. Use the computer’s arrow keys to maneuver
+to the various tabs or pages in the firmware’s settings. Not all
+computer firmware’s have a CSM (or “Launch CSM”) setting. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">If you find a CSM or Launch CSM setting
+move the highlight to that item, then use the keyboard shortcuts or
+mouse to select it and the appropriate shortcut keys to change the
+CSM value to <b>Enabled</b>. There may also be a “Boot Device
+Control” setting that allows you to choose from multiple options
+such as these: <b>UEFI Only</b>, <b>UEFI and Legacy</b>, <b>Legacy
+Only</b>. You should choose either UEFI and Legacy, or Legacy Only.
+The following illustration shows what these settings might look like
+in the Asus UEFI BIOS Utility’s Advanced Mode:</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/UEFI-Launch-CSM-Asus.png" name="Image59" align="left" width="665" height="278">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Note that the “Launch CSM” setting
+is set to <b>Enabled</b>, and the “Boot Device Control” setting
+is set to <b>UEFI and Legacy</b>. Once enabled, proceed to the “Turn
+off or disable Secure Boot...” section below. If you do not find
+any CSM setting, it may be possible to just directly turn off or
+disable the secure boot setting as described in the next section
+below.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Here is a screen shot that illustrates
+settings for boot options taken from a Lenovo Thinkpad computer:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/UEFI-Launch-CSM-Thinkpad-with-CSM-support.png" name="Image60" align="left" width="665" height="383">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">In the above illustration, the <b>Boot</b>
+settings are on the firmware’s <b>Startup</b> tab. The “UEFI/Legacy
+Boot” setting was set to <b>Both</b>. The “UEFI/Legacy Boot
+Priority” was set to <b>Legacy First</b>. The “CSM Support”
+setting automatically switched to “Yes” when the Legacy First
+option above it was set. The last two settings were changed so that
+the “Boot device List F12 Option” was Enabled - to allow the boot
+menu to be accessible using the <b>F12</b> special key at boot time.
+Also ensure that any “Boot Order Lock” is Disabled – to allow
+the boot order to be changed so that we can boot from the USB memory
+stick. While you are accessing the firmware setting menus, the next
+thing to do is to turn off or disable Secure Boot and enable Legacy
+Boot as described in the next section. 
+</p>
+<h4 class="western">Turn off or disable Secure Boot (and enable
+Legacy boot)</h4>
+<p style="margin-bottom: 0in">To try out Wasta Linux, and possibly
+install it, we need to boot from our memory stick. To enable booting
+from USB memory stick you should find the setting to <b>turn off </b>or
+<b>disable</b> the <strong>Secure Boot</strong> feature on the
+computer. The secure boot settings will most likely be found on the
+<b>Boot</b>, <b>Security</b>, or <b>Authentication</b> sections of
+the firmware settings. For example, on a Lenovo Thinkpad, the
+firmware setting for <b>Secure Boot</b> is on the “Security” tab
+as shown below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Secure-Boot-Thinkpad-Security.jpg" name="Image62" align="left" width="439" height="249">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Use the arrow keys to highlight the
+Secure Boot item as shown above, then press <b>Enter</b>. The
+following <b>Secure Boot </b><b>sub-menu</b> appears:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Secure-Boot-Thinkpad-sub-menu-disable.png" name="Image63" align="left" width="470" height="217">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">With the <b>Secure Boot</b> line
+highlighted at left, press <b>Enter</b> and change the setting to
+<b>Disabled</b>.</p>
+<p style="margin-bottom: 0in">When you disable secure boot, you also
+will be <b>enabling legacy boot</b>. Your firmware may be different.
+On some computers you may need to explicitly set <b>Legacy Boot</b>
+to <b>Enabled</b>. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Note: This AppGeeker website shows how
+to disable the secure boot setting for some HP, Asus, Acer and ASRock
+computers:
+<a href="https://www.appgeeker.com/recovery/disable-uefi-secure-boot-in-windows-10.html">https://www.appgeeker.com/recovery/disable-uefi-secure-boot-in-windows-10.html</a></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">This ASUS site shows how to disable the
+secure boot setting for some Asus computers:
+<a href="https://www.asus.com/support/faq/1013017/">https://www.asus.com/support/faq/1013017/</a></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">This Daossoft site shows how to disable
+the secure boot setting for Dell computers:
+<a href="http://www.daossoft.com/bios-tips/how-to-disable-secure-boot-in-bios-on-dell.html">http://www.daossoft.com/bios-tips/how-to-disable-secure-boot-in-bios-on-dell.html</a></p>
+<p style="margin-bottom: 0in">This Lenovo site shows how to disable
+the secure boot setting on some Lenovo laptops:
+<a href="https://support.lenovo.com/us/en/solutions/ht500207">https://support.lenovo.com/us/en/solutions/ht500207</a></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<h4 class="western"><a name="Set_boot_priority_temporarily_to_USB"></a>
+Set the boot priority to boot temporarily from USB</h4>
+<p style="margin-bottom: 0in">While you are still in the UEFI
+Firmware settings, you can also try to ensure that the computer will
+give first priority to boot from the memory stick, and a lesser
+priority to boot from its own hard drive. Making this change may make
+it possible for the computer to boot immediately from the USB memory
+stick without needing to access the special boot menu at boot time. 
+</p>
+<p style="margin-bottom: 0in"> 
+</p>
+<p style="margin-bottom: 0in">Unfortunately, there is no consistent
+place in the firmware settings where the boot priority setting
+resides. Check the Boot tab/page first. If it is not there it could
+be on any tab/page including the Save &amp; Exit tab/page. Your goal
+is to (temporarily) enable the computer to boot from the <b>USB</b>
+<b>Disk Drive</b> (or <b>USB HDD</b>) as a higher boot priority than
+the other bootable options, especially it should be set higher than
+the computer's own Hard Drive. The possible options are usually
+listed vertically, and you use the shortcut keys to move the USB
+option up to the top of the list. This change in boot priority can be
+done to (temporarily) allow the computer to boot from the Wasta Linux
+memory stick instead of the Windows Boot Manager. Later, after Wasta
+Linux has been installed, the boot priority can be set back to give
+priority to boot from the computer’s hard drive – which is a
+faster option and avoids the computer trying to boot from any memory
+stick that happens to be plugged in to the computer at boot time.</p>
+<h4 class="western">Save the changes you make</h4>
+<p style="margin-bottom: 0in">Use the <b>F10</b> key, or appropriate
+method to “<b>Save and Exit</b>” the firmware settings. Your
+firmware may have a separate tab called “Save” or “Save and
+Exit”. The computer will immediately attempt to boot.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">If you successfully set the boot
+options described above, and set the boot priority to boot from a USB
+memory stick you should see the Wasta “Live” session menu on the
+screen – skip to <a href="#Step_2">Step 2</a> below.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">If Windows continues to boot instead of
+booting Wasta from the memory stick, you probably did not hit the
+special boot key quick enough. Restart and try pressing the special
+boot menu function key at the beginning of the boot process. The
+image below shows the Lenovo’s boot menu when successfully using
+the <b>F12</b> key to access the Lenovo’s boot menu at boot time: 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Boot-Order-Menu-Lenovo-USB-HDD-Legacy-secure-boot-off.png" name="Image61" align="left" width="520" height="290">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">After selecting the Wasta Linux USB
+memory stick (named “USB HDD: SanDisk Ultra” above), the Wasta
+“Live” session boot menu should appear – see Step 2 below.</p>
+<h3 class="western"><a name="Step_2"></a>Step 2. Boot Wasta to a
+“Live” session on the computer</h3>
+<p style="margin-bottom: 0in">When the initial boot sequence has
+successfully recognized the USB drive, it will show the Wasta-Linux
+16.04.1.1 boot options menu that appears similar to the following:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Wasta16.04.1.1-64bit-live-boot-menu.png" name="Image1" align="left" width="396" height="298">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The first menu item “<b>Live – boot
+the Live System</b>” is the default selection, and will be
+automatically selected at the end of a 10 second countdown. You can
+speed up the action by simply pressing the <b>Enter</b> key. The boot
+process will continue for a few minutes as it loads the system from
+the memory stick:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Wasta-16.04-boot-logo.png" name="Image2" align="left" width="397" height="113">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">After the computer has booted to your
+&quot;Live&quot; Wasta Linux session your computer is actually
+running Wasta Linux instead of Windows. The Wasta Linux desktop
+should look like this screen shot below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Wasta-16.04.1.1-live-boot-desktop-install-icon-not-highlighted.png" name="Image3" align="left" width="665" height="458">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<h3 class="western">Step 3. Check out the Wasta system</h3>
+<p style="margin-bottom: 0in">While the &quot;Live&quot; session of
+Linux is booted, your computer is running Linux entirely from the
+external USB memory stick- no changes have been made to the
+computer's own operating system at this point, and no changes will be
+made to it - unless you decide to actually install Wasta on the
+machine. Remember: Since the system is running from the memory stick,
+its performance will be slower than a normal Wasta installation.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">While the “Live” session is
+running, you can explore the Linux system and try out various
+programs. You will especially want to check out whether Linux has
+detected the computer’s hardware and ensure that the Linux system
+has assigned the proper Linux drivers for things like the screen
+display, wireless network connections, keyboard, sound, mouse, etc.
+You should check out the screen appearance – that its brightness is
+OK and the display’s resolution is set to the machine's normal
+setting. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">If the <b>screen brightness</b> looks
+too dim, you may need to use a function key to adjust screen
+brightness. Sometimes Lenovo laptops initially boot with screen
+brightness turned down. If this is an issue look at the little images
+on the function keys. For example, on Lenovo T430 laptops, holding
+the <b>Fn</b> key down and pressing the <b>F9</b> function key
+increases screen brightness (<b>Fn + F8</b> decreases screen
+brightness). 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">To check the <b>screen display</b>
+click on the main <b>Menu</b>, then click on the <b>Preferences</b>
+category, and click on the <b>Display</b> item:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Menu%20Preferences%20Display.png" name="Image4" align="left" width="470" height="207">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The <b>Display</b> applet will appear:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Display-applet-check-resolution.png" name="Image5" align="left" width="428" height="276">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Check the &quot;Resolution&quot; and
+ensure that it is set to the normal resolution of your computer’s
+screen display. You can click on the drop down list, and adjust the
+resolution if necessary. Dual or multiple monitors are also
+supported.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Check out other things too, such as the
+ability to connect to any <b>wireless</b> <b>network</b> that the
+Windows system was using when booted to Windows. If the Windows
+computer was using wireless to connect to a network, see if the
+wireless signal is detected by clicking on the network connections
+icon in the lower right part of the panel (task bar):</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Network-connections-icon-in-tray.png" name="Image6" align="left" width="439" height="301">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Locate your wireless network’s name
+in the list and click on it (mine is ‘asiu taso’ as shown above).
+A secured network (with padlock icon) will ask you to enter its key
+the first time you connect:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Network-enter-wireless-key.png" name="Image7" align="left" width="469" height="253">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Enter the <b>password/key</b> for the
+wireless network. You can click the check box next to <b>Show
+password</b> to make the typing of a complicated password easier.
+Click on the <b>Connect</b> button. After a few seconds check to see
+if the wireless connection was made. You may see a notification at
+the top of your screen.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Once it connects, the network
+connection icon changes to show a wave signal (see the panel icon in
+the red box below). You can also click on the connections icon again
+and see whether the connection has been established (indicated by the
+white dot next to the network name and an indication of the signal
+strength to the right of the name – see the illustration below):</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Network-connections-icon-in-tray-connected.png" name="Image8" align="left" width="297" height="239">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Once your wireless network connects to
+the <b>Internet</b>, you can try it out by running Firefox and
+checking to see if you can load an Internet website:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Firefox-icon-in-tray.png" name="Image18" align="left" width="252" height="95">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">You might also want to check other
+hardware items such as your computer’s <b>sound system</b>. You can
+test your sound system by going to the Sound applet in the
+Preferences category of the main Menu:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Menu-Preferences-Sound.png" name="Image13" align="left" width="460" height="187">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The <b>Sound</b> applet will appear:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Sound-applet.png" name="Image14" align="left" width="537" height="422">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">With the above Sound applet you can
+your computers sound abilities. On the Output tab, select your
+computer’s sound device (if it has multiple devices) and check the
+sound output by clicking on the <b>Test sound</b> button, which bring
+up this speaker test dialog:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Test-sound-left-right.png" name="Image15" align="left" width="244" height="230">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The speaker arrangement may vary
+depending on your computer’s sound system. You can click on the
+<b>Close</b> button to close the speaker test. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Note that there is a volume control
+among other sound settings in the sound applet. There are also tabs
+at the top of the main Sound dialog (see above), that you can use to
+test your <b>Output</b> (speakers), <b>Input</b> (microphone) and
+various <b>Sound Effects</b> on other tab pages of the applet. When
+you are done playing with the Sound applet close its window.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Go to Menu and type <b>s</b><b>ystem
+</b><b>info</b> into the search box at the top of the menu, and
+select the <b>System </b><b>Info</b> application that appears in the
+list:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Menu-system-info.png" name="Image9" align="left" width="429" height="366">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The <b>System Info</b> applet appears:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/System%20Info%20applet.png" name="Image10" align="left" width="665" height="302">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Write down the amounts reported for
+Memory and Hard Drives, as this information will be good to have
+handy later during the actual Wasta installation. In the above case
+it shows we have about 4GB of Memory and a 100GB Hard Drive.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Feel free to experiment and try out
+various programs that are listed in categories in the main Menu at
+the lower left corner of the desktop (similar to the Windows Start
+button). When you hover your mouse over a menu item, a brief
+description of that item will appear in the lower right part of the
+menu. Test out creating a document with LibreOffice Writer (in the
+Office category). If you computer has a web camera, try it out with
+the Cheese application in the menu’s Sound &amp; Video category.
+Check out the applets in the Accessories and Preferences categories.
+Remember: during a live session no changes are made to your computer,
+so any changes or documents you create in this live session will not
+be saved. 
+</p>
+<h4 class="western">Are you ready to install Wasta Linux?</h4>
+<p style="margin-bottom: 0in">The remainder of this document
+describes how to install Wasta Linux on your computer. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>Note that Steps 4 through 7 below
+are </b><b>non-destructive installation steps.</b> You can feel free
+to proceed down through the first part of step 8 below. Nothing will
+be changed on your computer if you opt to <b>Quit</b> before you get
+to the last part of step 8 below (clicking on the <b>Install Now</b>
+button). 
+</p>
+<h3 class="western">Step 4. Start the installer using the desktop
+icon</h3>
+<p style="margin-bottom: 0in">The first step is to double click the
+&quot;<b>Install </b><b>Wasta</b><b> </b><b>Linux 16.04</b>&quot;
+desktop icon (the red arrow is pointing at this icon in the image
+below):</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Wasta-16.04.1.1-live-boot-desktop-install-icon-highlighted.png" name="Image19" align="left" width="609" height="420">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Wait for first install wizard window to
+appear. It will be for selecting the <b>language</b> for the
+installation and looks as follows:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Install-Welcome.png" name="Image11" align="left" width="481" height="310">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">English is usually the default
+selection. Click <b>Continue</b>. The next screen appears:</p>
+<h3 class="western">Step 5. Connect to a wi-fi network</h3>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">If
+your computer has an active wireless connection –</span><span style="font-weight: normal">
+but not yet connected -</span><span style="font-weight: normal"> the
+installer may ask you if you want to connect the computer to the
+wi-fi network:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/Install-connect-to-wireless.png" name="Image16" align="left" width="600" height="334">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">If
+you wish to you can select the </span><b>Connect to this network</b><span style="font-weight: normal">
+button, select the name of your network in the list, and enter your
+network’s security password in the Password box. But, a connection
+to your wireless network is </span><span style="font-weight: normal">optional,
+and being connected to the Internet is not required</span><span style="font-weight: normal">
+</span><span style="font-weight: normal">during the</span><span style="font-weight: normal">
+installatio</span><span style="font-weight: normal">n. </span><span style="font-weight: normal">S</span><span style="font-weight: normal">o,
+you can </span><span style="font-weight: normal">also </span><span style="font-weight: normal">leave
+it set to the default “I don’t want to connect to a wi-fi network
+right now” </span><span style="font-weight: normal">- especially if
+you have slow or expensive Internet</span><span style="font-weight: normal">.
+</span><span style="font-weight: normal">You can connect after
+installation </span><span style="font-weight: normal">(or use a full
+wasta-offline mirror to update your software). If you wish to connect
+now you can do so </span><span style="font-weight: normal">as you did
+in Step 3 above when you played around with the Live system. </span><span style="font-weight: normal">In
+either case, </span><span style="font-weight: normal">then </span><span style="font-weight: normal">c</span><span style="font-weight: normal">lick
+</span><b>Continue</b><span style="font-weight: normal">.</span></p>
+<h3 class="western">Step 6. Updates and third-party software</h3>
+<p style="margin-bottom: 0in">Next a <b>Preparing to install Wasta
+Linux</b> screen appears offering to download updates and third-party
+software while installing:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Install-Preparing-to-install.png" name="Image12" align="left" width="607" height="369">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">We will not install these updates and
+third-party software during the initial installation. You can do
+updates after installation, so just click <b>Continue</b>.</p>
+<h3 class="western">Step 7. Installation type</h3>
+<p style="margin-bottom: 0in">The next install wizard page wants to
+know how you want Wasta Linux to be installed on the computer,
+especially in relation to any existing operating system such as
+Windows - or a previous Linux installation(s). The appearance of this
+dialog will vary depending on what operating system(s) are already on
+the computer. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">If you are installing Wasta Linux:</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in">to replace Windows XP, proceed
+	with the <a href="#Windows XP">Windows XP section below</a></p>
+	<li/>
+<p style="margin-bottom: 0in">to replace Windows 7, 8 or 8.1,
+	skip to the <a href="#Windows 7 - 8">Windows 7, 8, or 8.1 section</a></p>
+	<li/>
+<p>to replace Window 10, skip to the <a href="#Windows 10">Windows
+	10 section</a></p>
+</ul>
+<p style="margin-bottom: 0in">The <b>Installatio</b><b>n type</b>
+dialog will look similar to one of the dialogs shown below –
+depending on the version of Windows you are replacing:</p>
+<h4 class="western"><a name="Windows XP"></a>Windows XP</h4>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-type-WinXP-initial-default.png" name="Image20" align="left" width="583" height="326">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The first option is often pre-selected,
+but you should choose <b>Something else</b> instead. Click <b>Continue.</b></p>
+<h4 class="western"><a name="Windows 7 - 8"></a>Windows 7, 8, 8.1</h4>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-type-Win7-initial-default.png" name="Image21" align="left" width="598" height="335">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The first option is often pre-selected,
+but you should choose <b>Something else</b> instead. Click <b>Continue.</b></p>
+<h4 class="western"><a name="Windows 10"></a>Windows 10</h4>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-type-Win10initial-default.png" name="Image22" align="left" width="612" height="341">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The first option is often pre-selected,
+but you should choose <b>Something else</b> instead. Click <b>Continue.</b></p>
+<h4 class="western">Why we choose Something else?</h4>
+<p style="margin-bottom: 0in">It is possible to install Wasta Linux
+using one of the other Installation type options, but this
+documentation suggests choosing <b>Something else</b><span style="font-weight: normal">
+for the </span><span style="font-weight: normal">following</span><span style="font-weight: normal">
+reasons:</span></p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">The
+	</span><b>Something else</b><span style="font-weight: normal">
+	option allows us to have your /home directory on a separate
+	partition. Having /home on a separate partition makes it easy to
+	upgrade to a newer version of Wasta (or other kind of Linux) in the
+	future without touching any of your documents, data or settings.</span></p>
+	<li/>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">The
+	</span><b>Something else</b><span style="font-weight: normal">
+	option </span><span style="font-weight: normal">allows us to choose
+	the size and arrangement of the partitions that will be created on
+	the computer’s hard drive.</span></p>
+	<li/>
+<p style="margin-bottom: 0in">Different versions of Windows
+	come with different numbers and kinds of partitions. By selecting
+	<b>Something els</b>e, we can ensure that we remove all the existing
+	Windows partitions, and partition the hard drive more efficiently.</p>
+	<li/>
+<p style="margin-bottom: 0in">While the first couple options
+	in the above dialog may vary depending on how your Windows computer
+	is set up, the last option for any installation will always be
+	<b>Something else</b>. The Something else option therefore allows us
+	to standardize this document, and reduce the number of possible
+	variations and gotchas that might happen if we tried to describe one
+	of the other options. 
+	</p>
+	<li/>
+<p style="margin-bottom: 0in">We are not planning to encrypt
+	the new Wasta installation, nor use the Logical Volume Management
+	(LVM) system. The use of these technologies is not necessary in most
+	environments. They are more complicated to set up at installation
+	time and so are beyond the scope of this document.</p>
+</ul>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The <b>Installation type</b> dialogs
+shown above may differ a little from what you see on your particular
+Windows computer, but the last option &quot;<b>Something else</b>&quot;
+should always be available and is the one you should  selected to
+follow this document. Then click <b>C</b><b>ontinue</b></p>
+<h3 class="western">Step 8. Removing Windows partitions and creating
+Linux partitions</h3>
+<p style="margin-bottom: 0in">This is the longest and most involved
+step in this installation documentation. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The installation program uses a
+partitioning program <span style="font-weight: normal">to show you </span>a
+graphical display of the existing partitions that are on the
+computer's hard drive. Its appearance and the number of partitions
+displayed in the dialog will depend on what partitions currently
+exist on the computer. You will want to study the graph showing on
+your screen, and the information displayed on it carefully. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The point of no return is the <b>Install
+Now</b> button at the bottom right of this installation page. <b>Do
+not click on that button until the end of Step 8</b>. Our actions in
+removing Windows partitions and adding Linux partitions are only
+<b>simulated</b> until we get them just the way we want them. We can
+adjust them over and over again without making actual changes to your
+computer. At any time you can call it quits by clicking on the <b>Quit</b>
+button – and no changes will be made to your computer. <b>Again,
+don’t click on the Install Now button until you are ready for the
+changes to be made on your computer.</b></p>
+<h4 class="western">Remove the Windows partitions</h4>
+<p style="margin-bottom: 0in">Before we proceed to the &quot;Install
+Now&quot; action, we need to remove the existing Windows partitions.
+A Windows 10 computer, for example, will have two or more partitions
+on it so that its partitions might like similar to the following:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Partitioning-Win10-initial-state.png" name="Image23" align="left" width="641" height="413">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Look carefully at the above
+illustration and compare it to the partitions displayed for your
+computer. Note that on a Windows computer, there will often be
+several partitions with &quot;<b>ntfs</b>&quot; shown as their <b>Type</b>.
+All partitions with &quot;<b>ntfs</b>&quot;, &quot;<b>fat32</b>&quot;
+or &quot;<b>fat</b>&quot; Type are Windows partitions.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Since these instructions are about
+totally replacing the Windows system with Wasta Linux, we will tell
+the installer that we want to delete the existing Windows system
+partitions - removing them one by one.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Select the <b>first</b> <b>ntfs</b>
+partition (device /dev/sda1) and click the minus button to remove it:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Partitioning-Win10-first-ntfs-partition-selected.png" name="Image24" align="left" width="515" height="331">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The display will dynamically change to
+show the state of the partitions after each action:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Partitioning-Win10-first-ntfs-partition-now-free-space.png" name="Image25" align="left" width="470" height="302">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The partition was removed and it is now
+“free space” as shown above.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Next, select the remaining <b>ntfs</b>
+partition (device /dev/sda2) and click the minus button to remove it
+as shown below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Partitioning-Win10-remaining-ntfs-partition-selected.png" name="Image26" align="left" width="543" height="348">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Again the display dynamically changes
+to show the state of the partitions:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Partitioning-Win10-first-ntfs-all-is-now-free-space.png" name="Image27" align="left" width="562" height="360">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Repeat the above action for any
+remaining Windows partitions showing for your computer. 
+</p>
+<p style="margin-bottom: 0in">At this point the ntfs (Windows)
+partitions should have all been removed and the hard drive (device
+sda) should only have free space on it as shown in the illustration
+above.</p>
+<h4 class="western">Add the Linux partitions</h4>
+<p style="margin-bottom: 0in">We want to now start adding the Linux
+partitions to the free space. We will add three partitions, one at a
+time:</p>
+<ol>
+	<li/>
+<p style="margin-bottom: 0in">A Linux root (/) partition with
+	a size of 15GB (15000MB)</p>
+	<li/>
+<p style="margin-bottom: 0in">A Linux swap partition with a
+	size of 4GB (4000MB)</p>
+	<li/>
+<p style="margin-bottom: 0in">A Home partition (/home) with
+	the remainder of the free space</p>
+</ol>
+<h5 class="western">Add the Linux root / partition</h5>
+<p style="margin-bottom: 0in">The <b>first partition</b> we want to
+add is the Linux <b>root (/) partition</b> with a size of 15GB or
+15000MB. Start by selecting the <b>free space</b> line in the dialog,
+and click the <b>plus</b> button to add a new partition:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Partitioning-Win10-free-space-selected.png" name="Image28" align="left" width="665" height="427">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The installer needs to know some
+details about the first new partition, so it provides an overlay
+dialog to get that information as shown in the illustration below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Partitioning-Win10-create-root-partition-dialog-set-size.png" name="Image29" align="left" width="555" height="357">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The value in the <b>Size</b> box will
+vary depending on the size of your hard drive. The size is in
+MegaBytes (MB), so for GigaByte considerations, we need to think in
+terms of thousands of MB. The first partition we are creating will be
+for the Linux root file system. Generally 15GB should be enough disk
+space for the file system root. 15GB is 15000MB, so type 15000 into
+the <b>Size</b> box:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Partitioning-Win10-create-root-partition-set-to-15000.png" name="Image30" align="left" width="527" height="339">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">We can leave the type of partition set
+as “<b>Primary</b>”, and its location at the “<b>Beginning of
+this space</b>”. The “<b>Use as</b>” drop-down selector can
+also be left as “<b>Ext4 journaling file system</b>”. The last
+setting for this partition is its “<b>Mount point</b>”. Click on
+the down arrow at the right end of the Mount point drop-down selector
+and select the <b>/ </b>item at the top of the list as shown below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Partitioning-Win10-create-root-partition-set-mount-point-to-slash.png" name="Image31" align="left" width="665" height="434">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The settings for our root (/) partition
+are now complete. Check that your settings look like this Create
+partition dialog below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Partitioning-Win10-create-swap-partition-dialog-summary.png" name="Image32" align="left" width="477" height="278">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Double check to ensure that the 5
+settings are set as follows:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">1. The Size is set to: <b>15000</b></p>
+<p style="margin-bottom: 0in">2. The Type of partition is set to:
+<b>Primary</b></p>
+<p style="margin-bottom: 0in">3. The Location is set to: <b>Beginning
+of this space</b></p>
+<p style="margin-bottom: 0in">4. The Use as selector is set to: <b>Ext4
+journaling file system</b></p>
+<p style="margin-bottom: 0in">5. The Mount point is set to:<b> /</b></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Click the <b>OK</b> button. The display
+will update showing your new <b>root</b> partition:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Partitioning-Win10-create-root-partition-displaying.png" name="Image33" align="left" width="665" height="426">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Note in the above illustration that the
+installer made the device name of the new partition /dev/sda1. It
+also auto-adjusted the best size for the partition to be 14998 MB –
+close to our specified 15000, and it shows the remaining space to be
+86270. In my illustration I’m using a relatively small
+approximately 100GB hard drive (100000MB). The remaining space on
+your computer is likely to be much larger.</p>
+<h5 class="western">Add the Linux swap partition</h5>
+<p style="margin-bottom: 0in">The <b>second partition</b> we want to
+add is the Linux <b>swap partition</b> with a size of 4GB or 4000MB.
+As with the first partition, we add a second partition to a portion
+of the free space, so select the <b>free space</b> line in the
+dialog, and click the <b>plus</b> button to add a new partition as
+shown in the illustration below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Partitioning-Win10-create-swap-partition-free-space-selected.png" name="Image34" align="left" width="665" height="429">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The installer needs to know the details
+about the second new partition and shows the Create partition overlay
+dialog to get that information as shown in the illustration below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Partitioning-Win10-create-swap-partition-set-size.png" name="Image35" align="left" width="492" height="292">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">A
+swap partition is a special partition that Linux can use to swap out
+some of its RAM memory if it needs to. It is generally recommended to
+have a swap partition that is </span><span style="font-weight: normal">at
+least </span><span style="font-weight: normal">as large as the amount
+of RAM memory in the computer. </span><span style="font-weight: normal">When
+we ran the System Info applet, it showed that we had about 4GB of
+memory. So, here we</span><span style="font-weight: normal"> adjust
+this swap size </span>4GB which is <b>4000</b> in MB. Also you can
+set the “Type for the new partition” to <b>Primary</b><span style="font-weight: normal">
+if it is not already set to Primary. </span><span style="font-weight: normal">We
+will leave the “Location for the new partition” at </span><b>Beginning
+of this space</b><span style="font-weight: normal">. </span><span style="font-weight: normal">Click
+on the down arrow of the “Use as” selector and set it to </span><b>swap
+area</b><span style="font-weight: normal"> as shown in the
+illustration below:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/Partitioning-Win10-create-swap-partition-set-to-swap-area.png" name="Image36" align="left" width="395" height="433">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">The
+settings for our </span><span style="font-weight: normal">Linux swap
+area</span><span style="font-weight: normal"> partition are now
+complete. Check that you</span><span style="font-weight: normal">r</span><span style="font-weight: normal">
+settings look like this </span><span style="font-weight: normal">Create
+partition dialog </span><span style="font-weight: normal">below:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/Partitioning-Win10-create-swap-partition-dialog-summary.png" name="Image37" align="left" width="494" height="255">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Double check that the 4 settings are
+set as follows:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">1. The Size is set to: <b>4</b><b>000</b></p>
+<p style="margin-bottom: 0in">2. The Type of partition is set to:
+<b>Primary</b></p>
+<p style="margin-bottom: 0in">3. The Location is set to: <b>Beginning
+of this space</b></p>
+<p style="margin-bottom: 0in">4. The Use as selector is set to: <b>swap
+area</b></p>
+<p style="margin-bottom: 0in; font-weight: normal">The swap area does
+not have a mount point.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Click the <b>OK</b> button. The display
+will update showing your new <b>swap area</b> partition:</p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/Partitioning-Win10-create-swap-partition-displaying.png" name="Image38" align="left" width="665" height="426">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Note in the above illustration that the
+installer made the device name of the new partition /dev/sda2. It
+also calculated the best size for the partition to be 4000 MB, and it
+shows the remaining space of this hard drive to be 82270. In my
+illustration I’m using a relatively small approximately 100GB hard
+drive. The remaining space on your computer is likely to be much
+larger.</p>
+<h5 class="western">Add the Linux /home partition</h5>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">The
+</span><b>third and final</b><b> partition</b><span style="font-weight: normal">
+we want to add is the Linux </span><b>/</b><b>home</b><b> partition</b><span style="font-weight: normal">.
+</span><span style="font-weight: normal">The /home partition is where
+all your user generated files will be stored including your
+Documents, Music, Pictures, Videos, Downloads, Desktop files, and all
+of your user settings including settings for the applications you
+will be using. </span><b>For </b><b>our /home partition we want to
+</b><b>use up the remaining </b><b>free space</b><span style="font-weight: normal">.
+</span>
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">As
+you have learned from the above procedures, first we s</span><span style="font-weight: normal">elect
+</span><span style="font-weight: normal">the </span><b>free space</b><span style="font-weight: normal">
+line in the dialog, </span><span style="font-weight: normal">and
+click the </span><b>plus</b><span style="font-weight: normal"> button
+to add a new partition as shown in the illustration below</span><span style="font-weight: normal">:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/Partitioning-Win10-create-home-partition-free-space-selected.png" name="Image39" align="left" width="665" height="426">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">The
+installer needs to know </span><span style="font-weight: normal">the</span><span style="font-weight: normal">
+details about the </span><span style="font-weight: normal">third (and
+final)</span><span style="font-weight: normal"> partition </span><span style="font-weight: normal">and
+shows the Create partition overlay dialog to get that information as
+</span><span style="font-weight: normal">shown </span><span style="font-weight: normal">in
+the illustration </span><span style="font-weight: normal">below:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/Partitioning-Win10-create-home-partition-dialog-set-size.png" name="Image40" align="left" width="447" height="262">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">For
+our /home partition we want the system to use all the free space that
+is left, so leave the value that appears in the “Size” box on
+your computer unchanged. </span><span style="font-weight: normal">It
+will be the maximum space that is left on the hard drive</span><span style="font-weight: normal">.
+Mine shows 82271 MB, but your should be much larger – leave it at
+its maximum value</span><span style="font-weight: normal">. </span><span style="font-weight: normal">S</span><span style="font-weight: normal">et
+the “</span><span style="font-weight: normal">T</span><span style="font-weight: normal">ype
+for the new partition” to </span><b>Primary</b><span style="font-weight: normal">
+if it is not already set to Primary. </span><span style="font-weight: normal">We
+will leave the “Location for the new partition” at </span><b>Beginning
+of this space</b><span style="font-weight: normal">, </span><span style="font-weight: normal">and
+leave the “Use as” value set to </span><b>Ext4 journaling file
+system</b><span style="font-weight: normal">. </span><span style="font-weight: normal">Click
+on the down arrow of the “</span><span style="font-weight: normal">Mount
+point</span><span style="font-weight: normal">” selector and set it
+to </span><b>/</b><b>home</b><span style="font-weight: normal"> as
+shown in the illustration below:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/Partitioning-Win10-create-home-partition-set-mount-point-to-home.png" name="Image41" align="left" width="402" height="440">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">The
+settings for our </span><span style="font-weight: normal">Linux /</span><span style="font-weight: normal">home</span><span style="font-weight: normal">
+partition are now complete. Check that you</span><span style="font-weight: normal">r</span><span style="font-weight: normal">
+settings look like this </span><span style="font-weight: normal">Create
+partition dialog </span><span style="font-weight: normal">illustrated
+</span><span style="font-weight: normal">below:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/Partitioning-Win10-create-home-partition-dialog-summary.png" name="Image42" align="left" width="370" height="218">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Double check that the 5 settings are
+set as follows:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">1. The Size is set to: <b>your maximum
+space left</b></p>
+<p style="margin-bottom: 0in">2. The Type of partition is set to:
+<b>Primary</b></p>
+<p style="margin-bottom: 0in">3. The Location is set to: <b>Beginning
+of this space</b></p>
+<p style="margin-bottom: 0in">4. The Use as selector is set to: <b>Ext4
+journaling file system</b></p>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">5.
+</span><span style="font-weight: normal">The </span><span style="font-weight: normal">M</span><span style="font-weight: normal">ount
+point </span><span style="font-weight: normal">is set to: </span><b>/home</b></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Click the <b>OK</b> button. The display
+will update showing your new <b>/</b><b>home</b> partition:</p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/Partitioning-Win10-create-all-three-partitions-ready.png" name="Image43" align="left" width="578" height="372">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal">Note in the above
+illustration that the installer made the device name of the last
+partition /dev/sda3. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>Other things to note:</b></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<ul>
+	<li/>
+<p>The installer partitioned the drive to use all the
+	remaining free space. 
+	</p>
+	<li/>
+<p>There are check boxes next to the root partition (/), and
+	the /home partition, indicating that those partitions will be
+	formatted during the installation process. Since this is a new
+	installation of Linux on this computer, all partitions will be
+	formatted including the /home partition. If we were re-installing
+	Linux or upgrading to a newer version of Linux on this computer, its
+	/home partition would <b>NOT</b> be formatted by default – leaving
+	any data on the /home partition untouched. The Linux installer won’t
+	automatically format any existing Linux /home partition.</p>
+	<li/>
+<p>The &quot;Device for boot loader Installation&quot;
+	selector should show the computer's main hard disk (usually
+	/dev/sda) with the hard disk's known capacity shown in parentheses.</p>
+</ul>
+<h4 class="western">Ready to take the plunge?</h4>
+<p style="margin-bottom: 0in"><font color="#ff0000"><font size="5" style="font-size: 18pt">Make
+sure the settings and partitions are set according to the above
+information (because the next </font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">action</font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">
+will destroy a</font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">ll</font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">
+data that is already on the computer including the whole Windows
+system). </font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">If
+you don’t want to continue click the Quit button.</font></font></p>
+<h3 class="western">Step 9. If you are ready, click on the “Install
+Now” button</h3>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">The
+installation will start and present you with some configuration
+screens while the system does the partitioning, formatting and
+installation of the </span><span style="font-weight: normal">Wasta
+</span><span style="font-weight: normal">Linux system. </span><span style="font-weight: normal">There
+will be a series of </span><span style="font-weight: normal">setup</span><span style="font-weight: normal">
+screens appear during the installation process. </span>
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">  The first configuration screen will
+be the  “Where are you?” screen that looks like this:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-where-are-you.png" name="Image44" align="left" width="541" height="348">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Click on the general area of the world
+map where you are located. For Manus users, the time zone are that
+includes PNG should be highlighted, so that &quot;<b>Port Moresby</b>&quot;
+shows on the time zone selected.</p>
+<p style="margin-bottom: 0in">Click “<b>C</b><b>ontinue</b>”.</p>
+<h3 class="western">Step 10. Select keyboard layout</h3>
+<p style="margin-bottom: 0in">The next configuration screen is the
+keyboard layout screen which looks like this:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-keyboard-layout.png" name="Image45" align="left" width="570" height="351">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Click “<b>C</b><b>ontinue</b>” to
+use the “English (US)” keyboard as default, unless you have a
+different keyboard layout on your computer.</p>
+<h3 class="western">Step 11. Enter your user information</h3>
+<p style="margin-bottom: 0in">The next screen is the “Who are you?”
+screen which appears as illustrated below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-who-are-you.png" name="Image46" align="left" width="583" height="358">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Fill in the requested data and
+password:</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in">Type your name in the top box.</p>
+	<li/>
+<p style="margin-bottom: 0in">The computer’s name is the
+	name that it will have on any local network.</p>
+	<li/>
+<p style="margin-bottom: 0in">The <b>username</b> you type in
+	will be used at the name of your user folder in the Home directory. 
+	</p>
+	<li/>
+<p style="margin-bottom: 0in">It is smart to use a good
+	password – one that you can remember. 
+	</p>
+	<li/>
+<p style="margin-bottom: 0in">You should keep the button
+	selected “Require my password to log in.” 
+	</p>
+</ul>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Click <b>Continue</b>. The installation
+process does not require any additional input from you. The installer
+will display a little slide show that describes some of the features
+available in (Ubuntu) Linux. The installation progress is displayed
+in the bar at the bottom of the slides.</p>
+<h3 class="western">Step 12. Wait for the installation to complete</h3>
+<p style="margin-bottom: 0in">When the installation is finished a
+dialog will appear that looks like this:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-has-finished.png" name="Image47" align="left" width="665" height="67">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Click on the &quot;Restart Now&quot;
+button. As the computer shuts down you will see:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Install-please-remove-installation-media.png" name="Image48" align="left" width="542" height="367">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Remove the memory stick at the prompt
+and press Enter to reboot the computer.</p>
+<h3 class="western">Step 13. Restart into Wasta Linux</h3>
+<p style="margin-bottom: 0in">Each time you boot into your Wasta
+Linux system, you will need to type your password into the login box.
+Your login password is the password you set during the installation.
+The same password is also used when you do administration tasks such
+as installing software:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Login-screen.png" name="Image49" align="left" width="534" height="347">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"> If the prompt inside the login box
+asks for your Username, you can type it in, or click on it with a
+mouse to get the Password prompt.</p>
+<h3 class="western">Step 14. Customize your background image</h3>
+<p style="margin-bottom: 0in">Once the system has started up, and you
+have logged in, you can set the background image: Right-click on the
+desktop and select “Change Desktop Background”. The <b>Backgrounds</b>
+applet will appear:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Backgrounds-applet.png" name="Image50" align="left" width="665" height="492">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">You can select a stock picture from one
+of the Linux distributions by selecting the distribution name in the
+left panel. Alternatively, you can select a Background image from
+your Pictures folder. You can load a different folder by clicking on
+the little <b>+</b> button to add a folder of pictures to the
+selection list. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">For the Manus computers, navigate to
+open the “Pictures” folder. Then, double-click on the
+&quot;manus_jaha_background_images&quot; folder. This folder has 30
+Manus-Jaha backgrounds. Select the one that agrees with the N number
+used in the user name above. Scroll down in the background pictures
+to select the appropriate background picture. Select Advanced and
+from that drop down list choose the “Stretched” option to make
+the Manus-Jaha image fit the screen.</p>
+<h3 class="western">Step 15. Configure other post-install settings</h3>
+<p style="margin-bottom: 0in; font-weight: normal">While most
+software and resources are immediately available for use, some
+programs like Paratext and Adapt It will need additional setup and
+configuration. 
+</p>
+<h4 class="western">Configuring Paratext:</h4>
+<p style="margin-bottom: 0in; font-weight: normal">The <i>Paratext</i>
+registration information will need to be entered for the specific
+user of the computer. <i>Paratext</i> will also need to have its
+projects created, and if used in collaboration with <i>Adapt It</i>,
+<i>Paratext</i> will need the following projects setup as a minimum
+for collaboration with <i>Adapt It</i>:</p>
+<p style="margin-bottom: 0in; font-weight: normal">   * A <b>source</b>
+language <i>Paratext</i> project - containing the Scripture books
+imported into the <i>Paratext</i> project that will be used in <i>Adapt
+It </i>as <b>source</b> text for adaptation work. 
+</p>
+<p style="margin-bottom: 0in; font-weight: normal">   * A <b>target</b>
+language <i>Paratext</i> project - containing Scripture books created
+as empty books (i.e., &quot;empty&quot; but containing chapter and
+verse numbers when created within <i>Paratext</i>). This initially
+“empty” project will be used in <i>Adapt It</i> as target or
+translation text for adaptation work, and will be transferred
+automatically to <i>Paratext</i> each time the adaptation document is
+saved within <i>Adapt It</i>. 
+</p>
+<h4 class="western">Configuring Adapt It:</h4>
+<p style="margin-bottom: 0in"><i><span style="font-weight: normal">Adapt
+It</span></i><span style="font-weight: normal"> can be configured to
+collaborate with </span><i><span style="font-weight: normal">Paratext</span></i><span style="font-weight: normal">,
+but the necessary </span><i><span style="font-weight: normal">Paratext</span></i><span style="font-weight: normal">
+projects need to be created first (see above). Once the </span><i><span style="font-weight: normal">Paratext</span></i><span style="font-weight: normal">
+projects are created for the source language and target languages, </span><span style="font-weight: normal">an
+administrator can make the &quot;Administrator&quot; menu visible
+within </span><i><span style="font-weight: normal">Adapt It</span></i><span style="font-weight: normal">,
+and use </span><span style="font-weight: normal">its </span><span style="font-weight: normal">“</span><b>Setup
+Or Remove Collaboration</b><span style="font-weight: normal">” </span><span style="font-weight: normal">menu
+to set up one or more </span><i><span style="font-weight: normal">Adapt
+It</span></i><span style="font-weight: normal"> collaboration
+projects between </span><i><span style="font-weight: normal">Adapt It</span></i><span style="font-weight: normal">
+and </span><i><span style="font-weight: normal">Paratext</span></i><span style="font-weight: normal">.
+</span><span style="font-weight: normal">See the Adapt It HTML
+document named Help_for_Administrators.htm for more details on how to
+set up collaboration between </span><i><span style="font-weight: normal">Paratext</span></i><span style="font-weight: normal">
+and </span><i><span style="font-weight: normal">Adapt It</span></i><span style="font-weight: normal">.
+ </span>
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<div title="footer">
+	<p style="margin-top: 0.2in; margin-bottom: 0in"><font face="Arial, sans-serif"><font size="2" style="font-size: 10pt"><b>Install
+	Wasta Linux totally replacing Windows	<sdfield type=DOCINFO subtype=CHANGE format=DATE sdnum="1033;1033;D. MMM. YYYY">2. Aug. 2017</sdfield>	Page
+	<sdfield type=PAGE subtype=RANDOM format=PAGE>42</sdfield> of <sdfield type=DOCSTAT subtype=PAGE format=PAGE>42</sdfield></b></font></font></p>
+</div>
+</body>
+</html>
