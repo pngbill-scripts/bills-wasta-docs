@@ -1,0 +1,2019 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 5.3.5.2 (Linux)"/>
+	<meta name="author" content="Jerry Pfaff"/>
+	<meta name="created" content="2013-06-18T14:53:02"/>
+	<meta name="changed" content="2017-08-15T21:07:51.813660628"/>
+	<style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.08in }
+		h2.western { font-family: "Arial", sans-serif; font-size: 16pt }
+		h2.cjk { font-family: "Droid Sans Fallback"; font-size: 16pt }
+		h2.ctl { font-family: "Lohit Hindi"; font-size: 16pt }
+		h3.western { font-family: "Arial", sans-serif; font-size: 14pt }
+		h3.cjk { font-family: "Droid Sans Fallback"; font-size: 14pt }
+		h3.ctl { font-family: "Lohit Hindi"; font-size: 14pt }
+		h4.western { font-family: "Arial", sans-serif; font-size: 13pt; font-style: italic }
+		h4.cjk { font-family: "Droid Sans Fallback"; font-size: 13pt; font-style: italic }
+		h4.ctl { font-family: "Lohit Hindi"; font-size: 13pt; font-style: italic }
+		h5.western { font-family: "Arial", sans-serif; font-size: 11pt }
+		h5.cjk { font-family: "Droid Sans Fallback"; font-size: 11pt }
+		h5.ctl { font-family: "Lohit Hindi"; font-size: 11pt }
+		a:link { so-language: zxx }
+	</style>
+</head>
+<body lang="en-US" dir="ltr">
+<h2 class="western">How to install Wasta Linux to dual boot with an
+existing Windows system by Bill Martin (<sdfield type=DOCINFO subtype=CHANGE format=DATE sdnum="1033;1033;D. MMMM YYYY">15. August 2017</sdfield>)</h2>
+<p align="center" style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>Important Note: These instructions
+tell how to </b><b>install</b><b> </b><b>Wasta Linux</b><b> </b><b>to</b><b>
+dual boot with an existing </b><b>Windows system </b><b>- so that at
+boot time the actual system that is booted can be selected from a
+grub </b><b>boot </b><b>menu which will allow Windows to be selected
+rather than the </b><b>newly installed</b><b> </b><b>Wasta </b><b>Linux
+system. </b><b>Th</b><b>ese instructions, when followed carefully</b><b>,</b><b>
+will </b><b>allow you to preserve the data on the Windows partitions
+as well as the Windows system itself. The Windows partition(s) will
+be shrunk down in size to provide </b><b>free space on your </b><b>hard
+drive for the </b><b>Wasta </b><b>Linux installation. Although this
+process can be done without wiping out data from the computer, it is
+always good to make sure you</b><b> have backed up all data </b><b>to
+an external drive </b><b>before proceeding with these installation
+steps. Step </b><b>4</b><b> below is where actual changes start to
+take place - you can abort the installation at any time before you
+get to the </b><b>point </b><b>of pressing the </b><b>&quot;</b><b>Apply
+All Operations</b><b>&quot; button at the end of step </b><b>4</b><b>.</b></p>
+<p><br/>
+<br/>
+
+</p>
+<p align="left" style="margin-bottom: 0in"><b>Note: If you want to
+install Wasta Linux so that it totally replaces an existing Windows
+system see the document “<a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.odt">How
+to install Wasta Linux totally replacing Windows</a>”</b></p>
+<h3 class="western">What is this document?</h3>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Wasta-logo-low-res.jpg" name="Image55" align="left" width="331" height="71" border="0"/>
+This
+document is an illustrated guide that shows how to install Wasta
+Linux to dual boot with an existing Windows system. If you want to
+install Wasta Linux, but you need to keep the computer’s ability to
+boot to either Wasta Linux or to Windows (dual boot), this document
+shows you how to do that installation.</p>
+<h3 class="western">Who is this document for?</h3>
+<p style="margin-bottom: 0in">This document is designed to be a guide
+for an Advisor, Consultant, or Technician with some knowledge about
+booting and operating systems - or wants to learn! This document
+describes how to make radical changes to the computer that cannot be
+easily reversed. The booting process for some computers can be
+different from other computers, so this document cannot predict all
+possible scenarios that might occur during the process of booting,
+shrinking the existing Windows system, and installing Wasta along
+side Windows. Hence, there is some risk that this process could turn
+your computer into a “brick” that can no longer boot to any
+operating system. That risk, I think, is small, but not zero. I think
+it is worth the risk, and if you also think so please proceed. The
+document is well illustrated with screenshots throughout. You will
+find it helpful if you read through the whole document before trying
+to execute it step by step. Note: The first 3 Steps of this document
+link to the companion document entitled: “<a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.odt#Step%201"><b>How
+to install Wasta Linux totally replacing Windows</b></a>”</p>
+<h3 class="western">When does it make sense to use this procedure</h3>
+<p style="margin-bottom: 0in">It makes sense:</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in">If you would like to switch to
+	using Wasta Linux on your computer, but you cannot or do not feel
+	free to totally remove Windows from the computer - at least at the
+	present time.</p>
+	<li/>
+<p style="margin-bottom: 0in">If you have one or more
+	Windows-only programs that you must use on the computer and for
+	which there is no Linux equivalent or substitute, so you know there
+	will be times that you will need to boot up the computer in Windows
+	in order to use that Windows-only software. (Note: such situations
+	are really very rare these days!).</p>
+	<li/>
+<p style="margin-bottom: 0in">If you are tired of the expense
+	and hassle of always being tied to Microsoft Windows with its
+	licensing restrictions, its vulnerability to viruses and malware,
+	its time-consuming updates, and its encroachment on your privacy.</p>
+	<li/>
+<p style="margin-bottom: 0in">If you want an operating system
+	and software that is highly secure and efficient - and specially
+	designed for the tasks that you do in your work.</p>
+	<li/>
+<p style="margin-bottom: 0in">Note: Putting Wasta Linux on an
+	older Windows XP or other Windows computer is a good way to bring
+	renewed life back into that computer. But, in such cases, we
+	strongly recommend that you totally remove Windows from the old
+	computer, and not set it up to dual boot to Wasta Linux as well as
+	the old Windows system. Old Windows systems are no longer supported
+	by Microsoft and have serious security vulnerabilities – so, each
+	time you decide to boot to the old version of Windows, you subject
+	the computer to those worsening security vulnerabilities. For a
+	better choice, please see the document: “<a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.odt"><b>How
+	to install Wasta Linux totally replacing Windows</b></a>” 
+	</p>
+</ul>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<h3 class="western">Related How To documents:</h3>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in">“<a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.odt"><b>How
+	to install Wasta Linux totally replacing Windows</b></a>”</p>
+</ul>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The first 3 Steps of our documentation
+are identical to the first three steps of the companion document
+entitled: “<a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.odt#Step%201"><b>How
+to install Wasta Linux totally replacing Windows</b></a>”. To avoid
+a lot of duplication, we only provide links to those 3 steps here.
+You should refer to that other document and follow the first 3
+detailed steps which are well illustrated there (more than 12 pages),
+then return to this document and continue with Step 4 below.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<h3 class="western"><a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.odt#Step%201">Step
+1</a>. Get your computer to boot from a USB memory stick. 
+</h3>
+<p style="margin-bottom: 0in; font-weight: normal">Follow <a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.odt#Step%201">Step
+1</a> in other documentation entitled “<a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.odt#Step%201"><b>How
+to install Wasta Linux totally replacing Windows</b></a>”.</p>
+<h3 class="western"><a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.odt#Step_2">Step
+2</a>. Boot Wasta to a “Live” session on the computer.</h3>
+<p style="margin-bottom: 0in; font-weight: normal">Follow <a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.odt#Step_2">Step
+2</a> in other documentation entitled “<a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.odt#Step%202"><b>How
+to install Wasta Linux totally replacing Windows</b></a>”.</p>
+<h3 class="western"><a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.odt#Step%203">Step
+3</a>. Check out the Wasta system.</h3>
+<p style="margin-bottom: 0in; font-weight: normal">Follow <a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.odt#Step%203">Step
+3</a> in other documentation entitled “<a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.odt#Step%203"><b>How
+to install Wasta Linux totally replacing Windows</b></a>”.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<h3 class="western"><a name="Step 4 - Use GParted to shrink the main Windows partition"></a>
+Step 4. Use GParted to shrink the main Windows partition</h3>
+<p>This step assumes you have successfully followed the first 3 steps
+detailed in the companion document “<a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.odt"><b>How
+to install Wasta Linux totally replacing Windows</b></a>” and are
+currently booted to a “Live” session of Wasta Linux 16.04.1.1 on
+your computer. Your desktop should be displaying the “Live”
+session of Wasta’s desktop on your screen which looks like this:</p>
+<p><img src="wasta-docs-images/Wasta-16.04.1.1-live-boot-desktop-install-icon-not-highlighted.png" name="Image1" align="left" width="665" height="458">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>The existing Windows system normally reserves the entire disk
+space for its own use. In order to make space for Wasta Linux to be
+installed on the same computer, we will use the GParted program to
+shrink the main Windows partition of the computer’s hard drive.</p>
+<p>Start up the GParted program by selecting <b>GParted</b> from the
+<b>Administration</b> category of the main <b>Menu</b> of the live
+Wasta session:</p>
+<p><img src="wasta-docs-images/Menu-Administration-GParted.png" name="Image2" align="left" width="606" height="380">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>The GParted program will first ask you to type your password:</p>
+<p><img src="wasta-docs-images/Enter-Password-for-GParted.png" name="Image3" align="left" width="500" height="184">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>GParted then scans the partitions that exist on the computer hard
+drive and other storage devices, and displays its main program screen
+which looks like the following example - from a computer with Windows
+10 on it:</p>
+<p><img src="wasta-docs-images/GParted-Win10-initial-display.png" name="Image4" align="left" width="648" height="441">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>Study the GParted display of your computer. The above illustration
+is a sample only – your computer will certainly look different, but
+there will be some similarities. The partitions that have an <b>ntfs</b>
+type of file system are Windows partitions. Also partitions of the
+&quot;fat32&quot; or &quot;fat&quot; type are Windows compatible
+partitions. There is more <a href="#Partitions and partitioning – background information">background
+information about computer partitions in the Appendix</a> at the end
+of this document.</p>
+<p>The above illustration shows a Windows 10 computer that has 2 <b>ntfs</b>
+partitions; your computer may have 3 or more, and the size of your
+partitions will almost certainly be different from those shown above.</p>
+<p><b>You need to determine which ntfs partition on your computer is
+the main Windows partition</b>. Look for the partition that has the
+<b>largest </b><b>Size</b> – in Gigabytes (GiB). It should also
+have the <b>largest Unused space</b>. The relative size of the disk’s
+partitions is represented in the horizontal bar graph in the above
+illustration. Some manufacturers label the main Windows partition
+something like “Windows10_OS”, “Windows8_OS” or
+“Windows7_OS”. Pay close attention to the difference between
+Megabytes (MiB) and Gigabytes (GiB). It takes about a thousand
+Megabytes to make one Gigabyte. So, in the illustration above the
+first partition (/dev/sda1) is only half a Gigabyte (500 Megabytes or
+MiB) in Size. The second partition (/dev/sda2) is 394.04 Gigabytes,
+or about 394,000 Megabytes and it has about 345.54 GiB, or 345,540 MB
+of unused space. Although it has no name in the Label column,
+<b>clearly, the /dev/sda2 ntfs partition is </b><b>the </b><b>largest,
+and has most unused space. </b><b>W</b><b>e will shrink </b><b>partition
+sda2</b><b> </b><b>to make space for our Linux partitions </b><b>on
+this computer.</b></p>
+<h4 class="western">Tell GParted how you want to shrink the main
+Windows partition</h4>
+<p>Once you have determined which partition is your main Windows
+partition, <b>click on </b><b>the line representing the main
+partition</b><b> in GParted to </b><b>select/</b><b>highlight it</b><span style="font-weight: normal">
+</span><span style="font-weight: normal">as shown in the illustration
+below</span><span style="font-weight: normal">:</span></p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Resize-Icon.png" name="Image5" align="left" width="491" height="333">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>With the main Windows partition selected (sda2 in the above
+example), click on the <b>Resize/</b><b>Move</b> icon in the tool
+bar, as shown in the above illustration. After clicking on the Resize
+button, the <b>Resize/Move</b> dialog should pop up over the main
+GParted window:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Resize-dialog.png" name="Image6" align="left" width="482" height="328">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>The pop up dialog shows a graphical representation of the main
+Windows partition at the top of the dialog, and also shows some
+information about this main partition. Our goal is to make this
+Windows partition smaller, and at the same time, free up space on the
+hard drive – space that we will later use to create some Linux
+partitions in. Here is another view that only shows the Resize/Move
+dialog:</p>
+<p><img src="wasta-docs-images/GParted-Resize-dialog-initial-size.png" name="Image7" align="left" width="573" height="310">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>We will make changes to this partition (/dev/sda2) using the
+graphic at the top of the above dialog:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Resize-dialog-slider-function.png" name="Image8" align="left" width="547" height="200">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>Within the graphic, note that the yellow shaded part at left
+represents the “used” part of the partition – the part
+containing data or files. The white part at right represents the part
+of the partition that is “unused” - the part that has no data or
+files on it. 
+</p>
+<p>Using your mouse click down on the slider at the right end and
+hold it down while dragging the slider to the left – to a point
+about half way within the white area – as shown below:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Resize-dialog-slider-at-middle.png" name="Image9" align="left" width="665" height="77">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>The gray area that appears to the right of the slider arrow is
+<b>freed space</b> – the space where we will create our Linux
+partitions later. The Resize/Move dialog should now appear similar to
+this:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Resize-dialog-drag-slider-to-half-of-unused-space.png" name="Image10" align="left" width="665" height="452">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>The size numbers shown above are for illustration purposes only.
+Your numbers will vary depending on the starting size of the Windows
+main partition on your system, and the amount of data and files on
+it. As you drag the slider to the left, the numbers in the <b>New
+size (MiB)</b> and in the <b>Free space following (MiB)</b> boxes
+automatically adjust proportionally, keeping the total of those two
+values equal to the Maximum size available. The white space to the
+left of the sizer is the unused space that will stay with the Windows
+system, and the gray space labeled “Freed space” above is the
+size that will become available for Linux partitions. The actual size
+in MiB is shown in the “Free space following” box. You can adjust
+the slider to whatever proportion you want to devote to each
+operating system, but giving each operating system about half of the
+available (white) space is a good starting point.</p>
+<p>When you have adjusted the slider to the point you want, click on
+the <b>Resize/Move</b> button in the lower right corner of the
+dialog. Clicking the Resize/Move button will set up the resize
+operation as a pending operation. 
+</p>
+<p><b>Remember: The changes you are making within GParted are not
+made immediately on the actual computer. The changes are put into a
+queue of “pending operations” which will only be executed when
+you are ready to “Apply All Operations”.</b></p>
+<p>After clicking on the <b>Resize/Move</b> button in the overlay
+dialog, the main GParted screen will now look like this illustration
+below:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Resize-dialog-resized-apply-all-operations.png" name="Image11" align="left" width="665" height="452">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>Notice that the graphic is now displaying what the main partition
+(/dev/sda2) will look like <b>after</b> the pending operation has
+been executed. If you were to “Clear all operations” (on the Edit
+menu), or Quit the GParted program (from the GParted menu), no
+changes would be made to the computer.</p>
+<h4 class="western">Tell GParted to shrink the Windows partition</h4>
+<p><img src="wasta-docs-images/GParted-Apply-all-operations-icon.png" name="Image16" align="left" width="51" height="55" border="0"/>
+When
+you are ready to shrink the Windows partition, click on the <b>Apply
+All Operations icon</b> on the GParted tool bar (the icon with the
+green tick mark). 
+</p>
+<p>You will be asked to confirm the operation:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Resize-dialog-resized-confirm-apply-all.png" name="Image12" align="left" width="563" height="163">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>Click on the <b>Apply</b> button to execute the partition resize
+operation. Be patient. The process can take a long time especially if
+GParted needs to move data down to safety out of the area of the
+partition that is being shrunk.</p>
+<p> GParted will show a progress bar as the operation proceeds:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Resize-dialog-resized-applying-pending-progress.png" name="Image14" align="left" width="645" height="266">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>When the process completes it will show a dialog announcing “All
+operations successfully completed” as shown in the illustration
+below:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Resize-dialog-resized-completed.png" name="Image13" align="left" width="619" height="420">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>Click the <b>Close</b> button. The GParted screen will then show
+the current state of computer’s Main Windows partition as shown in
+the illustration below:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Resize-dialog-resized-completed-new-unallocated-space-selected.png" name="Image15" align="left" width="611" height="415">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>The “unallocated” space shown in the illustration above
+(168.65 GiB) is where we will have the Wasta installer create our
+Linux partitions as described below. Your unallocated space will be
+different. 
+</p>
+<h3 class="western">Step 5. Create an Extended Partition in the newly
+created unallocated space</h3>
+<p>While the GParted program is still running, it is a good time to
+see if we can create an <b>E</b><b>xtended</b> partition within the
+unallocated space that we freed up in Step 4 above. The Extended
+partition will be the “container” for the Linux partitions we
+will create later during the actual installation of Wasta Linux.</p>
+<p>With the “unallocated” line selected/highlighted as shown in
+the image above, click on the <b>Partition</b> menu (at the top of
+the GParted program screen), and select the <b>New</b> menu item as
+shown in the screen illustration below:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Add-New-menu.png" name="Image42" align="left" width="597" height="405">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>If there are 4 or more partitions showing in the GParted window at
+this point, it is possible that GParted will not allow you to create
+a new partition on the hard drive. If GParted presents you with this
+error message when you try to create a new partition:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Create-New-Partition-Error-not-possible.png" name="Image60" align="left" width="575" height="211">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>it is likely that there are already the maximum number of 4
+primary partitions on the hard drive. To remedy this situation please
+skip down to the Appendix section entitled: “<a href="#If_the_partitioner_cannot_create_partitions">If
+the partitioner cannot create partitions or the drive has ‘unusable’
+space on it</a>” and follow the procedures detailed there before
+you attempt to install the Wasta Linux system in Step 6.</p>
+<p>If you don’t see the error message shown above, you should now
+see a dialog that looks like the following illustration:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Create-New-Partition-dialog.png" name="Image51" align="left" width="620" height="284">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>Click on the drop down arrow to access the <b>Create as</b> list
+and select <b>Extended </b><b>Partition</b> as shown in the
+illustration below:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Create-New-Partition-select-Extended.png" name="Image52" align="left" width="665" height="310">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>With Extended Partition selected in the <b>Create as</b> list,
+click on the <b>Add</b> button as shown below:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Create-New-Partition-select-Extended-Add.png" name="Image53" align="left" width="644" height="298">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>GParted will now show a <b>New Partition #1</b> - planned as a
+pending operation within its graphical representation of the
+partitions, as shown below:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Create-New-Partition-Extended-pending-operation.png" name="Image54" align="left" width="635" height="432">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p><img src="wasta-docs-images/GParted-Apply-all-operations-icon.png" name="Image59" align="left" width="51" height="55" border="0"/>
+To
+execute the pending operation and create the new Extended partition
+click on the <b>Apply All Operations icon</b> in the GParted tool bar
+as shown above. You will be asked to confirm the operation with this
+message:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Resize-dialog-resized-confirm-apply-all.png" name="Image56" align="left" width="563" height="163">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>Click on the <b>Apply</b> button to proceed. Normally the creation
+of the Extended partition will be done quickly and you will see the
+following message that “All operations successfully completed”:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Create-New-Partition-Extended-completed.png" name="Image57" align="left" width="616" height="419">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>Click on the <b>Close</b> button to continue. GParted now shows
+the extended partition added as <b>sda3</b>, with unallocated space
+of 168.65 GiB available:</p>
+<p><img src="wasta-docs-images/GParted-select-partition-and-Create-New-Partition-Extended-now-showing.png" name="Image58" align="left" width="665" height="347">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>The “extended” partition functions as a container. The
+“unallocated” part of the extended partition is where we will
+create the Linux partitions. We will not create the Linux partitions
+during this session of GParted, but will do so below during the
+installation of the Wasta system in Steps 6 and following.</p>
+<p>So, select <b>Quit</b> from the GParted menu to close the GParted
+program window for now. 
+</p>
+<p>Our next step will be to start up the Wasta installer while we are
+still booted from the “Live” Wasta Linux memory stick. In the
+remaining steps we will do the actual installation of the Wasta
+system on the computer.</p>
+<h3 class="western"><a name="Step 6 - Start the installer using the desktop icon"></a>
+Step 6. Start the installer using the desktop icon</h3>
+<h4 class="western">Are you ready to install Wasta Linux?</h4>
+<p style="margin-bottom: 0in">The remainder of this document
+describes how to install Wasta Linux on the newly created
+“unallocated” space on your computer. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>Note that Steps </b><b>6</b><b>
+through </b><b>9</b><b> are </b><b>non-destructive installation
+steps.</b> You can feel free to proceed down through the first part
+of step 10 below. No new changes will be made on your computer if you
+decide to <b>Quit</b> before you get to the last part of step 10
+below (clicking on the <b>Install Now</b> button). 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">At this point you should still see the
+desktop of the “Live” Wasta Linux session on your computer
+screen:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Wasta-16.04.1.1-live-boot-desktop-install-icon-highlighted.png" name="Image17" align="left" width="635" height="438">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>Start the installer by d</b><b>ouble
+click</b><b>ing </b><b> the “Install Wasta Linux 16.04” icon on
+the live session desktop as shown above</b>.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Wait for the installation “Welcome”
+window to appear. It will allow you to change the <b>language</b> for
+the installation and looks as follows:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Install-Welcome.png" name="Image18" align="left" width="437" height="281">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">English is usually the default
+selection. Click <b>Continue</b>. The next screen appears.</p>
+<h3 class="western">Step 7. Connect to a wi-fi network (optional)</h3>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">If
+your computer has an active wireless connection –</span><span style="font-weight: normal">
+but not yet connected -</span><span style="font-weight: normal"> the
+installer may ask you if you want to connect the computer to the
+wi-fi network:</span></p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Install-connect-to-wireless.png" name="Image19" align="left" width="598" height="333">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">If
+you wish to you can select the </span><b>Connect to this network</b><span style="font-weight: normal">
+button, select the name of your network in the list, and enter your
+network’s security password/</span><span style="font-weight: normal">key</span><span style="font-weight: normal">
+in the Password box. But, a connection to your wireless network is
+</span><span style="font-weight: normal">optional, and being
+connected to the Internet is not required</span><span style="font-weight: normal">
+</span><span style="font-weight: normal">during the</span><span style="font-weight: normal">
+installatio</span><span style="font-weight: normal">n. </span><span style="font-weight: normal">S</span><span style="font-weight: normal">o,
+you can </span><span style="font-weight: normal">also </span><span style="font-weight: normal">leave
+it set to the default “I don’t want to connect to a wi-fi network
+right now” </span><span style="font-weight: normal">- especially if
+you have slow or expensive Internet</span><span style="font-weight: normal">.
+</span><span style="font-weight: normal">You can connect after
+installation </span><span style="font-weight: normal">(or use a full
+wasta-offline mirror to update your software). If you wish to connect
+now you can do so </span><span style="font-weight: normal">as you did
+in Step 3 above when you played around with the Live system. </span><span style="font-weight: normal">In
+either case, </span><span style="font-weight: normal">then </span><span style="font-weight: normal">c</span><span style="font-weight: normal">lick
+</span><b>Continue</b><span style="font-weight: normal"> </span><span style="font-weight: normal">when
+you are ready to move on to the next step.</span></p>
+<h3 class="western">Step 8. Updates and third-party software
+(optional)</h3>
+<p style="margin-bottom: 0in">Next, a <b>Preparing to install Wasta
+Linux</b> screen will appear - offering to download updates and
+third-party software while installing:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Install-Preparing-to-install.png" name="Image20" align="left" width="665" height="405">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">We will not install these updates and
+third-party software during the initial installation. You can do
+updates after installation, so just leave the check boxes un-ticked,
+and click <b>Continue</b>.</p>
+<h3 class="western">Step 9. Installation type</h3>
+<p style="margin-bottom: 0in">The next install wizard page wants to
+know how you want Wasta Linux to be installed on the computer,
+especially in relation to any existing operating system such as
+Windows - or a previous Linux installation(s). The appearance of this
+dialog will vary depending on what operating system(s) are already on
+the computer. We are assuming here that some version of Windows is on
+the computer.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The <b>Installatio</b><b>n type</b>
+dialog will look similar to one of the dialogs shown below –
+depending on the version of Windows that is resident on the computer.
+Regardless of the type of Windows system on your computer, we will
+always elect to do a manual partitioning of the hard drive – which
+is always going to be the last option called “<b>Something else</b>”
+in the Installation type that is presented to you.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Therefore, if you are installing Wasta
+Linux:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in">to replace Windows XP, proceed
+	with the <a href="#Windows XP">Windows XP section below</a></p>
+	<li/>
+<p style="margin-bottom: 0in">to replace Windows 7, 8 or 8.1,
+	skip to the <a href="#Windows 7 - 8">Windows 7, 8, or 8.1 section</a></p>
+	<li/>
+<p>to replace Window 10, skip to the <a href="#Windows 10">Windows
+	10 section</a></p>
+</ul>
+<p style="margin-bottom: 0in">The <b>Installatio</b><b>n type</b>
+dialog will look similar to one of the dialogs shown below –
+depending on the version of Windows that is on the computer:</p>
+<h4 class="western"><a name="Windows XP"></a>Windows XP</h4>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-type-WinXP-initial-default.png" name="Image21" align="left" width="665" height="372">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The first option is often pre-selected,
+but you should choose <b>Something else</b> instead. Click <b>Continue</b><span style="font-weight: normal">
+</span><span style="font-weight: normal">and skip down to <a href="#Why do we choose Something else">Why
+do we choose Something else?</a></span></p>
+<h4 class="western"><a name="Windows 7 - 8"></a>Windows 7, 8, 8.1</h4>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-type-Win7-initial-default.png" name="Image22" align="left" width="665" height="372">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The first option is often pre-selected,
+but you should choose <b>Something else</b> instead. Click <b>Continue</b><span style="font-weight: normal">
+</span><span style="font-weight: normal">and skip down to <a href="#Why do we choose Something else">Why
+do we choose Something else?</a></span></p>
+<h4 class="western"><a name="Windows 10"></a>Windows 10</h4>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-type-Win10initial-default.png" name="Image23" align="left" width="665" height="370">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The first option is often pre-selected,
+but you should choose <b>Something else</b> instead. Click <b>Continue.</b></p>
+<h4 class="western"><a name="Why do we choose Something else"></a>Why
+do we choose Something else?</h4>
+<p style="margin-bottom: 0in">It is possible to install Wasta Linux
+using one of the other Installation type options, but this
+documentation suggests choosing <b>Something else</b><span style="font-weight: normal">
+for the </span><span style="font-weight: normal">following</span><span style="font-weight: normal">
+reasons:</span></p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">The
+	</span><b>Something else</b><span style="font-weight: normal">
+	option allows us to have your </span><b>/home</b><span style="font-weight: normal">
+	directory on a separate partition. Having </span><b>/home</b><span style="font-weight: normal">
+	on a separate partition makes it easy to upgrade to a newer version
+	of Wasta (or other kind of Linux) in the future without touching any
+	of your documents, data or settings.</span></p>
+	<li/>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">The
+	</span><b>Something else</b><span style="font-weight: normal">
+	option </span><span style="font-weight: normal">allows us to choose
+	the </span><b>size and arrangement</b><span style="font-weight: normal">
+	of the partitions that will be created on the computer’s hard
+	drive.</span></p>
+	<li/>
+<p style="margin-bottom: 0in">Different versions of Windows
+	come with different numbers and kinds of partitions. By selecting
+	<b>Something els</b>e, we can ensure that we can fit the Linux
+	partitions within the unallocated space (we created earlier), so
+	that the Linux and Windows partitions can co-exist and the computer
+	can be booted to either Wasta or Windows at startup.</p>
+	<li/>
+<p style="margin-bottom: 0in">While the first couple options
+	in the above dialog may vary depending on how your Windows computer
+	is set up, the last option for any installation will always be
+	<b>Something else</b>. The <b>Something else</b> option therefore
+	allows us to standardize this document, and reduce the number of
+	possible variations and gotchas that might happen if we tried to
+	describe one of the other options. 
+	</p>
+	<li/>
+<p style="margin-bottom: 0in">We are not planning to encrypt
+	the new Wasta installation, nor use the Logical Volume Management
+	(LVM) system. The use of these technologies is not necessary in most
+	environments. They are more complicated to set up at installation
+	time and so are beyond the scope of this document.</p>
+</ul>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Note: The <b>Installation type</b>
+dialogs shown above may differ a little from what you see on your
+particular Windows computer, but the last option &quot;<b>Something
+else</b>&quot; should always be available and is the one you should
+select to follow this document. After selecting <b>Something else</b>,
+click <b>C</b><b>ontinue.</b></p>
+<h3 class="western">Step 10. Creating the Linux partitions</h3>
+<p style="margin-bottom: 0in">The installation program uses a
+partitioning program <span style="font-weight: normal">to show you </span>a
+graphical display of the existing partitions that are on the
+computer's hard drive. The Wasta installer calls on the services of
+the GParted program, so the display will look quite similar to what
+you saw while using GParted earlier to resize the main Windows
+partition and create the extended partition. The graphics within the
+installer will look a little different, but you should recognize the
+general partitioning layout and the information it displays:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Live-Install-initial-dialog.png" name="Image24" align="left" width="626" height="402">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The appearance and the number of
+partitions displayed in the dialog you see will depend on what
+partitions currently exist on your computer. You will want to study
+the graph showing on your screen, and the information displayed on it
+carefully.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">If you already created the Extended
+partition with Gparted in an earlier step that became sda3, you may
+be wondering why an extended partition named sda3 is not showing in
+the above dialog. During installation, the installer simply hides the
+extended partitions and other things from view, and just represents
+it as “free space” as shown above. The installer takes care of
+the assignment of partition device names (as you will see below). 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The point of no return is the <b>Install
+Now</b> button at the bottom right of this installation page. <b>Do
+not click on that button until the end of Step </b><b>10</b>. Our
+actions in creating Linux partitions are only <b>simulated</b> until
+we get them just the way we want them. We can adjust them over and
+over again without making actual changes to your computer. At any
+time you can call it quits by clicking on the <b>Quit</b> button –
+and no new changes will be made to your computer. <b>Again, don’t
+click on the Install Now button until you are ready for the changes
+to be made on your computer </b><b>(at the end of Step 10 below)</b><b>.</b></p>
+<h4 class="western">Add the Linux partitions</h4>
+<p style="margin-bottom: 0in">We want to now start adding the Linux
+partitions to the Extended/unallocated space. We will add <b>three</b>
+logical partitions, <b>one at a time</b>:</p>
+<ol>
+	<li/>
+<p style="margin-bottom: 0in">A Linux root (/) partition with
+	a size of 15GB (15000MB)</p>
+	<li/>
+<p style="margin-bottom: 0in">A Linux swap partition with a
+	size of 4GB (4000MB)</p>
+	<li/>
+<p style="margin-bottom: 0in">A Home partition (/home) with
+	the remainder of the free space</p>
+</ol>
+<h5 class="western">Add the Linux root / partition</h5>
+<p style="margin-bottom: 0in">The <b>first partition</b> we want to
+add is the Linux <b>root (/) partition</b> with a size of 15GB or
+15000MB.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>Select</b><b> the free space line</b>
+in the dialog, and click the <b>plus</b> button to add a new
+partition as shown in the illustration below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Live-Install-free-space-selected.png" name="Image26" align="left" width="665" height="427">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">If the “Create partition” dialog
+pops up, skip down to the <a href="#Setting the data for the Linux root">Setting
+the data for the Linux root / partition</a> section below.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Note: If, the partitioner won’t allow
+you to add a new partition, and instead it shows the unused part of
+the hard drive as “<b>unusable,</b>”  as shown in the following
+sample:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Live-Install-unusable-space-with-4-primary-partitions.png" name="Image25" align="left" width="514" height="164">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">then the hard drive already has the
+maximum number of 4 primary partitions permitted on the hard drive.
+If that is the case on your computer you will need to remove one or
+more of the non-critical Windows partitions in order to be able to
+create a new “<b>extended</b>” partition to hold the Linux
+partitions. For instructions on how to do that, see the section “<a href="#If_the_partitioner_cannot_create_partitions">If
+the partitioner cannot create partitions or the drive has unusable
+space on it</a>”, then return here.</p>
+<h5 class="western"><a name="Setting the data for the Linux root"></a>
+Setting the data for the Linux root / partition</h5>
+<p style="margin-bottom: 0in">After pressing the plus button, the
+partitioner puts up a “Create partition” dialog to get the
+information it needs for the new partition. Make the settings as
+shown below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Live-Install-root-partition-size.png" name="Image27" align="left" width="360" height="399">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Double check to ensure that the
+following 5 settings are set:</p>
+<p style="margin-bottom: 0in">1. Type <b>15000</b> for the <b>Size</b>
+of the root partition (it is in Megabytes (MB) = 15 GB).</p>
+<p style="margin-bottom: 0in">2. Ensure that the <b>Logical</b>
+button is selected for the <b>Type of the new partition</b>.</p>
+<p style="margin-bottom: 0in">3. Ensure that the <b>Ext4 journaling
+file system</b> is selected for <b>Use as</b> from the drop down
+list.</p>
+<p style="margin-bottom: 0in">4. Ensure that the <b>Beginning of this
+space</b> is selected for <b>Location for the new partition</b>. 
+</p>
+<p style="margin-bottom: 0in">5. Select <b>Mount point</b> of  <b>/ </b>
+from the drop down list (the top item of the list)</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The dialog should now look like this:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Live-Install-root-partition-all-settings-summary.png" name="Image28" align="left" width="361" height="212">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Click the <b>OK</b> button to close the
+Create partition dialog. The partitioner now shows the new Linux <b>root</b>
+partition planned for installation:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Live-Install-root-partition-planned.png" name="Image29" align="left" width="609" height="392">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Note that the partitioner named the new
+Linux root partition <b>sda5</b> instead of <b>sda3</b> or <b>sda4
+</b>that you might have expected. What happened to sda3 and sda4?
+This seemingly odd partition naming is the result of creating our
+first Linux partition as a “Logical” partition. During
+installation, the system reserves some of the device names for its
+“extended” partitions and “logical” partitions.</p>
+<h5 class="western">Add the Linux swap partition</h5>
+<p style="margin-bottom: 0in">The <b>second partition</b> we want to
+add is the Linux <b>swap</b> <b>partition</b> with a size of 4GB or
+4000MB. <span style="font-weight: normal">A swap partition is a
+special partition that Linux can use to swap out some of its RAM
+memory if it needs to. It is generally recommended to have a swap
+partition that is </span><span style="font-weight: normal">at least
+</span><span style="font-weight: normal">as large as the amount of
+RAM memory in the computer. </span>If your computer has more than 4
+GB then increase the swap size accordingly. For example, if you
+computer has 6 GB of RAM memory, you can make the swap partition size
+6000 MB. If it has 8 GB of RAM memory, make the partition size 8000
+MB. If it has just 2 GB of RAM, you can make the swap size 2000 MB.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>Select</b><b> the free space line</b>
+in the dialog, and click the <b>plus</b> button to add a new
+partition as shown in the illustration below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Live-Install-free-space-selected-before-swap.png" name="Image30" align="left" width="665" height="428">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<h5 class="western">Setting the data for the Linux swap partition</h5>
+<p style="margin-bottom: 0in">After pressing the plus button, the
+partitioner puts up the “Create partition” dialog to get the
+information it needs for the new partition. Make the settings as
+shown below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Live-Install-swap-partition-size.png" name="Image31" align="left" width="398" height="434">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Double check to ensure that the
+following 4 settings are set:</p>
+<p style="margin-bottom: 0in">1. Type <b>4000</b> for the <b>Size</b>
+of the root partition in Megabytes (MB) = 4 GB.</p>
+<p style="margin-bottom: 0in">2. Ensure that the <b>Logical</b>
+button is selected for the <b>Type of the new partition</b>.</p>
+<p style="margin-bottom: 0in">3. Ensure that the <b>Ext4 journaling
+file system</b> is selected for <b>Use as</b> from the drop down
+list.</p>
+<p style="margin-bottom: 0in">4. Select <b>swap area</b> from the
+drop down list next to the <b>Use as</b> setting.</p>
+<p style="margin-bottom: 0in">Note: There is no Mount point setting
+for a swap partition.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The dialog should now look like this:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Live-Install-swap-partition-all-settings-summary.png" name="Image32" align="left" width="445" height="228">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Click the <b>OK</b> button to close the
+Create partition dialog. The partitioner now shows the new Linux root
+and swap partitions planned for installation:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Live-Install-swap-partition-planned.png" name="Image33" align="left" width="665" height="427">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<h5 class="western">Add the Linux /home partition</h5>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">The
+</span><b>third and final</b><b> partition</b><span style="font-weight: normal">
+we want to add is the Linux </span><b>/</b><b>home</b><b> partition</b><span style="font-weight: normal">.
+</span><span style="font-weight: normal">The /home partition is where
+all your user generated files will be stored including your
+Documents, Music, Pictures, Videos, Downloads, Desktop files, and all
+of your user settings including settings for the applications you
+will be using. </span><b>For </b><b>our /home partition we want to
+</b><b>use up </b><b>all of </b><b>the remaining </b><b>free space</b><span style="font-weight: normal">.
+</span>
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">As
+you have learned from the above procedures, first we </span><b>s</b><b>elect
+</b><b>the free space line</b><span style="font-weight: normal"> in
+the dialog, </span><span style="font-weight: normal">and click the
+</span><b>plus</b><span style="font-weight: normal"> button to add a
+new partition as shown in the illustration below</span><span style="font-weight: normal">:</span></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Live-Install-free-space-selected-before-home.png" name="Image34" align="left" width="558" height="358">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<h5 class="western">Setting the data for the Linux /home partition</h5>
+<p style="margin-bottom: 0in">After pressing the plus button, the
+partitioner puts up the “Create partition” dialog to get the
+information it needs for the new partition. Make the settings as
+shown below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Live-Install-home-partition-size.png" name="Image35" align="left" width="305" height="336">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Double check to ensure that the
+following 4 settings are set:</p>
+<p style="margin-bottom: 0in">1. Leave the Size set to: <b>your
+maximum space left </b><b>(entered automatically)</b></p>
+<p style="margin-bottom: 0in">2. The Type of partition is set to:
+<b>Logical</b></p>
+<p style="margin-bottom: 0in">3. The Location is set to: <b>Beginning
+of this space</b></p>
+<p style="margin-bottom: 0in">4. The Use as selector is set to: <b>Ext4
+journaling file system</b></p>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">5.
+</span><span style="font-weight: normal">The </span><span style="font-weight: normal">M</span><span style="font-weight: normal">ount
+point </span><span style="font-weight: normal">is set to: </span><b>/home</b></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The dialog should now look like this:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Live-Install-home-partition-all-settings-summary.png" name="Image36" align="left" width="411" height="241">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Click the <b>OK</b> button. The display
+will update showing your new <b>/</b><b>home</b> partition:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Live-Install-home-partition-planned.png" name="Image37" align="left" width="586" height="377">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>Things to note:</b></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<ul>
+	<li/>
+<p>We had the installer partition the drive to use all the
+	remaining free space. 
+	</p>
+	<li/>
+<p>There are check boxes next to the root partition (/), and
+	the /home partition, indicating that those partitions will be
+	formatted during the installation process. Since this is a new
+	installation of Linux on this computer, all partitions will be
+	formatted including the /home partition. If we were re-installing
+	Linux or upgrading to a newer version of Linux on this computer, its
+	/home partition would <b>NOT</b> be formatted by default – leaving
+	any data on the /home partition untouched. The Linux installer won’t
+	automatically format any existing Linux /home partition.</p>
+	<li/>
+<p>The &quot;Device for boot loader Installation&quot;
+	selector should show the computer's main hard disk (usually
+	/dev/sda) with the hard disk's known capacity shown in parentheses.</p>
+</ul>
+<h4 class="western">Ready to take the plunge?</h4>
+<p style="margin-bottom: 0in"><font color="#ff0000"><font size="5" style="font-size: 18pt">Make
+sure the settings and partitions are set according to the above
+information. </font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">The
+next </font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">action</font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">
+will install Linux according to the partitioning scheme we have
+defined for the free space that was available. </font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">If
+you don’t want to continue click the Quit button.</font></font></p>
+<h3 class="western">Step 11. If you are ready, click on the “Install
+Now” button</h3>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/GParted-Live-Install-Install-Now.png" name="Image38" align="left" width="614" height="395">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">The
+installation will start and present you with some configuration
+screens while the system does the partitioning, formatting and
+installation of the </span><span style="font-weight: normal">Wasta
+</span><span style="font-weight: normal">Linux system. </span>The
+first configuration screen will be the  “Where are you?” screen
+that looks like this:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-where-are-you.png" name="Image44" align="left" width="652" height="419">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Click on the general area of the world
+map where you are located. For Manus users, the time zone that
+includes PNG should be highlighted, so that &quot;<b>Port Moresby</b>&quot;
+shows on the time zone selected.</p>
+<p style="margin-bottom: 0in">Click <b>C</b><b>ontinue.</b></p>
+<h3 class="western">Step 12. Select keyboard layout</h3>
+<p style="margin-bottom: 0in">The next configuration screen is the
+keyboard layout screen which looks like this:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-keyboard-layout.png" name="Image45" align="left" width="570" height="351">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Click <b>C</b><b>ontinue</b> to use the
+“English (US)” keyboard as default, unless you have a different
+keyboard layout on your computer.</p>
+<h3 class="western">Step 13. Enter your user information</h3>
+<p style="margin-bottom: 0in">The next screen is the “Who are you?”
+screen which appears as illustrated below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-who-are-you.png" name="Image46" align="left" width="583" height="358">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Fill in the requested information and
+password:</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in">Type your name in the top box.</p>
+	<li/>
+<p style="margin-bottom: 0in">The computer’s name is the
+	name that it will have on any local network.</p>
+	<li/>
+<p style="margin-bottom: 0in">The <b>username</b> you type in
+	will be used as the name of your user folder in the Home directory. 
+	</p>
+	<li/>
+<p style="margin-bottom: 0in">It is smart to use a good
+	password – one that you can remember. 
+	</p>
+	<li/>
+<p style="margin-bottom: 0in">You should keep the button
+	selected “Require my password to log in.” 
+	</p>
+</ul>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Click <b>Continue</b>. The installation
+process does not require any additional input from you. The installer
+will display a little slide show that describes some of the features
+available in (Ubuntu) Linux. The installation progress is displayed
+in the bar at the bottom of the slides. Most installs take less than
+30 minutes.</p>
+<h3 class="western">Step 14. Wait for the installation to complete</h3>
+<p style="margin-bottom: 0in">When the installation is finished a
+dialog will appear that looks like this:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-has-finished.png" name="Image47" align="left" width="665" height="67">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Click on the <b>Restart Now</b> button.
+As the computer shuts down you will see:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Install-please-remove-installation-media.png" name="Image48" align="left" width="542" height="367">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>R</b><b>emove the </b><b>memory
+stick</b> at the prompt and press <b>Enter</b> to reboot the
+computer.</p>
+<h3 class="western">Step 15. Restart into Wasta Linux</h3>
+<p style="margin-bottom: 0in">Each time you boot into your Wasta
+Linux system, you will need to type your password into the login box.
+Your login password is the password you set during the installation.
+The same password is also used when you do administration tasks such
+as installing software:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Login-screen.png" name="Image49" align="left" width="631" height="411">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"> If the prompt inside the login box
+asks for your Username, you can type it in, or click on the user name
+with a mouse to get the Password prompt.</p>
+<h3 class="western">Step 16. Customize your background image</h3>
+<p style="margin-bottom: 0in">Once the system has started up, and you
+have logged in, you can set the background image: Right-click on the
+desktop and select “Change Desktop Background”. The <b>Backgrounds</b>
+applet will appear:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Backgrounds-applet.png" name="Image50" align="left" width="665" height="492">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">You can select a stock picture from one
+of the Linux distributions by selecting the distribution name in the
+left panel. Alternatively, you can select a Background image from
+your Pictures folder. You can load a different folder by clicking on
+the little <b>+</b> button to add a folder of pictures to the
+selection list. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">For the Manus computers, navigate to
+open the “Pictures” folder. Then, double-click on the
+&quot;manus_jaha_background_images&quot; folder. This folder has 30
+Manus-Jaha backgrounds. Select the one that agrees with the N number
+used in the user name above. Scroll down in the background pictures
+to select the appropriate background picture. Select Advanced and
+from that drop down list choose the “Stretched” option to make
+the Manus-Jaha image fit the screen.</p>
+<h3 class="western">Step 17. Configure other post-install settings</h3>
+<p style="margin-bottom: 0in; font-weight: normal">While most
+software and resources are immediately available for use, some
+programs like Paratext and Adapt It will need additional setup and
+configuration. 
+</p>
+<h4 class="western">Configuring Paratext:</h4>
+<p style="margin-bottom: 0in; font-weight: normal">The <i>Paratext</i>
+registration information will need to be entered for the specific
+user of the computer. <i>Paratext</i> will also need to have its
+projects created, and if used in collaboration with <i>Adapt It</i>,
+<i>Paratext</i> will need the following projects setup as a minimum
+for collaboration with <i>Adapt It</i>:</p>
+<p style="margin-bottom: 0in; font-weight: normal">   * A <b>source</b>
+language <i>Paratext</i> project - containing the Scripture books
+imported into the <i>Paratext</i> project that will be used in <i>Adapt
+It </i>as <b>source</b> text for adaptation work. 
+</p>
+<p style="margin-bottom: 0in; font-weight: normal">   * A <b>target</b>
+language <i>Paratext</i> project - containing Scripture books created
+as empty books (i.e., &quot;empty&quot; but containing chapter and
+verse numbers when created within <i>Paratext</i>). This initially
+“empty” project will be used in <i>Adapt It</i> as target or
+translation text for adaptation work, and will be transferred
+automatically to <i>Paratext</i> each time the adaptation document is
+saved within <i>Adapt It</i>. 
+</p>
+<h4 class="western">Configuring Adapt It:</h4>
+<p style="margin-bottom: 0in"><i><span style="font-weight: normal">Adapt
+It</span></i><span style="font-weight: normal"> can be configured to
+collaborate with </span><i><span style="font-weight: normal">Paratext</span></i><span style="font-weight: normal">,
+but the necessary </span><i><span style="font-weight: normal">Paratext</span></i><span style="font-weight: normal">
+projects need to be created first (see above). Once the </span><i><span style="font-weight: normal">Paratext</span></i><span style="font-weight: normal">
+projects are created for the source language and target languages, </span><span style="font-weight: normal">an
+administrator can make the &quot;Administrator&quot; menu visible
+within </span><i><span style="font-weight: normal">Adapt It</span></i><span style="font-weight: normal">,
+and use </span><span style="font-weight: normal">its </span><span style="font-weight: normal">“</span><b>Setup
+Or Remove Collaboration</b><span style="font-weight: normal">” </span><span style="font-weight: normal">menu
+to set up one or more </span><i><span style="font-weight: normal">Adapt
+It</span></i><span style="font-weight: normal"> collaboration
+projects between </span><i><span style="font-weight: normal">Adapt It</span></i><span style="font-weight: normal">
+and </span><i><span style="font-weight: normal">Paratext</span></i><span style="font-weight: normal">.
+</span><span style="font-weight: normal">See the Adapt It HTML
+document named Help_for_Administrators.htm for more details on how to
+set up collaboration between </span><i><span style="font-weight: normal">Paratext</span></i><span style="font-weight: normal">
+and </span><i><span style="font-weight: normal">Adapt It</span></i><span style="font-weight: normal">.
+ </span>
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<h3 class="western">Appendix</h3>
+<h4 class="western"><a name="If_the_partitioner_cannot_create_partitions"></a>
+If the partitioner cannot create partitions or the drive has
+“unusable” space on it</h4>
+<p style="margin-bottom: 0in">If you are reading this section of the
+appendix, it is likely due to getting the following error message</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Create-New-Partition-Error-not-possible.png" name="Image61" align="left" width="586" height="215">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">when you tried to create an extended
+partition on the computer’s hard drive. Or, you may have noticed
+that GParted shows that a large section of space on your hard drive
+is “<b>unusable</b>” similar to what is depicted by the
+illustration below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Live-Install-unusable-space-example.png" name="Image39" align="left" width="649" height="420">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">For either of these situations, it is
+likely that there are already the maximum number of “primary”
+partitions (4) configured on your hard drive. The sections below will
+tell more about how to handle this situation, and make it possible
+for you to install the 3 Linux partitions we will add to your
+computer’s hard drive during the installation of the Wasta Linux
+system on your computer. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">First we’ll present some educational
+background information about partitions and partitioning. But, if you
+are in a hurry, you can skip down to the section called <a href="#How_to_recover_the_unusable_space">How
+to recover the unusable space</a>.</p>
+<h4 class="western"><a name="Partitions and partitioning – background information"></a>
+Partitions and partitioning – background information</h4>
+<p>In the realm of disk partitioning, there are three types of disk
+partitions: primary, extended, and logical partitions. 
+</p>
+<p style="margin-bottom: 0in">There are two partitioning schemes in
+common use today:  the Master Boot Record or MBR partitioning scheme,
+and the  GUID Partition Table or GPT partitioning scheme. The MBR
+scheme is older and is gradually being replaced by the newer GPT
+scheme.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p>A disk with a traditional partition table (MBR) can only have up
+to 4 partitions. In the MBR scheme, each disk can have up to 4
+primary partitions or 3 primary partitions and 1 extended partition.
+If you need 4 partitions or less, you can just create them as primary
+partitions. Extended and logical partitions are a way to get around
+this limitation, but logical partitions must be created within an
+extended partition container – and that extended partition
+container itself must take the place of one of the 4 possible primary
+partitions.</p>
+<p>If you want to have 6 partitions on a single drive, one way to do
+that is to create 3 primary partitions and 1 extended partition in
+the last primary partition slot. The extended partition effectively
+functions as a container that allows you to create more logical
+partitions within that extended partition container. So then, if you
+needed 6 partitions, you can create 3 primary partitions, 1 main
+extended partition, and then 3 more logical (extended) partitions
+inside the main extended partition. You could also just create a
+single primary partition, an extended partition container, and put 5
+logical (extended) partitions inside the main extended partition. The
+main restriction for the MBR scheme is that you cannot have more than
+4 primary partitions at a time. 
+</p>
+<p>Here is an example illustrating how the partitioning was done for
+a typical laptop computer after it had been configured to dual boot
+to either Windows 10 or to Wasta Linux. The illustration below is
+derived from the Linux “Disks” program that is part of Wasta
+Linux. It is not a view of the partitioning you will see during
+installation:</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Dual_Boot_Disks_View_of_partitions.png" name="Image40" align="left" width="665" height="329">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">In the above illustration notice the
+following:</p>
+<ul>
+	<li/>
+<p>Partition 1, Partition 2, and Partition 3 are “Primary
+	partitions” that came with the Windows computer. Partition 1 is
+	the System partition; Partition 2 is the main Windows partition, and
+	Partition 3 is the Recovery partition. Before we added the Extended
+	Partition 4, we shrank down the Windows Partition 2, and moved the
+	Recovery Partition 3 (without changing its size) to the left to
+	align with the right end of the shrunken Windows partition 2. That
+	left about 341 GB of free space at the right end of the drive for
+	creating the Extended partition 4.</p>
+	<li/>
+<p>Partition 4 is an “Extended Partition” - it is a
+	container residing in the 4<sup>th</sup> primary slot and contains
+	additional logical (extended) partitions. Notice that the Extended
+	Partition 4 becomes a container that spans over the 3 logical
+	partitions shown below it in the above illustration.</p>
+	<li/>
+<p>Partition 5, Partition 6, and Partition 7 are the logical
+	(extended) partitions existing within the main extended partition 4
+	that spans above them. Sometimes an installer may skip a partition
+	number when configuring logical partitions – so the logical
+	partitions shown above might become Partition 6, Partition 7 and
+	Partition 8, instead of 5, 6, and 7 as shown above.</p>
+	<li/>
+<p>Notice there are two small areas of “Free Space” - one
+	at the end of the disk space and another one between logical
+	partition 6 and 7. The partitioner will create these automatically
+	if needed in order to align the partitions most efficiently.</p>
+</ul>
+<p style="margin-bottom: 0in">As mentioned above, the older
+partitioning scheme is the Master Boot Record or MBR partitioning
+scheme as described above, but it is still very common and the
+easiest scheme for installing a Wasta system alongside Windows on a
+single computer. The MBR scheme is limited to 4 Windows <b>primary</b>
+partitions (but one of those can be configured as an extended
+partition for containing logical partitions) as described above.
+Because of the 4 primary partition limitation of the MBR partitioning
+scheme, much of this document focuses on how to install additional
+Linux partitions under the MBR partitioning scheme.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The GUID Partition Table or GPT scheme
+is a standard for the layout of the partition table on a physical
+storage device, such as a hard disk drive or solid-state drive, using
+globally unique identifiers (called “GUID”). GPT is newer
+partitioning scheme that is becoming increasingly popular since it
+can directly handle more than 4 partitions (up to 128), and the GPT
+drive format lets you set up drives that are larger than 4 terabytes
+(TB) – with each partition size up to 18 exabytes (about 18.8
+million terabytes) of space. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Wasta Linux is fully compatible with
+both the MBR and the GPT partitioning schemes. A computer equipped
+with GPT partitioned drive would be an easy environment for
+installing Linux, except for some complications that can arise due to
+the use of a security feature called “Secure Boot”.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The GPT partitioning scheme has
+supported the “Secure Boot” feature since 2012, but manufacturers
+have varied in the way and extent to which they have implemented the
+feature. For our purposes in installing Linux on a Windows computer,
+the Secure Boot mechanism - and the way it is implemented - make it
+more difficult to boot from a “Live” Wasta Linux memory stick and
+install Wasta Linux. As a result, Wasta documentation gives guidance
+on how to turn off Secure Boot as part of the Wasta Linux
+installation process (see the details in Step 1 of the “<a href="/home/bill/Documents/Wasta%20Documentation/bills-wasta-docs/How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.odt#Step%201">How
+to install Wasta Linux totally replacing Windows</a>” document).</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Hard drives need at least one partition
+in order to be able to store programs and data. The Windows operating
+system requires at least one primary partition to boot its system,
+and that primary partition needs to be the first partition on the
+first hard drive (drive 0) recognized by the system. The Linux
+operating system is the really flexible guy in the neighborhood.
+Linux can boot itself from almost anywhere - without the requirement
+of having its system being stored on a primary partition, or the
+first partition on the first hard drive in the system.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Note: You cannot modify a partition
+while it’s in-use.  For example, you cannot delete or resize a
+Windows system partition while Windows itself is running from that
+partition. This is one reason that we need to boot from a Linux live
+memory stick to make partitioning changes. A partition may also be
+in-use under Windows, if Windows is not fully “shut down”, or is
+in “sleep” or “hibernation” mode in which it has saved part
+of its operating system and data to a temporary location without
+completely shutting down the system. For this reason you should
+always make sure than Windows is fully shut down – and not
+sleeping, or hybernating, or in some other temporary state before
+installing Linux with the Live memory stick.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The newer partitioning scheme is called
+GPT which allows virtually unlimited number of partitions on a hard
+drive. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Manufacturers of Windows computers used
+to supply separate media disks for Windows system recovery. In more
+recent times, however, it is likely that the manufacturer set up the
+partitioning for your Windows system with one or more primary
+partitions dedicated as recovery or backup partitions - in lieu of
+supplying you with physical DVDs or other external recovery/backup
+media. 
+</p>
+<h4 class="western">Default Partition Layout of Windows computers</h4>
+<p style="margin-bottom: 0in">The partitions that come on a Windows
+computer can vary a lot in number, size, order of arrangement and
+naming. Various computer manufacturers also tend to modify the
+recommended partition setup that Microsoft specifies, and sometimes
+add one or more additional partitions. The Windows operating system
+is much more rigid than Linux as to where the partition is located
+that contains its system and boot loading files. Generally for
+Windows, a <b>System</b> partition must be the first partition on the
+first disk that is recognized by the computer system’s firmware.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The tricky part is that various
+computer manufacturers may put different labels on the partitions
+they create on their Windows-equipped computers. They may also add
+one or more additional partitions for backup purposes and also for
+“value added” things – also commonly called “bloat-ware”. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>Basic Rule: Generally speaking, on a
+Windows system, any partitions that are located before (to the left
+of) the main (and largest) Windows partition (see the partition
+layout diagrams below), are critical to the operating of the Windows
+operating system. They should not be changed or moved. Any partitions
+that are located after (to the right of) the main Windows partition,
+are auxiliary and not critical to the day-to-day operation of the
+Windows system.</b></p>
+<h5 class="western">BIOS – based Windows computers</h5>
+<p style="margin-bottom: 0in">For BIOS-based computers, Microsoft
+specifies a default partition layout for Windows that includes the
+following: a system partition, a Windows partition, and a recovery
+tools partition, as shown in the graphic below:</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Partitioning-Win10-default-partition-layout-for-BIOS-pcs.png" name="Image41" align="left" width="665" height="102">
+  <br clear="left"/>
+</img>
+Web
+Reference:
+<a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions">https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions</a></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">I<b>mplications f</b><b>or dual
+booting</b>: If your computer has only 3 partitions similar to what
+is shown in the above illustration, you can usually just add 1 main
+<b>extended</b> partition, and create the 3 Linux partitions as
+logical (extended) partitions within that extended partition. If you
+find 4  or more primary partitions on your Windows computer, so that
+after shrinking the Windows partition down to make space available
+for Linux, that space is “unusable”, you can probably safely
+delete one or more of the additional partitions after (to the right
+of) the main Windows partition - leaving the 3 Windows partitions
+shown above (System, Windows and Recovery). 
+</p>
+<h5 class="western">UEFI – based Windows computers</h5>
+<p>For UEFI-based computers, Microsoft specifies a default partition
+layout for Windows that includes the following: a system partition,
+an Microsoft Reserved Partition (called a MSR), a Windows partition,
+and a recovery tools partition, as shown in the graphic below:</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Partitioning-Win10-default-partition-layout-for-UEFI-pcs.png" name="Image43" align="left" width="665" height="102">
+  <br clear="left"/>
+</img>
+Web
+Reference: 
+<a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions">https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions</a></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">I<b>mplications for dual booting</b>:
+If your computer has 4 partitions (or more) similar to what is shown
+in the above illustration, and the disk uses the MBR partitioning
+scheme, you may need to determine which which of the 4 or more
+primary partitions can be deleted in order to make usable free space
+to install the Wasta Linux partitions. If, after shrinking the
+Windows partition down to make space available for Linux, that freed
+space turns out to be “unusable”, you can probably safely delete
+the Recovery partition, and any other primary partition to the right
+of the main Windows partition - leaving the first 3 Windows
+partitions shown above (System, MSR and the main Windows partition). 
+</p>
+<h4 class="western"><a name="How_to_recover_the_unusable_space"></a>How
+to recover the unusable space</h4>
+<p style="margin-bottom: 0in">This section describes how to recover
+the unusable space, and successfully create an extended partition in
+that space in preparation for the installation of the Wasta Linux
+system. It assumes that the reason for the unusable space is that
+there are already 4 primary partitions as part of the Windows system
+MBR configuration on the computer’s hard drive. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Our strategy will be the following:</p>
+<ul>
+	<li/>
+<p>Remove one or more of the non-critical Windows partitions
+	(leaving just 3 primary partitions)</p>
+	<li/>
+<p>Move a non-critical Windows partition back to maximize the
+	free space for Linux</p>
+	<li/>
+<p>Create an Extended partition within the free space (where
+	Linux partitions will be created during Linux installation)</p>
+</ul>
+<h5 class="western"><a name="Remove one or more of the non-critical Windows partitions"></a>
+Remove one or more of the non-critical Windows partitions (leaving
+just 3 primary partitions)</h5>
+<p style="margin-bottom: 0in">The following GParted screen
+illustration shows an example Windows 10 situation that already has 4
+primary partitions, the main partition (sda2) has also been shrunk
+down by following the first 4 steps of this document:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Recover-unusable-space-after-shrinking-main-Windows-partition.png" name="Image62" align="left" width="665" height="437">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">If your GParted screen does not show a
+significant amount of unallocated space you should go back up to <a href="#Step 4 - Use GParted to shrink the main Windows partition">Step
+4. Use GParted to shrink the main Windows partition</a>, and shrink
+the main Windows partition, then return here to continue with this
+procedure.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">In order to add Linux partitions, we
+need to remove one or more of the non-critical Windows partitions.</p>
+<p style="margin-bottom: 0in">Assuming GParted shows that you have at
+least 4 partitions, select/highlight the <b>last</b> partition in
+your GParted list of partitions, as shown in the illustration above
+(it is the sda4 partition above). Then click on the <b>Delete
+partition icon</b> in the tool bar as shown in the illustration
+below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Remove-last-partition-Remove-icon.png" name="Image63" align="left" width="513" height="336">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The Delete operation is now shown as a
+pending operation in the lower pane of the GParted window:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Remove-last-partition-now-pending.png" name="Image64" align="left" width="499" height="327">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Notice that we now have “unallocated”
+space in two different parts of the hard drive: (1) 168.65 GiB of
+space that we freed up by shrinking the main Windows partition
+earlier, and (2) 6.84 GiB that was just freed by the deletion of
+partition sda4. The sda3 partition is now located in between the two
+unallocated spaces. To best utilize the hard drive space, we will now
+<b>move</b> the sda3 partition (labeled “Lenovo_Recovery”) <b>up</b>
+to reside adjacent to the sda2 main Windows partition – moving it
+up without changing its size. That will result in all of the
+unallocated space merging together and residing at the end of the
+hard drive – which is more ideal.</p>
+<h5 class="western">Move partition(s) up to maximize the contiguous
+space</h5>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Now <b>select the partition that needs
+to be moved up</b> (sda3 labeled Lenovo_Recovery) and click on the
+<b>Resize/Move</b> icon in the tool bar as shown in the illustration
+below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Resize-Move-last-partition-Resize-move-icon.png" name="Image65" align="left" width="555" height="364">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The Resize/Move dialog pops up:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Resize-Move-last-partition-Move-drag-left-with-mouse.png" name="Image66" align="left" width="425" height="228">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Hover your mouse over the green box
+representing the sda3 partition. The mouse cursor will change to a
+“hand” indicating the object below it can be moved. Click down
+with the mouse inside the middle of the green box, and drag it to the
+left, moving the whole partition all the way to the left end of the
+graphic. The MiB figures in the size boxes automatically change as
+the box is moved. The Resize/Move dialog should then look similar to
+this:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Resize-Move-last-partition-Move-drag-left-at-left-end.png" name="Image67" align="left" width="503" height="270">
+  <br clear="left"/>
+</img>
+
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">With the partition now at the left end,
+click on the <b>Resize/Move</b> button as shown above. The program
+warns about the action:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Resize-Move-last-partition-Warning-message.png" name="Image68" align="left" width="443" height="266">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The move action is set up as a pending
+operation. As mentioned earlier, the pending actions are only
+simulated until the Apply All Operations icon is clicked.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Notice that there are now two pending
+actions listed in the lower window pane of the GParted screen as
+shown in the illustration below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Resize-Move-last-partition-2-pending-operations.png" name="Image69" align="left" width="665" height="437">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Apply-all-operations-icon.png" name="Image70" align="left" width="51" height="55" border="0"/>
+Click
+on the <b>Apply All Operations</b> icon (the green tick mark) on the
+tool bar to apply both of the pending operations. You will see the
+usual confirmation message:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Resize-dialog-resized-confirm-apply-all.png" name="Image71" align="left" width="563" height="163">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Click on the <b>Apply</b> button to
+execute the changes. A progress dialog will appear:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Resize-dialog-resized-applying-pending-progress-move.png" name="Image72" align="left" width="665" height="274">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">followed by a notice of successful
+completion:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Resize-dialog-resized-completed-move.png" name="Image73" align="left" width="665" height="437">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Click on <b>Close</b>. The GParted
+screen now shows the state of the hard drive:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Resize-dialog-resized-move-completed-new-unallocated-space-selected.png" name="Image74" align="left" width="540" height="355">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Note in the illustration above, that
+the unallocated space is all located at the end of the drive. 
+</p>
+<h5 class="western">Create an Extended partition in the unallocated
+space</h5>
+<p style="margin-bottom: 0in">Now, while we have GParted running, we
+should <b>add</b> the Extended partition to the unallocated space:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Add-New-menu-Extended.png" name="Image75" align="left" width="564" height="370">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">With the unallocated line
+selected/highlighted, click on the <b>Partition</b> menu at the top
+of the GParted program, and select <b>New</b>. The Create new
+Partition dialog appears:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Create-New-Partition-dialog-2.png" name="Image76" align="left" width="639" height="293">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">In the <b>Create new Partition</b>
+dialog, click on the <b>down arrow</b> of the drop-down list next to
+the <b>Create as</b> field, as shown in the above image, and select
+<b>Extended Partition</b> from the list:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Create-New-Partition-select-Extended-2.png" name="Image77" align="left" width="643" height="295">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">With the <b>Extended Partition</b> item
+selected from the <b>Create as</b> list, click on the <b>Add</b>
+button at the bottom of the dialog as shown below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Create-New-Partition-select-Extended-Add-2.png" name="Image78" align="left" width="642" height="294">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The new extended partition is added to
+the pending operation list:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Create-New-Partition-Extended-pending-operation-2.png" name="Image79" align="left" width="665" height="435">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-Apply-all-operations-icon.png" name="Image80" align="left" width="51" height="55" border="0"/>
+Click
+on the <b>Apply All Operations</b> icon (the green tick) shown in the
+illustration above – to create the Extended partition. You will be
+asked to confirm the operation:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Resize-dialog-resized-confirm-apply-all.png" name="Image81" align="left" width="563" height="163">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Click on <b>Apply</b> to execute the
+pending operation. The change will happen quickly and you should see
+the following “successfully completed” message:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Create-New-Partition-Extended-completed-2.png" name="Image82" align="left" width="665" height="435">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Click <b>Close</b>. The Extended
+partition has now been added to the hard drive, as shown in the
+following illustration:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/GParted-select-partition-and-Create-New-Partition-Extended-now-showing-2.png" name="Image83" align="left" width="665" height="436">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">If you have followed this Appendix
+article to remove one or more Windows partitions in order to create
+an extended partition, the extended partition is now in place. The
+extended partition (sda4 above) will now function as a container for
+the Linux partitions. You can now continue with the installation of
+Wasta Linux on the system by going back to the procedures detailed
+from <a href="#Step 6 - Start the installer using the desktop icon">Step
+6</a> and onwards.</p>
+<div title="footer">
+	<p align="left" style="margin-top: 0.2in; margin-bottom: 0in"><font face="Arial, sans-serif"><font size="2" style="font-size: 10pt"><b>Installing
+	Wasta Linux - to dual boot with an Existing Windows system			Page <sdfield type=PAGE subtype=RANDOM format=PAGE>53</sdfield>
+	of <sdfield type=DOCSTAT subtype=PAGE format=PAGE>53</sdfield></b></font></font></p>
+</div>
+</body>
+</html>
