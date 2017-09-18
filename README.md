@@ -10,7 +10,8 @@ Bill's Wasta Linux Documentation currently contains the following documents:
    a 1TB USB hard drive. (.odt, .html and .pdf)
 6. How to update your Wasta-Linux software offline by memory
    stick or external hard drive. (.odt, .html and .pdf)
-7. Wasta-Offline-Use-Full-Mirror-or-Memory-Stick-and-wasta-offline-setup-Flow-Chart. (.odg and .pdf)
+7. How to shrink the size of pictures for users of Wasta Linux. (.odt, html, and .pdf)
+8. Wasta-Offline-Use-Full-Mirror-or-Memory-Stick-and-wasta-offline-setup-Flow-Chart. (.odg and .pdf)
 
 Note: The illustrations, screenshots and graphics for the document files above are
    contained in the wasta-docs-images folder. This folder must be present for
