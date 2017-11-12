@@ -1,0 +1,1655 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 5.3.7.2 (Linux)"/>
+	<meta name="author" content="Jerry Pfaff"/>
+	<meta name="created" content="2013-06-18T14:53:02"/>
+	<meta name="changed" content="2017-11-10T22:58:57.396354918"/>
+	<style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.08in }
+		h2.western { font-family: "Arial", sans-serif; font-size: 16pt }
+		h2.cjk { font-family: "Droid Sans Fallback"; font-size: 16pt }
+		h2.ctl { font-family: "Lohit Hindi"; font-size: 16pt }
+		h3.western { font-family: "Arial", sans-serif; font-size: 14pt }
+		h3.cjk { font-family: "Droid Sans Fallback"; font-size: 14pt }
+		h3.ctl { font-family: "Lohit Hindi"; font-size: 14pt }
+		h4.western { font-family: "Arial", sans-serif; font-size: 13pt; font-style: italic }
+		h4.cjk { font-family: "Droid Sans Fallback"; font-size: 13pt; font-style: italic }
+		h4.ctl { font-family: "Lohit Hindi"; font-size: 13pt; font-style: italic }
+		h5.western { font-family: "Arial", sans-serif; font-size: 11pt }
+		h5.cjk { font-family: "Droid Sans Fallback"; font-size: 11pt }
+		h5.ctl { font-family: "Lohit Hindi"; font-size: 11pt }
+		a:link { so-language: zxx }
+	</style>
+</head>
+<body lang="en-US" dir="ltr">
+<h2 class="western">How to upgrade Wasta Linux using the Manus custom
+installer memory stick by Bill Martin (<sdfield type=DOCINFO subtype=CHANGE format=DATE sdnum="1033;1033;D. MMMM YYYY">10. November 2017</sdfield>)</h2>
+<p align="center" style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>Important Note: These instructions
+</b><b>describe</b><b> how to </b><u><b>upgrade</b></u><b> </b><b>an
+</b><b>older Wasta Linux </b><b>computer </b><b>used in Manus, using
+the </b><b>customized </b><b>bootable memory stick supplied by Bill
+Martin</b><b>. </b><b>The customized memory stick is labeled “Bill
+Martin’s Wasta Linux 16.04 #n Customized for Manus Installer &amp;
+Resources” and it will upgrade </b><b>a </b><b>Wasta Linux </b><b>system
+and all software to version 16.04</b><b> </b><b>(with </b><b>software
+</b><b>updates through November 2017) </b><b>– including the
+customizations and resources specially designed for the Manus region
+of PNG.</b><b> </b>
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>Th</b><b>ese instructions, when
+followed carefully</b><b>,</b><b> will </b><b>allow you to preserve
+the </b><b>existing </b><b>data </b><b>during the</b><b> Wasta Linux
+upgrade</b><b>. Although this process can be done without wiping out
+data from the computer, it is always good to make sure you</b><b>
+have backed up all </b><b>important </b><b>data </b><b>to an external
+drive </b><b>before proceeding with these installation steps. </b>
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>Step </b><b>4</b><b> below is where
+changes </b><b>are “staged” or put into a pending list</b><b> to
+take place - you can abort the installation at any time before you
+get to the </b><b>point </b><b>of pressing the </b><a href="#Apply All Operations to shrink the Windows partition"><b>“</b></a><a href="#Apply All Operations to shrink the Windows partition"><b>Apply
+All Operations”</b></a><a href="#Apply All Operations to shrink the Windows partition"><b>
+button </b></a><a href="#Apply All Operations to shrink the Windows partition"><b>within</b></a><a href="#Apply All Operations to shrink the Windows partition"><b>
+step </b></a><a href="#Apply All Operations to shrink the Windows partition"><b>4</b></a><b>.</b></p>
+<p><br/>
+<br/>
+
+</p>
+<p align="left" style="margin-bottom: 0in"><b>Note: This document
+only describes how to <u>upgrade</u> an older Wasta Linux computer
+that has been in use in Manus. If you want to totally replace a
+Windows-only computer system with Wasta Linux customized for use in
+Manus, you can also use the same customized bootable memory stick to
+replace the Windows system with Wasta Linux, but in that case, you
+should follow the instructions described in the document “<a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.html">How
+to install Wasta Linux totally replacing Windows</a>”. If you want
+to make a Windows computer dual boot with Bill Martin’s customized
+Manus memory stick, you can also use the customized memory stick for
+that purpose, but in that case you should refer to the document “<a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html">How
+to install</a><a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html">
+</a><a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html">Wasta
+Linux </a><a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html">to
+dual boot with an </a><a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html">e</a><a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html">xisting
+Windows system</a>”.</b></p>
+<h3 class="western">What is this document?</h3>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Wasta-logo-low-res.jpg" name="Image55" align="left" width="331" height="71" border="0"/>
+This
+document is an illustrated guide that shows <b>how to </b><b>upgrade
+an older installation of</b><b> Wasta Linux </b><b>to version 16.04</b>
+so that it has upgraded Linux software and includes the
+customizations and resources provided for Manus region computers. It
+describes how to boot Wasta from the “Live” memory stick and
+guides you through some checks to ensure that your computer’s
+hardware is working properly before you change anything on the
+computer. If you like what you see and want to upgrade to Wasta Linux
+16.04, this document also shows you how to do that installation.</p>
+<h3 class="western">Who is this document for?</h3>
+<p style="margin-bottom: 0in">This document is designed to be a guide
+for an Advisor, Consultant, or Technician with some knowledge about
+booting and operating systems - or wants to learn! This document
+describes how to make radical changes to the computer that cannot be
+easily reversed. The document is well illustrated with screenshots
+throughout. You will find it helpful if you read through the whole
+document before trying to execute it step by step. 
+</p>
+<h3 class="western">When does it make sense to use this procedure</h3>
+<p style="margin-bottom: 0in">It makes sense:</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in">If you are using an earlier
+	version of Wasta Linux (12.04 or 14.04), or some other version of
+	Linux, and you want to upgrade your computer to Wasta Linux
+	16.04.1.1</p>
+	<li/>
+<p style="margin-bottom: 0in">If you want your Wasta Linux
+	system to have the customizations and resources that have been
+	provided for the Manus region of Papua New Guinea.</p>
+</ul>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<h3 class="western">Related How To documents:</h3>
+<ul>
+	<li/>
+<p align="left" style="margin-bottom: 0in">“<a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html"><b>How
+	to install</b></a><a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html"><b>
+	</b></a><a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html"><b>Wasta
+	Linux </b></a><a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html"><b>to
+	dual boot with an </b></a><a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html"><b>e</b></a><b><a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html">xisting
+	Windows system</a>”</b></p>
+	<li/>
+<p align="left" style="margin-bottom: 0in">“<b><a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.html">How
+	to install Wasta Linux totally replacing Windows</a>”</b></p>
+</ul>
+<h3 class="western">How does the Manus Custom installer differ from
+the basic Wasta Linux 16.04.1.1 installer?</h3>
+<p style="margin-bottom: 0in">The Manus custom installer includes
+(pre-installed) the package wasta-custom-png-manus which makes a few
+interface adjustments, and installs the following programs:</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in">adaptit</p>
+	<li/>
+<p style="margin-bottom: 0in">adaptit-docs</p>
+	<li/>
+<p style="margin-bottom: 0in">bcmwl-kernel-source</p>
+	<li/>
+<p style="margin-bottom: 0in">gpaint</p>
+	<li/>
+<p style="margin-bottom: 0in">gnote</p>
+	<li/>
+<p style="margin-bottom: 0in">gnupg2</p>
+	<li/>
+<p style="margin-bottom: 0in">ibus-kmfl</p>
+	<li/>
+<p style="margin-bottom: 0in">musescore</p>
+	<li/>
+<p style="margin-bottom: 0in">paratext-7.5</p>
+	<li/>
+<p style="margin-bottom: 0in">paratext-8.0</p>
+	<li/>
+<p style="margin-bottom: 0in">tuxtype</p>
+	<li/>
+<p style="margin-bottom: 0in">xiphos</p>
+	<li/>
+<p style="margin-bottom: 0in">wesay</p>
+	<li/>
+<p style="margin-bottom: 0in">wasta-sword-modules</p>
+	<li/>
+<p style="margin-bottom: 0in">wasta-resources-png-manus</p>
+</ul>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The Manus custom installer also
+includes (pre-installed) the package wasta-resources-png-manus which
+provides the following folders of Wasta Resources that are copied to
+the user’s Documents directory at login:</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in"><b>Computer Documentation</b> –
+	contains 3 subfolders: KMFL Keyboard for Khehek, MuseScore
+	Documentation, Training Documents, and a PDF file called “How to
+	use the Nemo File Manager”. The Training Documents subfolder
+	contains an extensive Glossary of Common Terms for Manus Translators
+	using Adapt It and Paratext…, as well as all the Document help
+	files for the Adapt It program.</p>
+	<li/>
+<p style="margin-bottom: 0in"><b>Finances and Accounting</b> –
+	contains an Accounting Template.ots file for LibreOffice Calc, and a
+	sample monthly account statement produced using that template.</p>
+	<li/>
+<p style="margin-bottom: 0in"><b>Health</b> – contains a PDF
+	file of the whole book called “Where there is no doctor –
+	complete” and a document file suggesting the Top “Ten Remedies
+	for Gout”.</p>
+	<li/>
+<p style="margin-bottom: 0in"><b>Key Terms Documents</b> –
+	contains a copy of the book Key Terms of the New Testament by Katy
+	Barnwell, Nyindrou Keyterms (example), and Key-Terms-Work-Sheet in
+	doc and odt formats.</p>
+	<li/>
+<p style="margin-bottom: 0in"><b>Manus Maps and Census Data</b>
+	– contains a Manus Language Map in several forms,  and 2 xls
+	spreadsheet files containing detailed Census data for Manus Province
+	for the 2003 Census. 
+	</p>
+	<li/>
+<p style="margin-bottom: 0in"><b>Manus SIL and BTA History</b>
+	– Contains a large PDF file documenting the Manus Translation
+	History (as of July 2013).</p>
+	<li/>
+<p style="margin-bottom: 0in"><b>Nyindrou New Testament
+	Glossary</b> -  contains the full Glossary of Terms published in the
+	Nyindrou New Testament.</p>
+	<li/>
+<p style="margin-bottom: 0in"><b>Paratext Handbook</b> –
+	contains a Paratext course handbook (2011), a Paratext 7.1 Project
+	Sharing Manual, and a Paratext 8 Support Manual, all in PDF format.</p>
+	<li/>
+<p style="margin-bottom: 0in"><b>Proper Names in the New
+	Testament</b> – contains a document listing the Proper New
+	Testament Names, and a companion document of  Proper New Testament
+	Names with Nyindrou examples.</p>
+	<li/>
+<p style="margin-bottom: 0in"><b>Singsing Buk Baibel</b> –
+	Neil Coulter Book – contains Neil Coulter’s book Music, the
+	Bible, and Your Community in Tok Pisin, in PDF format.</p>
+	<li/>
+<p style="margin-bottom: 0in"><b>Solar System Components</b> –
+	contains Brian Chapaitis’ SCOS vol2 Handbook v2.7 in PDF format,
+	and a document called Instructions for wiring Manus solar systems,
+	including two illustrated photos of a typical Manus solar system.</p>
+	<li/>
+<p style="margin-bottom: 0in"><b>Topical Index</b> –
+	contains a document of Nyindrou Topical Index with spaces.</p>
+	<li/>
+<p style="margin-bottom: 0in"><b>Using a Wasta-Linux computer</b>
+	– Contains the PDF document “How to use the Nemo File Manager”,
+	an odt document called Some Common Editing Shortcuts, and an odt
+	document called Special Keys Used For Controlling Adapt It. 
+	</p>
+	<li/>
+<p style="margin-bottom: 0in"><b>Xref samples</b> – contains
+	standard format files containing cross reference for all New
+	Testament books based on the published Nyindrou New Testament.</p>
+</ul>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The Manus Custom Installer memory stick
+may also contain a partition or folder with the name <b>InstallerDocs</b>
+– which contains a PDF copy of this document you are reading, plus
+the following well-illustrated help documents in PDF form:</p>
+<ul>
+	<li/>
+<p align="left" style="margin-bottom: 0in">“<a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html"><b>How
+	to install</b></a><a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html"><b>
+	</b></a><a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html"><b>Wasta
+	Linux </b></a><a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html"><b>to
+	dual boot with an </b></a><a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html"><b>e</b></a><b><a href="How%20to%20install%20Wasta%20Linux%20to%20dual%20boot%20with%20an%20Existing%20Windows%20system.html">xisting
+	Windows system</a>”</b></p>
+	<li/>
+<p align="left" style="margin-bottom: 0in">“<b><a href="How%20to%20install%20Wasta%20Linux%20totally%20replacing%20Windows.html">How
+	to install Wasta Linux totally replacing Windows</a>”</b></p>
+</ul>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">One or more of these Installer
+documents will be helpful as you consider Installing Wasta Linux. 
+</p>
+<h3 class="western">Where to obtain the Manus Customized version of
+the Wasta Linux USB memory stick</h3>
+<p style="margin-bottom: 0in">You can obtain the custom installer
+memory stick by doing one of the following:</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in">Ask Bill Martin to prepare the
+	memory stick for you.</p>
+	<li/>
+<p style="margin-bottom: 0in">Download the Manus Customized
+	ISO image file (about 4.1 GB) and install it to a memory stick
+	yourself, or</p>
+</ul>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<h4 class="western">Have Bill Martin prepare an installer on a memory
+stick</h4>
+<p style="margin-bottom: 0in">Bill has a supply of inexpensive memory
+sticks and can provide one to you for the cost of the memory stick
+and any shipping required. Contact him at <a href="mailto:bill_martin@sil.org">bill_martin@sil.org</a>
+for more information.</p>
+<h4 class="western">Download the Manus Customized ISO image file and
+install it on a memory stick</h4>
+<p style="margin-bottom: 0in">The Manus Customized ISO image file
+(4.1 GB) can be downloaded from Google Drive at this link:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><a href="https://drive.google.com/file/d/1omvvb3Uzhg1mJVey-UMbFDNxd0vy8Ih6/view?usp=sharing">https://drive.google.com/file/d/1omvvb3Uzhg1mJVey-UMbFDNxd0vy8Ih6/view?usp=sharing</a></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The ISO file will have a name similar
+to this: <b>Wasta-Linux-16.04-64bit-Manus-PNG-2017-11-09.iso</b> (the
+version number and date may be different). <b>Caution</b>: The ISO
+file is a BIG file and might cost a lot to download if you pay per
+Megabyte for Internet data. 4.1 GB is the equivalent of 4,100 MB
+(Megabytes) of data in one download file. The download might also
+take a significant amount of time unless you have fast and reliable
+Internet connection. If it would be too difficult or expensive for
+you to download and install the ISO image on your own memory stick,
+ask Bill Martin to prepare one for you as mentioned above.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>Note that the downloaded</b><b> ISO
+image cannot be simply copied to the memory stick. It must be written
+to the memory stick with special software that also makes the memory
+stick bootable.</b> There are a number of programs that can write the
+ISO image to a  memory stick, and make it bootable as a “live”
+session. You can use a program that is available in Wasta Linux to
+install the ISO file properly to a memory stick. It is the <b>Startup
+Disk Creator</b> program (also known as usb-creator-gtk). The <b>Startup
+Disk Creator</b> program is available from the <b>Administration</b>
+category of the Wasta <b>Main Menu</b>. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Briefly, here are the (basic
+un-illustrated) steps for preparing a bootable memory stick using the
+ISO file:</p>
+<ol>
+	<li/>
+<p>Run the <b>Startup Disk Creator</b> program via the
+	<b>Administration</b> category of the <b>Main Menu</b>. 
+	</p>
+	<li/>
+<p>If the ISO image file is in your Downloads folder and there
+	is just one ISO image, Startup Disk Creator will have selected it.
+	If it is not listed in the upper pane select the correct ISO image
+	by clicking on the <b>Other…</b> button. 
+	</p>
+	<li/>
+<p>If your computer has just one USB flash drive, Startup Disk
+	Creator will have selected it, otherwise select the correct drive in
+	the lower pane list. 
+	</p>
+	<li/>
+<p>Click on the <b>Make Startup Disk</b> button at bottom
+	right. 
+	</p>
+	<li/>
+<p>Click <b>Yes</b> to confirm. The process should take 10-30
+	minutes to complete. 
+	</p>
+	<li/>
+<p>When the &quot;Installation Complete&quot; window opens
+	click <b>Quit</b>. The memory stick can then be used to boot from,
+	and upgrade (or install) the Linux system on your computer.</p>
+</ol>
+<h3 class="western">Upgrade Steps</h3>
+<p style="margin-bottom: 0in">The following steps assume you want to
+upgrade an older Wasta Linux system to a newer one, and that you are
+using a USB memory stick containing the Manus customizations and
+pre-installed resources. 
+</p>
+<h3 class="western"><a name="Step 1"></a>Step 1. Get your computer to
+boot from the USB memory stick</h3>
+<p style="margin-bottom: 0in"><b>With the computer OFF, insert the
+“Wasta Linux 16.04 Customized for Manus” USB memory stick into
+the computer. </b>
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Since we are doing an “upgrade” of
+an existing (older) Wasta Linux system, the computer will already
+have Wasta Linux installed on it. Therefore, this “Get your
+computer to boot from the USB memory stick” step should not have
+too many boot complications – since it previously booted from a USB
+memory stick when Wasta Linux was originally installed on it.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>Turn the computer ON and (on</b><b>
+a Lenovo laptop</b><b>)</b><b>, </b><b>press</b><b> the F12 function
+key at boot time</b>. If you are upgrading Wasta Linux on a different
+brand of computer, here is a chart of special key commands at boot
+time:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<table width="665" cellpadding="4" cellspacing="0">
+	<col width="95">
+	<col width="128">
+	<col width="10">
+	<col width="148">
+	<col width="242">
+	<tr valign="top">
+		<td width="95" bgcolor="#dddddd" style="background: #dddddd" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.04in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><b>Brand</b></p>
+		</td>
+		<td width="128" bgcolor="#dddddd" style="background: #dddddd" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.04in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><b>Key Command</b></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.04in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" bgcolor="#dddddd" style="background: #dddddd" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.04in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><b>Brand</b></p>
+		</td>
+		<td width="242" bgcolor="#dddddd" style="background: #dddddd" style="border: 1px solid #000000; padding: 0.04in">
+			<p><b>Key Command</b></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Acer</font></p>
+		</td>
+		<td width="128" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Esc / F9 / F12</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Intel</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F10</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Asrock</font></p>
+		</td>
+		<td width="128" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">F11</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Lenovo </font>
+			</p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F12 / Enter</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Asus</font></p>
+		</td>
+		<td width="128" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Esc / F8</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Microsoft Surface</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">Volume up + Power for 5
+			seconds</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Compaq</font></p>
+		</td>
+		<td width="128" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Esc / F9</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">MSI</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F11</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Dell</font></p>
+		</td>
+		<td width="128" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">F12</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Packard Bell</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F8</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Fujitsu</font></p>
+		</td>
+		<td width="128" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">F12</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Samsung</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">Esc</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Gigabyte</font></p>
+		</td>
+		<td width="128" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">F12</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Sony Vaio</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F11</font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="95" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">HP</font></p>
+		</td>
+		<td width="128" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Esc / F9</font></p>
+		</td>
+		<td width="10" bgcolor="#dddddd" style="background: #dddddd" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="148" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0in">
+			<p><font size="2" style="font-size: 11pt">Toshiba</font></p>
+		</td>
+		<td width="242" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.04in">
+			<p><font size="2" style="font-size: 11pt">F12</font></p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">If you succeed at accessing the
+computer's boot menu directly using the F12 function key (or a key
+commands shown above), then <b>select the device you want to boot
+from by highlighting the device in</b><b> the boot menu</b>, and
+pressing <b>Enter</b> to boot immediately from that device. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Here is a sample boot menu screen shot
+for a Lenovo X140e laptop (accessed directly with <b>F12</b> key):</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Boot-Order-Menu-Lenovo-USB-HDD-Legacy-secure-boot-off.png" name="Image56" align="left" width="423" height="236">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">In the above illustration, the second
+device in the list - <b>USB HDD: SanDisk Ultra</b> - is the memory
+stick that is plugged into the computer. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">After selecting the Wasta Linux USB
+memory stick (named “USB HDD: SanDisk Ultra” above), the Wasta
+“Live” session boot menu should appear as illustrated in Step 2
+below.</p>
+<h3 class="western"><a name="Step_2"></a>Step 2. Boot Wasta to a
+“Live” session on the computer</h3>
+<p style="margin-bottom: 0in">When the initial boot sequence has
+successfully recognized the USB drive, it will show the Wasta-Linux
+16.04 boot options menu that appears similar to the following:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Wasta16.04.1.1-64bit-live-boot-menu.png" name="Image1" align="left" width="396" height="298">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The first menu item “<b>Live – boot
+the Live System</b>” is the default selection, and will be
+automatically selected at the end of a 10 second countdown. You can
+speed up the action by simply pressing the <b>Enter</b> key. Booting
+from a USB memory stick is slower than booting from a hard drive. The
+boot process will continue for a few minutes as it loads the system
+from the memory stick:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Wasta-16.04-boot-logo.png" name="Image2" align="left" width="397" height="113">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">After the computer has booted to your
+&quot;Live&quot; Wasta Linux session your computer desktop should
+look like this screen shot below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Wasta-16.04.1.1-live-boot-desktop-install-icon-not-highlighted.png" name="Image3" align="left" width="665" height="458">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<h3 class="western"><a name="Step 3"></a>Step 3. Check out the new
+Wasta system</h3>
+<p style="margin-bottom: 0in">While the &quot;Live&quot; session of
+Linux is booted, your computer is running Linux entirely from the
+external USB memory stick- no changes have been made to the
+computer's own operating system at this point, and no changes will be
+made to it - unless you decide to upgrade the older Wasta system by
+installing the newer Wasta system on the machine. Remember: Since the
+system is running from the memory stick, its performance will be
+slower than a normal Wasta installation.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">While the “Live” session is
+running, you can explore the newer Wasta Linux system and try out
+various programs. Since this is an upgrade operation, presumably the
+older Wasta Linux properly detected the computer’s hardware and
+things like the screen display, wireless network connections,
+keyboard, sound, mouse, etc., were working OK. You might like to
+verify that the new Wasta system will also work properly by checking
+out the following things.</p>
+<h4 class="western">Screen brightness</h4>
+<p style="margin-bottom: 0in">If the <b>screen brightness</b> looks
+too dim, you may need to use a function key to adjust screen
+brightness. Sometimes Lenovo laptops initially boot with screen
+brightness turned down. If this is an issue look at the little images
+on the function keys. For example, on Lenovo T430 laptops, holding
+the <b>Fn</b> key down and pressing the <b>F9</b> function key
+increases screen brightness (<b>Fn + F8</b> decreases screen
+brightness). 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<h4 class="western">The Display settings</h4>
+<p style="margin-bottom: 0in">To check the <b>screen display</b>
+click on the main <b>Menu</b>, then click on the <b>Preferences</b>
+category, and click on the <b>Display</b> item:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Menu%20Preferences%20Display.png" name="Image4" align="left" width="470" height="207">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The <b>Display</b> applet will appear:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Display-applet-check-resolution.png" name="Image5" align="left" width="428" height="276">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Check the &quot;Resolution&quot; and
+ensure that it is set to the normal resolution of your computer’s
+screen display. You can click on the drop down list, and adjust the
+resolution if necessary. Dual or multiple monitors are also
+supported.</p>
+<h4 class="western">Wireless network access</h4>
+<p style="margin-bottom: 0in">Check out other things too, such as the
+ability to connect to any <b>wireless</b> <b>network</b> that the
+Windows system was using when booted to Windows. If the Windows
+computer was using wireless to connect to a network, see if the
+wireless signal is detected by clicking on the network connections
+icon in the lower right part of the panel (task bar):</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Network-connections-icon-in-tray.png" name="Image6" align="left" width="439" height="301">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Locate your wireless network’s name
+in the list and click on it (mine is ‘asiu taso’ as shown above).
+A secured network (with padlock icon) will ask you to enter its key
+the first time you connect:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Network-enter-wireless-key.png" name="Image7" align="left" width="469" height="253">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Enter the <b>password/key</b> for the
+wireless network. You can click the check box next to <b>Show
+password</b> to make the typing of a complicated password easier.
+Click on the <b>Connect</b> button. After a few seconds check to see
+if the wireless connection was made. You may see a notification at
+the top of your screen.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Once it connects, the network
+connection icon changes to show a wave signal (see the panel icon in
+the red box below). You can also click on the connections icon again
+and see whether the connection has been established (indicated by the
+white dot next to the network name and an indication of the signal
+strength to the right of the name – see the illustration below):</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Network-connections-icon-in-tray-connected.png" name="Image8" align="left" width="297" height="239">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<h4 class="western">Internet access</h4>
+<p style="margin-bottom: 0in">Once your wireless network connects to
+the <b>Internet</b>, you can try it out by running Firefox and
+checking to see if you can load an Internet website:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Firefox-icon-in-tray.png" name="Image18" align="left" width="252" height="95">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<h4 class="western">Sound system</h4>
+<p style="margin-bottom: 0in">You might also want to check other
+hardware items such as your computer’s <b>sound system</b>. You can
+test your sound system by going to the Sound applet in the
+Preferences category of the main Menu:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Menu-Preferences-Sound.png" name="Image13" align="left" width="460" height="187">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The <b>Sound</b> applet will appear:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Sound-applet.png" name="Image14" align="left" width="537" height="422">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">With the above Sound applet you can
+your computers sound abilities. On the Output tab, select your
+computer’s sound device (if it has multiple devices) and check the
+sound output by clicking on the <b>Test sound</b> button, which bring
+up this speaker test dialog:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Test-sound-left-right.png" name="Image15" align="left" width="244" height="230">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The speaker arrangement may vary
+depending on your computer’s sound system. You can click on the
+<b>Close</b> button to close the speaker test. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Note that there is a volume control
+among other sound settings in the sound applet. There are also tabs
+at the top of the main Sound dialog (see above), that you can use to
+test your <b>Output</b> (speakers), <b>Input</b> (microphone) and
+various <b>Sound Effects</b> on other tab pages of the applet. When
+you are done playing with the Sound applet close its window.</p>
+<h4 class="western">System Info</h4>
+<p style="margin-bottom: 0in">Go to Menu and type <b>s</b><b>ystem
+</b><b>info</b> into the search box at the top of the menu, and
+select the <b>System </b><b>Info</b> application that appears in the
+list:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Menu-system-info.png" name="Image9" align="left" width="392" height="334">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The <b>System Info</b> applet appears:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/System%20Info%20applet.png" name="Image10" align="left" width="640" height="290">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Write down the amounts reported for
+Memory. In the above case it shows we have about <b>4GB of Memory</b>.
+This information will be good to have handy later during the actual
+Wasta installation where we will create a Linux swap area that is the
+approximate size of the RAM memory of the computer.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Feel free to experiment and try out
+various programs that are listed in categories in the main Menu at
+the lower left corner of the desktop (similar to the Windows Start
+button). When you hover your mouse over a menu item, a brief
+description of that item will appear in the lower right part of the
+menu. Test out creating a document with LibreOffice Writer (in the
+Office category). If you computer has a web camera, try it out with
+the Cheese application in the menu’s Sound &amp; Video category.
+Check out the applets in the Accessories and Preferences categories.
+Remember: during a live session no changes are made to your computer,
+so any changes or documents you create in this live session will not
+be saved. 
+</p>
+<h4 class="western">Are you ready to upgrade / install Wasta Linux?</h4>
+<p style="margin-bottom: 0in">The remainder of this document
+describes how to upgrade / install Wasta Linux on your computer. The
+upgrade process involves doing an actual install operation –
+replacing the older Wasta system.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>Note that Steps 4 through 7 below
+are </b><b>non-destructive installation steps.</b> You can feel free
+to proceed down through the first part of step 8 below. Nothing will
+be changed on your computer if you opt to <b>Quit</b> before you get
+to the last part of step 8 below (clicking on the <b>Install Now</b>
+button). 
+</p>
+<h3 class="western">Step 4. Start the installer using the desktop
+icon</h3>
+<p style="margin-bottom: 0in">The first step is to double click the
+&quot;<b>Install </b><b>Wasta</b><b> </b><b>Linux 16.04</b>&quot;
+desktop icon (the red arrow is pointing at this icon in the image
+below):</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Wasta-16.04.1.1-live-boot-desktop-install-icon-highlighted.png" name="Image19" align="left" width="575" height="397">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Wait for first install wizard window to
+appear. It will be for selecting the <b>language</b> for the
+installation and looks as follows:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Install-Welcome.png" name="Image11" align="left" width="456" height="293">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">English is usually the default
+selection. Click <b>Continue</b>. The next screen appears.</p>
+<h3 class="western">Step 5. Connect to a wi-fi network (optional)</h3>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">If
+your computer has an active wireless connection –</span><span style="font-weight: normal">
+but not yet connected -</span><span style="font-weight: normal"> the
+installer may ask you if you want to connect the computer to the
+wi-fi network:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/Install-connect-to-wireless.png" name="Image16" align="left" width="548" height="305">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">If
+you wish to you can select the </span><b>Connect to this network</b><span style="font-weight: normal">
+button, select the name of your network in the list, and enter your
+network’s security password in the Password box. But, a connection
+to your wireless network is </span><span style="font-weight: normal">optional,
+and being connected to the Internet is not required</span><span style="font-weight: normal">
+</span><span style="font-weight: normal">during the</span><span style="font-weight: normal">
+installatio</span><span style="font-weight: normal">n. </span><span style="font-weight: normal">S</span><span style="font-weight: normal">o,
+you can </span><span style="font-weight: normal">also </span><span style="font-weight: normal">leave
+it set to the default “I don’t want to connect to a wi-fi network
+right now” </span><span style="font-weight: normal">- especially if
+you have slow or expensive Internet</span><span style="font-weight: normal">.
+</span><span style="font-weight: normal">You can connect after
+installation </span><span style="font-weight: normal">(or use a full
+wasta-offline mirror to update your software). If you wish to connect
+now you can do so </span><span style="font-weight: normal">as you did
+in Step 3 above when you played around with the Live system. </span><span style="font-weight: normal">In
+either case, </span><span style="font-weight: normal">then </span><span style="font-weight: normal">c</span><span style="font-weight: normal">lick
+</span><b>Continue</b><span style="font-weight: normal"> </span><span style="font-weight: normal">when
+you are ready to move on to the next step</span><span style="font-weight: normal">.</span></p>
+<h3 class="western">Step 6. Updates and third-party software
+(optional)</h3>
+<p style="margin-bottom: 0in">Next a <b>Preparing to install Wasta
+Linux</b> screen appears offering to download updates and third-party
+software while installing:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Install-Preparing-to-install.png" name="Image12" align="left" width="549" height="335">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">We will not install these updates and
+third-party software during the initial installation. You can do
+updates after installation, so just leave the check boxes un-ticked,
+and click <b>Continue</b>.</p>
+<h3 class="western">Step 7. Installation type</h3>
+<p style="margin-bottom: 0in">The next install wizard page wants to
+know how you want Wasta Linux to be installed on the computer,
+especially in relation to the existing Linux installation. The
+appearance of this dialog will vary depending on what previous Wasta
+system was already on the computer. We are assuming here that Wasta
+version 14.04 (based on Linux Mint 17.2 Rafaela) is the current Wasta
+system on the computer.</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The <b>Installatio</b><b>n type</b>
+dialog will look similar to the illustration shown below:</p>
+<h4 class="western"><a name="Windows XP"></a><img src="wasta-docs-images/Installation-type-Linux-Mint-Rafaela-initial-default.png" name="Image20" align="left" width="537" height="300">
+  <br clear="left"/>
+</img>
+</h4>
+<p style="margin-bottom: 0in">The first option is often pre-selected,
+but you should choose <b>Something else</b> instead. Then click
+<b>Continue. </b>
+</p>
+<h4 class="western">Why do we choose Something else?</h4>
+<p style="margin-bottom: 0in">It is possible to install Wasta Linux
+using one of the other Installation type options, but this
+documentation suggests choosing <b>Something else</b><span style="font-weight: normal">
+for the </span><span style="font-weight: normal">following</span><span style="font-weight: normal">
+reasons:</span></p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">The
+	</span><b>Something else</b><span style="font-weight: normal">
+	option allows us to have your </span><b>/home</b><span style="font-weight: normal">
+	directory on a separate partition. Having </span><b>/home</b><span style="font-weight: normal">
+	on a separate partition makes it easy to upgrade to a newer version
+	of Wasta (or other kind of Linux) in the future without touching any
+	of your documents, data or settings.</span></p>
+	<li/>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">The
+	</span><b>Something else</b><span style="font-weight: normal">
+	option </span><span style="font-weight: normal">allows us to </span><span style="font-weight: normal">reuse
+	the existing</span><span style="font-weight: normal"> partitions
+	</span><span style="font-weight: normal">that were previously set
+	for the older Wasta Linux system</span><span style="font-weight: normal">.</span></p>
+	<li/>
+<p style="margin-bottom: 0in">The last option for any
+	installation will always be <b>Something else</b>. The <b>Something
+	else</b> option therefore allows us to standardize this document,
+	and reduce the number of possible variations and gotchas that might
+	happen if we tried to describe one of the other options. 
+	</p>
+	<li/>
+<p style="margin-bottom: 0in">We are not planning to encrypt
+	the new Wasta installation, nor use the Logical Volume Management
+	(LVM) system. The use of these technologies is not necessary in most
+	environments. They are more complicated to set up at installation
+	time and so are beyond the scope of this document.</p>
+</ul>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Note: The <b>Installation type</b>
+dialog shown above may differ a little from what you see on your
+particular Wasta Linux computer, but the last option &quot;<b>Something
+else</b>&quot; should always be available and is the one you should
+select to follow this document. After selecting <b>Something else</b>,
+click <b>C</b><b>ontinue.</b></p>
+<h3 class="western"><a name="Step 8 Removing Windows partitions and creating Linux partitions"></a>
+Step 8. Reset the Linux partitions</h3>
+<p style="margin-bottom: 0in">The installation program uses a
+partitioning program <span style="font-weight: normal">to show you </span>a
+graphical display of the existing partitions that are on the
+computer's hard drive. Its appearance and the number of partitions
+displayed in the dialog will depend on what partitions currently
+exist on the computer. You will want to study the graph showing on
+your screen, and the information displayed on it carefully. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The point of no return is the <b>Install
+Now</b> button at the bottom right of this installation page. <b>Do
+not click on that button until the end of Step 8</b>. Our actions in
+adjusting the Linux partitions are only <b>simulated</b> until we get
+them just the way we want them. We can adjust them over and over
+again without making actual changes to your computer. At any time you
+can call it quits by clicking on the <b>Quit</b> button – and no
+changes will be made to your computer. <b>Again, don’t click on the
+Install Now button until you are ready for the changes to be made on
+your computer </b><b>(at the end of Step 8 below)</b><b>.</b></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">We need to reset two of the Linux
+partitions for the new version of Wasta. There should be three Linux
+partitions from the old Wasta system showing in the <b>Installation
+type</b> screen. The partitions may be in a different order – but
+the order is not important. We will do the following:</p>
+<ol>
+	<li/>
+<p style="margin-bottom: 0in">Leave the Linux swap partition
+	as it is (no changes are needed for it to be reused)</p>
+	<li/>
+<p style="margin-bottom: 0in">Set the <b>smaller</b> ext4
+	partition to use the <b>Ext4 journaling file system</b> at the <b>/
+	</b>mount point</p>
+	<li/>
+<p style="margin-bottom: 0in">Set the <b>larger</b> ext4
+	partition to use the <b>Ext4 journaling file system</b> at the <b>/home</b>
+	mount point</p>
+</ol>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Note the small partition that has <b>swap</b>
+as its Type. It may be listed as the first, second or third
+partition. In the illustration below it is listed as the first
+(/dev/sda1) partition. Its Size is likely to be between 2,000 and
+8000 MB (it is 1998 in the illustration). We will not change any of
+the settings for the swap partition. It will be reused by the new
+Wasta system as is, with its current settings.</p>
+<h5 class="western">Set the smaller ext4 partition to use the Ext4
+file system and the / mount point</h5>
+<p style="margin-bottom: 0in">The <b>first partition</b> we need to
+change is the partition that was used as the Linux <b>root (/)
+partition</b> in the older system. Click on the <b>smaller</b> of the
+two ext4 type partitions to select/highlight it as shown below. In
+the illustration below the smaller ext4 partition is device <b>/dev/sda2</b>
+with a Size of <b>10000 MB </b><span style="font-weight: normal">(your
+smaller ext4 partition may have a different device name and Size) </span>:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-type-Wasta-Linux-upgrade-select-smaller-ext4-partition-and-Change-button.png" name="Image17" align="left" width="497" height="355">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Click on the <b>Change</b> button. The
+“Edit Partition” dialog appears as shown below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-type-Wasta-Linux-upgrade-select-smaller-ext4-partition-with-Edit-Partition-Dlg-initial.png" name="Image21" align="left" width="447" height="346">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">We will not change the Size of the
+<b>smaller</b> partition, but we need to reset it to again use the
+Ext4 journaling file system, and also set it to use the / (root)
+Mount point. First, click on the down arrow at the right end of the
+<b>Use as</b> drop down list (highlighted above). We want to change
+the setting from <b>do not use the partition</b> to the <b>Ext4
+journaling file system</b> setting as shown below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-type-Wasta-Linux-upgrade-select-smaller-ext4-partition-with-Edit-Partition-Dlg-Select-Ext4.png" name="Image22" align="left" width="461" height="328">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Then click on the down arrow of the
+<b>Mount point</b> drop down list, and select the <b>/</b> item
+(first item in the list – referred to as “root”) as shown
+below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-type-Wasta-Linux-upgrade-select-smaller-ext4-partition-with-Edit-Partition-Dlg-Select-Root.png" name="Image23" align="left" width="283" height="269">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The settings for our root (/) partition
+are now complete. Check that your settings look like this Edit
+partition dialog below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-type-Wasta-Linux-upgrade-select-smaller-ext4-partition-with-Edit-Partition-Dlg-final.png" name="Image24" align="left" width="307" height="190">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Double check to ensure that the
+following 2 settings are set:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">1. The <b>Use as</b> selector is set
+to: <b>Ext4 journaling file system</b></p>
+<p style="margin-bottom: 0in">2. The <b>Mount point</b> is set to:<b>
+/</b></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Note: Don’t attempt to change the
+Size from what it was in the old system, but let it remain what it
+was (which is likely to be different from the Size of 10000 in the
+illustration above)</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Click the <b>OK</b> button. The display
+will update showing the smaller (sda2) partition is reset to the <b>/
+</b>(root) Mount point as shown in the illustration below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-type-Wasta-Linux-upgrade-select-smaller-ext4-partition-root-reset.png" name="Image25" align="left" width="489" height="350">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<h5 class="western">Set the large ext4 partition to use the Ext4 file
+system and the /home mount point</h5>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">The
+</span><b>last</b><b> partition</b><span style="font-weight: normal">
+we want to </span><span style="font-weight: normal">change</span><span style="font-weight: normal">
+is the partition that was used as the Linux </span><b>/home</b><b>
+partition</b><span style="font-weight: normal"> in the older system.
+Click on the </span><b>largest</b><span style="font-weight: normal">
+of the two ext4 type partitions to select/highlight it as shown
+below. In the illustration below the </span><span style="font-weight: normal">larger</span><span style="font-weight: normal">
+ext4 partition is </span><b>/dev/sda</b><b>3</b><span style="font-weight: normal">
+with a Size of </span><span style="font-weight: normal">20129</span><b>
+MB </b><span style="font-weight: normal">(your larger ext4 partition
+may have a different device name, and a much larger Size than what is
+shown below)</span><span style="font-weight: normal">:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/Installation-type-Wasta-Linux-upgrade-select-larger-ext4-partition-and-Change-button.png" name="Image26" align="left" width="491" height="352">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Click on the <b>Change</b> button. The
+“Edit Partition” dialog appears as shown below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-type-Wasta-Linux-upgrade-select-larger-ext4-partition-with-Edit-Partition-Dlg-initial.png" name="Image27" align="left" width="461" height="330">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">We
+will not change the Size of the </span><b>larger</b><span style="font-weight: normal">
+partition, but we need to reset it to again use the Ext4 journaling
+file system, and also set it to use the </span><b>/</b><b>home</b><span style="font-weight: normal">
+</span><span style="font-weight: normal">M</span><span style="font-weight: normal">ount
+point. First, click on the down arrow at the right end of the </span><b>Use
+as</b><span style="font-weight: normal"> drop down list (highlighted
+above). We want to change the setting from </span><b>do not use the
+partition</b><span style="font-weight: normal"> to the </span><b>Ext4
+journaling file system</b><span style="font-weight: normal"> setting
+as shown below:</span></p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/Installation-type-Wasta-Linux-upgrade-select-larger-ext4-partition-with-Edit-Partition-Dlg-Select-Ext4.png" name="Image28" align="left" width="503" height="360">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal">Then click on the
+down arrow of the <b>Mount point</b> drop down list, and select the
+<b>/</b><b>home</b> item (third item in the list) as shown below:</p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/Installation-type-Wasta-Linux-upgrade-select-larger-ext4-partition-with-Edit-Partition-Dlg-Select-Home.png" name="Image29" align="left" width="521" height="375">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in">The settings for our /home partition
+are now complete. Check that your settings look like this Edit
+partition dialog below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-type-Wasta-Linux-upgrade-select-larger-ext4-partition-with-Edit-Partition-Dlg-final.png" name="Image30" align="left" width="307" height="190">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Double check to ensure that the
+following 2 settings are set:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">1. The <b>Use as</b> selector is set
+to: <b>Ext4 journaling file system</b></p>
+<p style="margin-bottom: 0in">2. The <b>Mount point</b> is set to:<b>
+/</b><b>home</b></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Note: Don’t attempt to change the
+Size from what it was in the old system, but let it remain what it
+was (which is likely to be much larger than the Size of 20129 in the
+illustration above)</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal">Click the <b>OK</b>
+button. The display will update showing the larger (sda3) partition
+is reset to the <b>/</b><b>home</b> Mount point as shown in the
+illustration below:</p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/Installation-type-Wasta-Linux-upgrade-select-larger-ext4-partition-home-reset.png" name="Image31" align="left" width="665" height="477">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>WARNING: As indicated in the above
+illustration, make sure to NOT SELECT THE CHECK BOX in the Format
+column of the /home partition row. Formatting a partition destroys
+its data. You do not want to format the /home partition during the
+upgrade / installation of the new Wasta system.</b></p>
+<p style="margin-bottom: 0in; font-weight: normal"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>T</b><b>hings to note:</b></p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<ul>
+	<li/>
+<p>We do NOT change any Size values for the partitions during
+	the upgrade / installation.. 
+	</p>
+	<li/>
+<p>There are no ticks in the check boxes next to the root
+	partition (/), and the /home partition, indicating that those
+	partitions will not be formatted during the installation process.
+	Since this is an upgrade / installation of Linux on this computer,
+	it is not necessary to re-format the Linux partitions. We want to
+	preserve any data in the /home partition of the computer. The Linux
+	installer won’t automatically format any existing Linux /home
+	partition unless you deliberately tell it to do so.</p>
+	<li/>
+<p>The &quot;Device for boot loader Installation&quot;
+	selector should show the computer's main hard disk (usually
+	/dev/sda) with the hard disk's known capacity shown in parentheses.</p>
+</ul>
+<h4 class="western">Ready to take the plunge?</h4>
+<p style="margin-bottom: 0in"><font color="#ff0000"><font size="5" style="font-size: 18pt">Make
+sure the settings and partitions are set according to the above
+information. </font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">T</font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">he
+next </font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">action</font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">
+will </font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">begin
+the upgrade operation, replacing the old Wasta</font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">
+system </font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">with
+the new Wasta system</font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">.
+</font></font><font color="#ff0000"><font size="5" style="font-size: 18pt">If
+you don’t want to continue click the Quit button.</font></font></p>
+<h3 class="western"><a name="Step 9 Install Now button"></a>Step 9.
+If you are ready, click on the “Install Now” button</h3>
+<p style="margin-bottom: 0in; font-weight: normal"><img src="wasta-docs-images/Installation-type-Wasta-Linux-upgrade-Install-Now-button.png" name="Image32" align="left" width="665" height="477">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><span style="font-weight: normal">The
+installation will start and present you with some configuration
+screens while the system does the </span><span style="font-weight: normal">upgrade</span><span style="font-weight: normal">
+and installation of the </span><span style="font-weight: normal">Wasta
+</span><span style="font-weight: normal">Linux system. </span>The
+first configuration screen will be the  “Where are you?” screen
+that looks like this:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-where-are-you-Port-Moresby-selected.png" name="Image44" align="left" width="583" height="375">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Click on the general area of the world
+map where you are located. For Manus users, the time zone that
+includes PNG should be highlighted (click on the south-eastern tip of
+PNG on the map), so that &quot;<b>Port Moresby</b>&quot; shows on the
+time zone selected.</p>
+<p style="margin-bottom: 0in">Click <b>C</b><b>ontinue</b>.</p>
+<h3 class="western">Step 10. Select keyboard layout</h3>
+<p style="margin-bottom: 0in">The next configuration screen is the
+keyboard layout screen which looks like this:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-keyboard-layout.png" name="Image45" align="left" width="465" height="287">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Click <b>C</b><b>ontinue</b> to use the
+“English (US)” keyboard as default, unless you have a different
+keyboard layout on your computer.</p>
+<h3 class="western">Step 11. Enter your user information</h3>
+<p style="margin-bottom: 0in">The next screen is the “Who are you?”
+screen which appears as illustrated below:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-who-are-you-Manus-Jaha-example.png" name="Image46" align="left" width="661" height="406">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Fill in the requested information and
+password. For Manus computers you should enter this user identity
+information in a special form – that will make it easier for
+technical consultants to maintain the Manus region computers:</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in">Your name box. In the
+	illustration above I’ve entered Manus-Jaha20, but you should use
+	the same identity the computer had before this upgrade. Most Manus
+	computers have been assigned a name identity of the form Manus-JahaN
+	where N is the unique number identifying the computer. Since this is
+	an upgrade of an existing system that used Wasta Linux, the computer
+	should have been given a user name already. You should use whatever
+	identity that the computer previously had before your present
+	upgrade operation. The identity name may have also been showing
+	above the Manus flag in the default background image on the screen
+	before the upgrade.</p>
+	<li/>
+<p style="margin-bottom: 0in">Your computer’s name box. The
+	computer’s name is the name that it will have on any local
+	network. It is automatically entered as you type the identity name
+	field above it. You can adjust the computer’s name if you like but
+	whatever the installer enters is probably OK. 
+	</p>
+	<li/>
+<p style="margin-bottom: 0in">The Pick a <b>username</b> box.
+	This name should be the same as the identity you type in the Your
+	name box. It will be the name of the user’s folder in the
+	computer’s /home folder. 
+	</p>
+	<li/>
+<p style="margin-bottom: 0in">The Manus region computers have
+	generally all been given a similar password that differs only by the
+	a number at the end of the password. This number agrees with the
+	number at the end of the computer’s identity name. The general
+	form is sunamN where the N is the same number as the number of the
+	computer’s identity and user name. This password scheme makes the
+	computer somewhat secure from random people, but is easy to remember
+	since it is tied to the number. (Note: sunam is the word manus
+	spelled backwards).. 
+	</p>
+	<li/>
+<p style="margin-bottom: 0in">You should keep the button
+	selected “Require my password to log in.” 
+	</p>
+</ul>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Click <b>Continue</b>. The installation
+process does not require any additional input from you. The installer
+will display a little slide show that describes some of the features
+available in (Ubuntu) Linux. The installation progress is displayed
+in the bar at the bottom of the slides. Most installs take less than
+30 minutes.</p>
+<h3 class="western">Step 12. Wait for the installation to complete</h3>
+<p style="margin-bottom: 0in">When the installation is finished a
+dialog will appear that looks like this:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Installation-has-finished.png" name="Image47" align="left" width="665" height="67">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Click on the <b>Restart Now</b> button.
+As the computer shuts down you will see:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Install-please-remove-installation-media.png" name="Image48" align="left" width="542" height="367">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><b>R</b><b>emove the </b><b>memory
+stick</b> at the prompt and press <b>Enter</b> to reboot the
+computer.</p>
+<h3 class="western">Step 13. Restart into Wasta Linux</h3>
+<p style="margin-bottom: 0in">Each time you boot into your Wasta
+Linux system, you will need to type your password into the login box.
+Your login password is the password you set during the installation.
+The same password is also used when you do administration tasks such
+as installing software:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Login-screen.png" name="Image49" align="left" width="595" height="387">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"> If the prompt inside the login box
+asks for your Username, you can type it in, or click on the user name
+with a mouse to get the Password prompt.</p>
+<h3 class="western">Step 14. Customize your background image</h3>
+<p style="margin-bottom: 0in">Once the system has started up, and you
+have logged in, you can set the background image: Right-click on the
+desktop and select <b>C</b><b>hange </b><b>D</b><b>esktop </b><b>B</b><b>ackground</b>.
+The <b>Backgrounds</b> applet will appear:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Backgrounds-applet.png" name="Image50" align="left" width="665" height="492">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">Click on the <b>+ (Plus)</b> button (it
+is highlighted in the lower left corner of the image above). A
+directory dialog will appear that you can use to locate the
+background image. For the Manus region computers you should select
+the <b>manus_jaha_background_images</b> folder that is located in the
+upgraded computer’s Pictures folder.  This will add the
+manus_jaha_background_images folder to the list of locations in the
+left pane of the Backgrounds applet. Select that folder. The
+Manus-JahaN images should display and may look like this:</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in"><img src="wasta-docs-images/Backgrounds-applet-showing-manus-jaha-images-initial.png" name="Image33" align="left" width="665" height="520">
+  <br clear="left"/>
+</img>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in">The folder has 30 Manus-Jaha
+backgrounds. Select the image whose filename agrees with the N number
+used in the user name (and password suffix) above. Unfortunately, the
+list of images within the Background applet tends to truncate the
+file names on small displays, making it difficult to identify the
+number N that is suffixed on the file name and is associated with the
+user name you want to select. You will just have to pick some and
+look at the desktop image you get until you get the desired image for
+the upgraded computer. 
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">Close the Backgrounds applet window
+when you have set the desired desktop background.</p>
+<h3 class="western">Step 15. Configure other post-install settings</h3>
+<p style="margin-bottom: 0in; font-weight: normal">While most
+software and resources are immediately available for use, some
+programs like Paratext and Adapt It will need additional setup and
+configuration. 
+</p>
+<h4 class="western">Configuring Paratext:</h4>
+<p style="margin-bottom: 0in; font-weight: normal">The <i>Paratext</i>
+registration information will need to be entered for the specific
+user of the computer. <i>Paratext</i> will also need to have its
+projects created, and if used in collaboration with <i>Adapt It</i>,
+<i>Paratext</i> will need the following projects setup as a minimum
+for collaboration with <i>Adapt It</i>:</p>
+<p style="margin-bottom: 0in; font-weight: normal">   * A <b>source</b>
+language <i>Paratext</i> project - containing the Scripture books
+imported into the <i>Paratext</i> project that will be used in <i>Adapt
+It </i>as <b>source</b> text for adaptation work. 
+</p>
+<p style="margin-bottom: 0in; font-weight: normal">   * A <b>target</b>
+language <i>Paratext</i> project - containing Scripture books created
+as empty books (i.e., &quot;empty&quot; but containing chapter and
+verse numbers when created within <i>Paratext</i>). This initially
+“empty” project will be used in <i>Adapt It</i> as target or
+translation text for adaptation work, and will be transferred
+automatically to <i>Paratext</i> each time the adaptation document is
+saved within <i>Adapt It</i>. 
+</p>
+<h4 class="western">Configuring Adapt It:</h4>
+<p style="margin-bottom: 0in"><i><span style="font-weight: normal">Adapt
+It</span></i><span style="font-weight: normal"> can be configured to
+collaborate with </span><i><span style="font-weight: normal">Paratext</span></i><span style="font-weight: normal">,
+but the necessary </span><i><span style="font-weight: normal">Paratext</span></i><span style="font-weight: normal">
+projects need to be created first (see above). Once the </span><i><span style="font-weight: normal">Paratext</span></i><span style="font-weight: normal">
+projects are created for the source language and target languages, </span><span style="font-weight: normal">an
+administrator can make the &quot;Administrator&quot; menu visible
+within </span><i><span style="font-weight: normal">Adapt It</span></i><span style="font-weight: normal">,
+and use </span><span style="font-weight: normal">its </span><span style="font-weight: normal">“</span><b>Setup
+Or Remove Collaboration</b><span style="font-weight: normal">” </span><span style="font-weight: normal">menu
+to set up one or more </span><i><span style="font-weight: normal">Adapt
+It</span></i><span style="font-weight: normal"> collaboration
+projects between </span><i><span style="font-weight: normal">Adapt It</span></i><span style="font-weight: normal">
+and </span><i><span style="font-weight: normal">Paratext</span></i><span style="font-weight: normal">.
+</span><span style="font-weight: normal">See the Adapt It HTML
+document named Help_for_Administrators.htm for more details on how to
+set up collaboration between </span><i><span style="font-weight: normal">Paratext</span></i><span style="font-weight: normal">
+and </span><i><span style="font-weight: normal">Adapt It</span></i><span style="font-weight: normal">.
+ </span>
+</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<div title="footer">
+	<p align="left" style="margin-top: 0.2in; margin-bottom: 0in"><br/>
+
+	</p>
+	<p align="left" style="margin-bottom: 0in"><font face="Arial, sans-serif"><font size="2" style="font-size: 10pt"><b>Installing
+	Wasta Linux - to dual boot with an Existing Windows system			Page <sdfield type=PAGE subtype=RANDOM format=PAGE>31</sdfield>
+	of <sdfield type=DOCSTAT subtype=PAGE format=PAGE>31</sdfield></b></font></font></p>
+</div>
+</body>
+</html>
