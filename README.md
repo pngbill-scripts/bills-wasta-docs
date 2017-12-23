@@ -13,6 +13,7 @@ Bill's Wasta Linux Documentation currently contains the following documents:
 7. How to shrink the size of pictures for users of Wasta Linux. (.odt, html, and .pdf)
 8. Wasta-Offline-Use-Full-Mirror-or-Memory-Stick-and-wasta-offline-setup-Flow-Chart. (.odg and .pdf)
 9. How to upgrade Wasta Linux using the Manus custom installer memory stick. (.odt, html and .pdf)
+10. How to use the Nemo File Manager (.odt, html, and .pdf)
 
 Note: The illustrations, screenshots and graphics for the document files above are
    contained in the wasta-docs-images folder. This folder must be present for
